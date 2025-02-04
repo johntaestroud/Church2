@@ -87,7 +87,7 @@ for (var x = 0; x < nav_right.length; x++) {if (window.CP.shouldStopExecution(2)
 }window.CP.exitedLoop(2);
 
 for (var x = 0; x < nav_down.length; x++) {if (window.CP.shouldStopExecution(3)) break;
-  nav_down[x].addEventListener('click', moveDown);
+  nav_down[x].addEventListener('mousedown', moveDown);
 }
 
 // Animations
