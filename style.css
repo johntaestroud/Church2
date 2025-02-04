@@ -129,7 +129,7 @@ body {
   }
   .panel__nav--up {
     left: 50%;
-    top: 1rem;
+    top: 2rem;
     transform: translateX(-50%);
   }
   .panel__nav--left {
