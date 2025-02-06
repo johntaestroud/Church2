@@ -393,7 +393,7 @@ body {
     .controls {
         width: 100%;
         text-align: center;
-        margin-top: -80px;
+        margin-top: -50px;
         margin-bottom: 8px;
         margin-left: 8px;
         margin-right: 8px;
@@ -423,14 +423,14 @@ body {
     }
     
     .icon a svg {
-        width: 60px;
-        height: 59px;
-        drop-shadow: -3px -3px 10px #FFFFFF, 3px 3px 10px #b8b9be;
+        width: 50px;
+        height: 50px;
+        /* drop-shadow: -3px -3px 10px #FFFFFF, 3px 3px 10px #b8b9be; */
         -webkit-drop-stroke: 1px #141415;
     }
     
     .icon a svg .stroke {
-        stroke: #282a2d;
+        stroke: #E4E4EC;
         stroke-width: 0.4px;
         transition: all 0.3s ease-in-out;
     }
