@@ -23,6 +23,13 @@ body {
   h1 {
     font-size: 5vmin;
     margin: 0;
+    color: #EAE9E9BF;
+  }
+  .church {
+    font-size: 5vmin;
+    margin: 0;
+    color: #EAE9E9BF;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   }
   .panel-wrap {
     perspective: 2000px;
@@ -78,6 +85,37 @@ body {
     transform: translateX(-50%) translateY(-50%);
     user-select: none;
   }
+  .panel .address {
+    cursor: default;
+    left: 50%;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    font-family: Courier, monospace;
+    margin: -5em 0;
+    font-size: 16px;
+    color: #d8d8d8;
+    z-index: 1;
+  }
+  .panel .city {
+    cursor: default;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    font-family: Courier, monospace;
+    margin: -3em 0;
+    font-size: 16px;
+    color: #d8d8d8;
+   
+  }
   .panel[data-x-pos="-2"] {
     left: -200%;
   }
@@ -112,6 +150,8 @@ body {
     transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     user-select: none;
     z-index: 10;
+    width: 10%;
+    height: 30%;
   }
   .panel__zoom:hover {
     opacity: 1;
@@ -181,9 +221,9 @@ body {
     user-select: none;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     font-family: Courier, monospace;
-    margin: 0.8em 0;
-    font-size: 24px;
-    color: #d8d8d8 ;
+    /* margin: 0.8em 0; */
+    font-size: 16px;
+    color: #d8d8d8;
   }
   
   /* .panel__animation-list */
@@ -353,7 +393,10 @@ body {
     .controls {
         width: 100%;
         text-align: center;
-        margin: -8px;
+        margin-top: -80px;
+        margin-bottom: 8px;
+        margin-left: 8px;
+        margin-right: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -371,7 +414,7 @@ body {
     }
     
     .icon a {
-        font-size: 60px;
+        /* font-size: 60px; */
         color: #E4E4EC;
         text-shadow: -6px -6px 12px #16171a, 6px 6px 12px #1e1f23;
         -webkit-text-stroke: 1px #141415;
