@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 
 <head>
   <meta charset="UTF-8">
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  
 
     <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
 
@@ -19,7 +20,7 @@
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
 
 
-  <title>Church of God | Salvation Makes You A Member</title>
+  <title></title>
 
     <link rel="canonical" href="https://codepen.io/ig_design/pen/JxbVRq">
   
@@ -37,13 +38,14 @@
   --white-sand: 	hsl(40, 7%, 92%);
   --black: 	hsl(234, 14%, 14%);
 }
+
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.6;
 	color: #fff;
-	background-color: var(--black);
+	background-color: #1f2029;
 	overflow: hidden;
 	height: 100vh;
 	-webkit-transition: all 300ms linear;
@@ -104,7 +106,7 @@ a:hover {
 	border: 2px solid #fff;
 }
 .cursor2.hover{
-	background: rgb(10, 5, 21);
+	background: rgba(255,255,255,1);
 	border-color: transparent;
 }
 
@@ -123,8 +125,7 @@ a:hover {
 	display: block;
 	overflow: hidden;
 	height: 100vh;
-    background-color: var(--white-sand);
-	/* background-image: url('http://www.ivang-design.com/svg-load/portfolio/photo.jpg');
+	/* background-image: url('');
 	background-size: cover;
 	background-position: center; */
 	transform: scale(1) rotateX(0);
@@ -136,21 +137,21 @@ a:hover {
 	transform-origin: center top;
 }
 .hero-section h1{
-    color: var(--dark-blue);
+    color: #fff;
 	font-size: 5vw;
 	line-height: 1;
 	font-weight: 900;
 }
-.hero-section .location {
+.hero-section .dancing{
     font-family: 'Dancing Script', cursive;
 	letter-spacing: 1px;
-	color: var(--dark-blue);
+	color: var(--logo-red);
 	font-size: 26px;
 	line-height: 1;
 	font-weight: 700;
 }
 @media screen and (max-width: 580px){
-	.hero-section .location {
+	.hero-section .dancing{
 		font-size: 18px;
 	}
 }
@@ -158,7 +159,7 @@ a:hover {
 	font-size: 15px;
 	line-height: 20px;
 	font-weight: 500;
-	color: var(--dark-blue);
+	color: #fff;
 	letter-spacing: 1px;
 }
 .hero-section p span{
@@ -221,7 +222,7 @@ body.nature-on .hero-section {
 	font-size: 17px;
 	line-height: 20px;
 	font-weight: 700;
-	color: var(--dark-blue);
+	color: #fff;
 	letter-spacing: 2px;
 	top: 50%;
 	left: 40px;
@@ -322,7 +323,7 @@ body.about-on .about-section {
 	font-size: 17px;
 	line-height: 20px;
 	font-weight: 700;
-	color: var(--dark-blue);
+	color: #fff;
 	letter-spacing: 2px;
 	top: 50%;
 	right: 40px;
@@ -387,7 +388,7 @@ body.contact-on .contact-section {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 36px 36px;
-	background-image: url('https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/close.svgclose.svg');
+	background-image: url('http://www.ivang-design.com/svg-load/portfolio/close.svg');
 	cursor: pointer;
 	z-index: 11;
 }
@@ -399,7 +400,7 @@ body.contact-on .contact-section {
 	font-size: 32px;
 	font-weight: 900;
 	letter-spacing: 1px;
-	color: var(--dark-blue);
+	color: #fff;
   display: inline-block;
 }
 .contact-section .social a{
@@ -434,7 +435,7 @@ body.contact-on .contact-section {
 	display: block;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-color: var(--white-sand);
+	background-color: rgba(31,32,41,1);
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear;
 	z-index: 10;
@@ -454,7 +455,7 @@ body.contact-on .contact-section {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 36px 36px;
-	background-image: url('https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/close.svg');
+	background-image: url('http://www.ivang-design.com/svg-load/portfolio/close.svg');
 	cursor: pointer;
 	z-index: 11;
 }
@@ -488,14 +489,14 @@ body.nature-on .nature-section {
 	border-radius: 4px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
-/* .travel-section h3,
+.travel-section h3,
 .wildlife-section h3,
 .nature-section h3 {
 	font-size: 44px;
 	line-height: 1.3;
 	font-weight: 700;
 	letter-spacing: 1px;
-	color: var(--dark-blue);
+	color: #fff;
 }
 .travel-section p,
 .wildlife-section p,
@@ -510,8 +511,8 @@ body.nature-on .nature-section {
 	font-size: 20px;
 	line-height: 1.3;
 	font-weight: 700;
-	color: var(--logo-red);
-} */
+	color: #866BAF;
+}
 
 </style>
 
@@ -530,19 +531,17 @@ body.nature-on .nature-section {
 		<div class="section-center">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
-                    
 					<div class="col-12 text-center">
-                     <object data="fire_animation._logo.svg"></object>
+						<h1>Church</h1>
 					</div>
-
 					<div class="col-12 text-center mb-2">
-						<div class="location">1901 62nd Ave S <br><br>St. Petersburg, FL 33712</div>
+						<div class="dancing"></div>
 					</div>
 					<div class="col-12 text-center mt-4 mt-lg-5">
 						<p>
-							<span class="travel hover-target">Video</span> 
+							<span class="travel hover-target">video</span> 
 							<span class="wildlife hover-target">Beliefs</span> 
-							<span class="nature hover-target">Audio</span>
+							<span class="nature hover-target">audio</span>
 						</p>
 					</div>
 				</div>
@@ -556,22 +555,15 @@ body.nature-on .nature-section {
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 text-center">
-						<!-- <img src="" alt=""> -->
+						<img src="" alt="">
 					</div>
-
-                    <div class="col-12 text-center">
-						<p><span>About Us</span></p>
-					</div>
-                    
+                    <p><span>About Us</span></p>
 					<div class="col-lg-8 text-center mt-4">
-						<p>The Church of God of Saint Petersburg represents a local body of believers that’s
-            part of the universal church of God worldwide. Our doors are open to anyone searching for love from God
-            and unity with believers in God. We are a humble people living a righteous life through his grace. We aim
-            to do good works in our local community by helping, supporting, and uplifting the spirits of the less
-            fortunate. Furthermore, we are confident that God will bring his children together and build them up in
-            the faith and discover their true life’s purpose. </p>
+						<p>The Church of God of Saint Petersburg represents a local body of believers that’s part of the universal church of God worldwide. Our doors are open to anyone searching for love from God and unity with believers in God. We are a humble people living a righteous life through his grace. We aim to do good works in our local community by helping, supporting, and uplifting the spirits of the less fortunate. Furthermore, we are confident that God will bring his children together and build them up in the faith and discover their true life’s purpose.</p>
 					</div>
-					
+					<div class="col-12 text-center">
+						
+					</div>
 				</div>
 			</div>
 		</div>		
@@ -598,517 +590,18 @@ body.nature-on .nature-section {
 	<div class="travel-section">	
 		<div class="travel-close hover-target"></div>
 		<div class="container">
-			<!-- <div class="row justify-content-center"> -->
-            <!-- <div class="col-12 text-center">
-					<h3>Video</h3>
-				</div> -->
-                <div class="custom-hr-video-platform">
-    <!-- Main Tabs -->
-    <div class="hr-platform-tabs">
-      <div class="hr-tab" data-tab="tab-1">Recent</div>
-      <div class="hr-tab active" data-tab="tab-2">Pastor Troy Jones</div>
-      <div class="hr-tab" data-tab="tab-3">Minister Darren Milton</div>
-      <div class="hr-tab" data-tab="tab-4">Revival</div>
-    </div>
-
-    <!-- Function to generate each tab block -->
-    <!-- Recent -->
-    
-    <div class="hr-tab-content" data-tab-content="tab-1">
-    <!-- Main Video Frame 1 -->
-    <div class="hr-video-main">
-      <div class="hr-video-player-container"><iframe src="https://www.youtube.com/embed/TVtkzxNOS-8?si=XMJxGl87yKx4QFea&rel=0" allow="fullscreen" allowfullscreen></iframe>
-    </div>
-
-      <div class="hr-video-platform">
-        <div class="hr-playlist-sidebar">
-          <!-- <div class="hr-playlist-header"><h1><i class=""></i>Recent</h1></div> -->
-          <div class="hr-playlist-scroll">
-
-            <!-- Playlist Video #01 - data-speakers="" data-description="" removed-->
-            <div class="hr-video-item active"
-                 data-video-id=""
-                 data-title="recent 1">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">recent 1</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 37:47</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #02 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="recent 2">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">recent 2</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 41:36</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #03 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="recent 3">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">recent 3</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 37:28</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #04 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="recent 4"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">recent 4</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 40:06</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #05 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="recent 5"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">recent 5</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 50:20</span>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-    
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- Pastor Troy Jones -->
-    <div class="hr-tab-content active" data-tab-content="tab-2">
-      <!-- Main Video Frame 2 -->
-    <div class="hr-video-main">
-        <div class="hr-video-player-container"><iframe src="https://www.youtube.com/embed/C1h-AuB-CDg?si=LokvFGxGrsa0-1Q3&rel=0" allow="fullscreen" allowfullscreen></iframe>
-    </div>
-
-      <div class="hr-video-platform">
-        <div class="hr-playlist-sidebar">
-          <!-- <div class="hr-playlist-header"><h1><i class=""></i> Pastor Troy Jones</h1></div> -->
-          <div class="hr-playlist-scroll">
-
-            <!-- Playlist Video #01 -->
-            <div class="hr-video-item active"
-                 data-video-id="C1h-AuB-CDg?si=mC6zxiD6VX3ZDs0L"
-                 data-title="Pastor Troy Jones 1"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>  -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">The Distinction of God's Church</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 1:36:31</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #02 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Pastor Troy Jones 2"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Pastor Troy Jones 2</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:53</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #03 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Pastor Troy Jones 3"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Pastor Troy Jones 3</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:31</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #04 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Pastor Troy Jones 4"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Pastor Troy Jones 4</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:50</span>
-                </div>
-              </div>
-            </div>
-
-             <!-- Playlist Video #05 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Pastor Troy Jones 5"
-                 data-speakers=""
-                 data-description="">
-              <!-- <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div> -->
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Pastor Troy Jones 5</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:50</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Minister Darren Milton -->
-    <div class="hr-tab-content" data-tab-content="tab-3">
-      <!-- Main Video Frame 3 -->
-    <div class="hr-video-main">
-        <div class="hr-video-player-container"><iframe src="https://www.youtube.com/embed/3N9a0VO3ZPo?si=HTDyFDO-jXufn9Ur&rel=0" allow="fullscreen" allowfullscreen></iframe>
-    </div>
-
-      <div class="hr-video-platform">
-        <div class="hr-playlist-sidebar">
-          <!-- <div class="hr-playlist-header"><h1><i class=""></i> Minister Darren Milton</h1></div> -->
-          <div class="hr-playlist-scroll">
-
-            <!-- Playlist Video #01 -->
-            <div class="hr-video-item active"
-                 data-video-id=""
-                 data-title="Minister Darren Milton 1"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Minister Darren Milton 1</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 6:05</span>
-                </div>
-              </div>
-            </div>
-          
-
-            <!-- Playlist Video #02 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Minister Darren Milton 2"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Minister Darren Milton 2</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:58</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #03 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Minister Darren Milton 3"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Minister Darren Milton 3</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:21</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #04 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Minister Darren Milton 4"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Minister Darren Milton 4</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 0:00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #05 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Minister Darren Milton 5"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Minister Darren Milton 5</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:27</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Revivals -->
-    <div class="hr-tab-content" data-tab-content="tab-4">
-      <!-- Main Video Frame 4 -->
-      <div class="hr-video-main">
-          <div class="hr-video-player-container"><iframe src="https://www.youtube.com/embed/wWFgIxFVfbo?si=FFdrJ3wAEp6u_CB3&rel=0" allow="fullscreen" allowfullscreen></iframe>
-      </div>
-
-      <div class="hr-video-platform">
-        <div class="hr-playlist-sidebar">
-          <!-- <div class="hr-playlist-header"><h1><i class=""></i> Revivals</h1></div> -->
-          <div class="hr-playlist-scroll">
-
-            <!-- Playlist Video #01 -->
-            <div class="hr-video-item active"
-                 data-video-id="FuXh63e5VVA"
-                 data-title="Revival 1"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Revival 1</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 6:05</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #02 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Revival 2"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Revival 2</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:58</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #03 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Revival 3"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Revival 3</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:21</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #04 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Revival 4"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Revival 4</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 0:00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Playlist Video #05 -->
-            <div class="hr-video-item"
-                 data-video-id=""
-                 data-title="Revival 5"
-                 data-speakers=""
-                 data-description="">
-              <div class="hr-video-thumbnail">
-                <img src="images/churchfire.svg" alt="Video thumbnail">
-                <div class="hr-play-icon"><i class="fas fa-play"></i></div>
-              </div>
-              <div class="hr-video-details">
-                <h3 class="hr-video-title">Revival 5</h3>
-                <div class="hr-video-meta">
-                  <span class="hr-video-duration"><i class="far fa-clock"></i> 5:27</span>
-                </div>
-              </div>
-            </div>
-
-        
-
-          </div>
-        </div>
-
-   
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const platformTabs = document.querySelectorAll('.hr-tab');
-      platformTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          platformTabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          document.querySelectorAll('.hr-tab-content').forEach(c => c.classList.remove('active'));
-          document.querySelector(`.hr-tab-content[data-tab-content="${tab.getAttribute('data-tab')}"]`).classList.add('active');
-        });
-      });
-
-      document.addEventListener('click', e => {
-        const item = e.target.closest('.hr-video-item');
-        if (item) {
-          const platform = item.closest('.hr-video-platform');
-          platform.querySelectorAll('.hr-video-item').forEach(i => i.classList.remove('active'));
-          item.classList.add('active');
-          const id = item.dataset.videoId;
-          platform.querySelector('iframe').src = `https://www.youtube.com/embed/${id}&rel=0`;
-          platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
-          platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"] .hr-video-description').textContent = item.dataset.description;
-          platform.querySelector('.hr-inner-tab-content[data-tab-content="speakers"] .hr-video-speakers').innerHTML = item.dataset.speakers;
-          platform.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
-          const talkTab = platform.querySelector('.hr-content-tab[data-tab="talk"]');
-          talkTab.classList.add('active');
-          platform.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
-          platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"]').classList.add('active');
-          if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        const innerTab = e.target.closest('.hr-content-tab');
-        if (innerTab) {
-          const info = innerTab.closest('.hr-video-info');
-          info.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
-          innerTab.classList.add('active');
-          info.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
-          info.querySelector(`.hr-inner-tab-content[data-tab-content="${innerTab.getAttribute('data-tab')}"]`).classList.add('active');
-        }
-      });
-    });
-  </script>
-        <!-- video end -->
-
-
-				<!-- <div class="col-12 text-center">
+			<div class="row justify-content-center">
+				<div class="col-12 text-center">
 					<h3>video</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
-					<p><span>testing power</span></p>
+					<p><span>Canon PowerShot S95</span></p>
 				</div>
 				<div class="col-12 text-center">
-					
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="" alt="">
-				</div> -->
 				
-			
+				</div>
+				
+				
 			</div>
 		</div>
 	</div>
@@ -1118,55 +611,15 @@ body.nature-on .nature-section {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
-					<h3>wildlife</h3>
+					<h3>audio</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
-					<p><span>Canon PowerShot S95</span></p>
+					<p><span></span></p>
 				</div>
 				<div class="col-12 text-center">
-					<p>
-						focal length: 22.5mm<br>
-						aperture: ƒ/5.6<br>
-						exposure time: 1/1000<br>
-						ISO: 80
-					</p>
+					
 				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -1176,55 +629,15 @@ body.nature-on .nature-section {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
-					<h3>nature</h3>
+					<h3>audio</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
 					<p><span>Canon PowerShot S95</span></p>
 				</div>
 				<div class="col-12 text-center">
-					<p>
-						focal length: 22.5mm<br>
-						aperture: ƒ/5.6<br>
-						exposure time: 1/1000<br>
-						ISO: 80
-					</p>
+					
 				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -1236,6 +649,7 @@ body.nature-on .nature-section {
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
       <script id="rendered-js" >
+
 
 
 (function ($) {"use strict";
