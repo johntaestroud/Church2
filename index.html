@@ -20,7 +20,7 @@
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
 
 
-  <title></title>
+  <title>Photography page concept</title>
 
     <link rel="canonical" href="https://codepen.io/ig_design/pen/JxbVRq">
   
@@ -28,16 +28,16 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
   
 <style>
+/* Please ❤ this if you like it! */
+
+
+/* ======================================== * 
+		        BEST VIEWED FULLSCREEN
+   https://codepen.io/ig_design/full/JxbVRq
+ * ======================================== */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
-
-:root {
-  --dark-blue: hsl(213, 92%, 15%);
-  --logo-red: hsla(11, 92%, 43%, 0.884);
-  --white-sand: 	hsl(40, 7%, 92%);
-  --black: 	hsl(234, 14%, 14%);
-}
 
 body{
 	font-family: 'Poppins', sans-serif;
@@ -125,9 +125,9 @@ a:hover {
 	display: block;
 	overflow: hidden;
 	height: 100vh;
-	/* background-image: url('');
+	background-image: url('http://www.ivang-design.com/svg-load/portfolio/photo.jpg');
 	background-size: cover;
-	background-position: center; */
+	background-position: center;
 	transform: scale(1) rotateX(0);
 	box-shadow: 0 0 40px rgba(0,0,0,0.2);
 	-webkit-transition: all 300ms linear;
@@ -145,7 +145,7 @@ a:hover {
 .hero-section .dancing{
     font-family: 'Dancing Script', cursive;
 	letter-spacing: 1px;
-	color: var(--logo-red);
+	color: #866BAF;
 	font-size: 26px;
 	line-height: 1;
 	font-weight: 700;
@@ -313,7 +313,7 @@ body.about-on .about-section {
 .about-section p span {
     font-family: 'Dancing Script', cursive;
 	letter-spacing: 1px;
-	color: var(--logo-red);
+	color: #866BAF;
 	font-size: 25px;
 	font-weight: 400;
 }
@@ -409,7 +409,7 @@ body.contact-on .contact-section {
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: 1px;
-	color: var(--logo-red);
+	color: #866BAF;
 }
 @media screen and (max-width: 580px){
 	.contact-section a{
@@ -513,7 +513,32 @@ body.nature-on .nature-section {
 	font-weight: 700;
 	color: #866BAF;
 }
+/* #Link to page
+================================================== */
 
+.link-to-portfolio {
+	  position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 200;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: 65%;
+  background-repeat: no-repeat;
+    background-image: url('https://assets.codepen.io/1462889/fcy.png');
+    box-shadow: 0 0 0 2px rgba(255,255,255,.1);
+    transition: opacity .2s, border-radius .2s, box-shadow .2s;
+    transition-timing-function: ease-out;
+}
+.link-to-portfolio:hover {
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(255,255,255,.1);
+}
 </style>
 
   <script>
@@ -532,16 +557,16 @@ body.nature-on .nature-section {
 			<div class="container-fluid">
 				<div class="row justify-content-center">
 					<div class="col-12 text-center">
-						<h1>Church</h1>
+						<h1>Test</h1>
 					</div>
 					<div class="col-12 text-center mb-2">
-						<div class="dancing"></div>
+						<div class="dancing">location</div>
 					</div>
 					<div class="col-12 text-center mt-4 mt-lg-5">
 						<p>
 							<span class="travel hover-target">video</span> 
-							<span class="wildlife hover-target">Beliefs</span> 
-							<span class="nature hover-target">audio</span>
+							<span class="wildlife hover-target">wildlife</span> 
+							<span class="nature hover-target">nature</span>
 						</p>
 					</div>
 				</div>
@@ -555,14 +580,13 @@ body.nature-on .nature-section {
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 text-center">
-						<img src="" alt="">
+						<img src="http://www.ivang-design.com/svg-load/portfolio/freel.jpg" alt="">
 					</div>
-                    <p><span>About Us</span></p>
 					<div class="col-lg-8 text-center mt-4">
-						<p>The Church of God of Saint Petersburg represents a local body of believers that’s part of the universal church of God worldwide. Our doors are open to anyone searching for love from God and unity with believers in God. We are a humble people living a righteous life through his grace. We aim to do good works in our local community by helping, supporting, and uplifting the spirits of the less fortunate. Furthermore, we are confident that God will bring his children together and build them up in the faith and discover their true life’s purpose.</p>
+						<p></p>
 					</div>
 					<div class="col-12 text-center">
-						
+						<p><span>test</span></p>
 					</div>
 				</div>
 			</div>
@@ -592,16 +616,55 @@ body.nature-on .nature-section {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
-					<h3>video</h3>
+					<h3>travel</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
 					<p><span>Canon PowerShot S95</span></p>
 				</div>
 				<div class="col-12 text-center">
-				
+					<p>
+						focal length: 22.5mm<br>
+						aperture: ƒ/5.6<br>
+						exposure time: 1/1000<br>
+						ISO: 80
+					</p>
 				</div>
-				
-				
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -611,15 +674,55 @@ body.nature-on .nature-section {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
-					<h3>audio</h3>
+					<h3>wildlife</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
-					<p><span></span></p>
+					<p><span>Canon PowerShot S95</span></p>
 				</div>
 				<div class="col-12 text-center">
-					
+					<p>
+						focal length: 22.5mm<br>
+						aperture: ƒ/5.6<br>
+						exposure time: 1/1000<br>
+						ISO: 80
+					</p>
 				</div>
-				
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -629,15 +732,55 @@ body.nature-on .nature-section {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
-					<h3>audio</h3>
+					<h3>nature</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
 					<p><span>Canon PowerShot S95</span></p>
 				</div>
 				<div class="col-12 text-center">
-					
+					<p>
+						focal length: 22.5mm<br>
+						aperture: ƒ/5.6<br>
+						exposure time: 1/1000<br>
+						ISO: 80
+					</p>
 				</div>
-				
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -646,10 +789,13 @@ body.nature-on .nature-section {
 	<div class='cursor2' id="cursor2"></div>
 	<div class='cursor3' id="cursor3"></div>
 
+<!-- Link to page
+================================================== -->
 
+<a href="https://front.codes/" class="link-to-portfolio hover-target" target=”_blank”></a>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
       <script id="rendered-js" >
-
+/* Please ❤ this if you like it! */
 
 
 (function ($) {"use strict";
