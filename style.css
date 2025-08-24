@@ -602,7 +602,6 @@ body.nature-on .nature-section {
       scrollbar-color: var(--dark-blue) var(--white-sp-color);
       flex-grow: 1;
       height: 100vh;
-      box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
     }
     .hr-playlist-scroll::-webkit-scrollbar {
       width: 1px;
