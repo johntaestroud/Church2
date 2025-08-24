@@ -4,7 +4,7 @@
 :root {
   --dark-blue: hsl(213, 92%, 15%);
   --logo-red: hsla(11, 92%, 43%, 0.884);
-  --white-sand: 	hsl(40, 7%, 92%);
+  --white-sand: 		hsl(40, 7%, 92%);
   --black: 	hsl(234, 14%, 14%);
 }
 body{
@@ -114,7 +114,7 @@ a:hover {
 .hero-section .location {
     font-family: 'Dancing Script', cursive;
 	letter-spacing: 1px;
-	color: var(--logo-red);
+	color: var(--dark-blue);
 	font-size: 26px;
 	line-height: 1;
 	font-weight: 700;
