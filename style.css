@@ -31,7 +31,23 @@ body{
   color: transparent !important;
   /* text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px; */
   text-shadow: #fdfdfd59 1px 2px 1px !important;
+  font-size: 28px;
 }
+
+@media only screen and (width: 390px) and (height: 852px) and (-webkit-device-pixel-ratio: 3) {
+  /* Your styles for these iPhones */
+  .text {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens up to 768px wide (common breakpoint for tablets/mobiles) */
+   .text {
+    font-size: 20px !important;
+  }
+}
+
 a {
 	cursor: pointer;
 }
