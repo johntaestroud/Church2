@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
 
     <script
         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
@@ -13,6 +13,10 @@
 
       <title>Church of God | Salvation Makes You A Member</title>
 
+  
+  
+  <link rel='stylesheet' href='bootstrap.min.css'>
+  
   
 </head>
 
@@ -668,56 +672,1307 @@
 		<div class="nature-close hover-target"></div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-12 text-center">
-					<h3>nature</h3>
+				<!-- <div class="col-12 text-center">
+					<h3>audio</h3>
 				</div>
 				<div class="col-12 mt-3 text-center">
-					<p><span>Canon PowerShot S95</span></p>
+					<p><span></span></p>
+				</div> -->
+				
+                <!--  -->
+                 <!-- playlist start resource https://codepen.io/bato-web-agency/pen/ZYbzKjG-->
+           <style>
+:root {
+	--player-color-dark-grey: rgba(103, 103, 103, 1);
+}
+
+
+.player img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center center;
+	   object-position: center center;
+}
+
+/* Player */
+
+
+.player-block {
+	display: flex;
+	align-self: center;
+	justify-self: center;
+	overflow: hidden;
+	max-height: 453px;
+	border-radius: 10px;
+	font-family: "Oswald", sans-serif;
+	/* background-color: #131414; */
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
+  /* max-width: 98%; */
+  /* margin-left: 16px; */
+}
+
+.player {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	padding: 50px;
+	max-width: 525px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 100%;
+  box-shadow:  inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);;
+	border-radius: 10px;
+	border: transparent;
+}
+
+.player::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	/* background: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(102, 102, 102, 1))
+		border-box; */
+	-webkit-mask: linear-gradient(#fff 0, #fff 100%) padding-box,
+		linear-gradient(#fff 0, #fff 100%);
+	        mask: linear-gradient(#fff 0, #fff 100%) padding-box,
+		linear-gradient(#fff 0, #fff 100%);
+	-webkit-mask-composite: xor;
+	        mask-composite: exclude;
+}
+
+.player.open-playlist + .playlist,
+.player.open-playlist + .playlist .playlist__content {
+	width: 525px; /*100% makes expanding less smooth*/
+  margin-left: auto;
+  margin-right: auto;
+	opacity: 1;
+}
+
+/* Player Playlist */
+
+.playlist {
+	width: 0;
+	height: 100%;
+	transition: all 0.4s;
+	overflow: hidden;
+}
+
+.playlist__content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 20px;
+	padding: 50px 50px 50px 30px;
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.playlist__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+}
+
+.playlist__title {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	font-weight: 400;
+	/* text-transform: uppercase; */
+
+   background: #7e655a;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
+}
+
+.playlist__control {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.playlist__content i {
+	position: absolute;
+	width: 15px;
+	height: 3px;
+	background-color: hsl(213, 92%, 15%);
+	transition: 0.3s background-color;
+}
+
+.playlist__content i:first-child {
+	transform: rotate(-45deg);
+}
+
+.playlist__content i:last-child {
+	transform: rotate(45deg);
+}
+
+.playlist__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	overflow-y: auto;
+	max-height: 310px;
+	padding-right: 16px;
+}
+
+.playlist__list::-webkit-scrollbar {
+	width: 4px;
+}
+
+.playlist__list::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.playlist__list::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.05);
+	/* border-radius: 2px; */
+
+}
+
+.playlist__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	max-height: 30px;
+	border-radius: 6px; 
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-family: "Poppins", sans-serif;
+}
+
+.playlist__item.current {
+	background-color: hsl(18deg 22% 61% / 17%);
+}
+
+.playlist__song,
+.playlist__duration {
+	font-size: 0.975rem;
+	font-weight: 300;
+	line-height: 1;
+  background: #182747de;
+    -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
+}
+
+.playlist__song-name {
+	 background: #9d8c8cbd;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+/* Player Settings */
+
+.player__settings {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+.player__settings input {
+	display: none;
+}
+
+.player__playlist-btn,
+.player__settings-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	/* border-radius: 50%; */
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+/* 
+.player__playlist-btn.active,
+.player__settings-btn.active {
+	 filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%)
+		hue-rotate(66deg) brightness(105%) contrast(104%); 
+} */
+
+.player__settings-btn.active + .player__settings-block {
+	flex: 1;
+	max-width: 100%;
+}
+
+.player__settings-block {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	width: 0;
+	transition: 0.5s all;
+}
+
+.player__autoplay-block {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.player__settings-checkbox {
+	position: relative;
+	display: flex;
+	width: 50px;
+	height: 24px;
+	transform: translateY(1px);
+}
+
+.player__settings-switch {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	/* border-radius: 24px; */
+	background-color: var(--player-color-dark-grey);
+	transition: 0.4s all;
+}
+
+.player__settings-switch:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 4px;
+	bottom: 4px;
+	/* border-radius: 50%; */
+	transition: all 0.4s;
+	background-color: white;
+}
+
+input:checked + .player__settings-switch:before {
+	transform: translateX(26px);
+}
+
+input:checked + .player__settings-switch {
+	background-color: #182747de;
+}
+
+/* Players Bars */
+
+.player__box {
+	margin-top: 15px;
+}
+
+.player__bars {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	gap: 4px;
+	width: 100%;
+	height: 155px;
+	cursor: pointer;
+}
+
+.player__bar {
+	min-height: 2px;
+	width: 16px;
+	height: 0;
+	max-height: 155px;
+	background: linear-gradient(
+		to bottom,
+		hsl(18, 22%, 61%),
+		hsl(0, 0%, 92%)
+	);
+	transition: height 0.2s ease-out, background 1s ease-out;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+.player__bar.color {
+	background: linear-gradient(
+		120deg,
+		hsl(213, 92%, 15%) 0%,
+		hsl(18, 22%, 61%)  53%,
+		hsl(0, 0%, 92%) 100%
+	);
+}
+
+.player__audio {
+	display: none;
+}
+
+/* Player Controls */
+
+.player__info {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.player__music-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.player__music-author,
+.player__duration {
+	font-size: .95rem;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #182747de;
+	text-transform: uppercase;
+}
+
+.player__music-title {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #182747de;
+	text-transform: uppercase;
+}
+
+.player__controller {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+
+.player__controls {
+	display: flex;
+	align-items: center;
+	gap: 44px;
+}
+
+.player__next-btn,
+.player__prev-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	/* border-radius: 50%; */
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.3s all ease-in-out;
+}
+
+.player__next-btn.disabled,
+.player__prev-btn.disabled {
+	filter: brightness(0) saturate(100%) invert(45%) sepia(1%) saturate(914%)
+		hue-rotate(318deg) brightness(91%) contrast(1%);
+	cursor: default;
+	pointer-events: none;
+}
+
+.player__pause-icon,
+.player__play-icon,
+.player__replay-btn img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11px;
+	/* border-radius: 50%; */
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.3s all ease-in-out;
+}
+
+.player__pause-icon:active,
+.player__play-icon:active,
+.player__replay-icon:active {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.player__pause-icon.hidden,
+.player__play-icon.hidden,
+.player__play-btn.hidden,
+.player__replay-btn.hidden {
+	display: none;
+}
+
+.player__volume-btn {
+	position: relative;
+	cursor: pointer;
+	padding-right: 5px;
+	height: 24px;
+}
+
+.player__volume-block {
+	position: absolute;
+	overflow: hidden;
+	z-index: 10;
+	width: 0;
+	bottom: -10px;
+	left: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border-radius: 10px; */
+	background-color: hsl(213, 92%, 15%);
+	transition: all 0.3s;
+}
+
+.player__volume-block input {
+	overflow: hidden;
+	margin: 20px;
+	width: 100%;
+	height: 10px;
+	--range: 20%;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	outline: none;
+	/* border-radius: 2px; */
+	background: linear-gradient(
+		to right,
+		hsl(18, 22%, 61%) var(--range), /*bar*/
+		hsl(0, 0%, 92%) var(--range)
+	);
+	cursor: pointer;
+}
+
+.player__volume-block input[type="range"]::-webkit-slider-thumb {
+	cursor: pointer;
+	-webkit-appearance: none;
+	        appearance: none;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+.player__volume-icon {
+	position: absolute;
+	inset: 0;
+	opacity: 1;
+	width: -webkit-max-content !important;
+	width: -moz-max-content !important;
+	width: max-content !important;
+	visibility: visible;
+	transition: all 0.3s;
+}
+
+.player__volume-default.hidden,
+.player__volume-high.hidden,
+.player__volume-mute.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.player__volume-btn:hover .player__volume-block {
+	width: 180px;
+}
+
+.player__random-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	/* border-radius: 50%; */
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.player__random-btn.active {
+	filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%)
+		hue-rotate(66deg) brightness(105%) contrast(104%);
+}
+
+
+@media screen and (max-width: 1280px) {
+	.player-block {
+		flex-direction: column;
+		max-height: 100%;
+    max-width: 525px; 
+    justify-self: center;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	.player.open-playlist + .playlist,
+	.player.open-playlist + .playlist .playlist__content {
+		width: 100%;
+		height: 450px;
+		opacity: 1;
+	}
+
+	.playlist__list {
+		max-height: none;
+	}
+
+	.playlist {
+		width: 100%;
+		height: 0;
+	}
+}
+
+/* @media screen and (max-width: 620px) {
+	.player__controls {
+		gap: 10px;
+	}
+
+	.player__volume-btn {
+		width: 40px;
+	}
+
+} */
+
+@media screen and (max-width: 460px) {
+	.player-block {
+		/* border-radius: 20px; */
+	}
+
+	.player {
+		/* border-radius: 20px; */
+		padding: 40px 20px 20px;
+	}
+
+	.player::before {
+		/* border-radius: 20px; */
+	}
+
+	.player__settings {
+		gap: 10px;
+	}
+
+	.playlist__content {
+		padding: 20px;
+	}
+
+	.playlist__item {
+		max-height: 100%;
+	}
+
+	.playlist__song {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.playlist__control:hover i {
+		background-color: white;
+	}
+
+	.player__pause-icon:hover,
+	.player__play-icon:hover,
+	.player__replay-icon:hover,
+	.player__random-btn:hover,
+	.player__next-btn:hover,
+	.player__prev-btn:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.player__playlist-btn:hover,
+	.player__settings-btn:hover {
+		filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%)
+			hue-rotate(66deg) brightness(105%) contrast(104%);
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.playlist__item:hover {
+		background-color: hsl(18deg 22% 61% / 30%);
+	}
+}
+</style>
+
+
+
+<section class="base-template">
+	<div class="wrapper base-template__wrapper">
+
+
+		<div class="base-template__content">
+			<div class="player-block">
+				<div class="player">
+
+					<!-- Player Settings -->
+
+					<div class="player__settings">
+						<div id="settingsPlayer" class="player__settings-btn" tabindex="0">
+							<img src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/settings.svg" alt="settings-icon" width="24" height="24" loading="lazy">
+						</div>
+						<div class="player__settings-block">
+							<div class="player__autoplay-block">
+								Autoplay:
+
+								<label class="player__settings-checkbox">
+									<input type="checkbox" checked name="autoplay" id="autoplay">
+
+									<span class="player__settings-switch"></span>
+								</label>
+							</div>
+						</div>
+
+						<div id="musicPlaylist" class="player__playlist-btn" tabindex="0">
+							<img src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/playlist.svg" alt="playlist-icon" width="24" height="24" loading="lazy">
+						</div>
+					</div>
+
+					<!-- Audio Wave -->
+
+					<div class="player__box">
+						<div class="player__wave-box">
+							<div class="player__bars" id="bars"></div>
+						</div>
+
+						<audio crossorigin="anonymous" id="audioPlayer" class="player__audio"></audio>
+					</div>
+
+					<div class="player__info">
+						<div class="player__music-info">
+							<span class="player__music-author" id="musicArtist">
+								Name
+							</span>
+							<h3 class="player__music-title" id="musicTitle">
+								Title
+							</h3>
+						</div>
+
+						<span class="player__duration" id="musicDuration">
+							00:00
+						</span>
+					</div>
+
+					<!-- Player Controllers -->
+
+					<div class="player__controller">
+						<div id="musicVolume" class="player__volume-btn">
+							<img class="player__volume-icon player__volume-default" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/volume.svg" alt="volume-icon" width="24" height="24" loading="lazy">
+
+							<img class="player__volume-icon player__volume-high hidden" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/volume-changer.svg" alt="volume-icon" width="24" height="24" loading="lazy">
+
+							<img class="player__volume-icon player__volume-mute hidden" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/mute.svg" alt="volume-icon" width="24" height="24" loading="lazy">
+
+							<div class="player__volume-block">
+								<input name="volume" id="volumeInput" value="20" type="range" min="0" max="100">
+							</div>
+						</div>
+
+						<div class="player__controls">
+							<div class="player__prev-btn" id="prevBtn" tabindex="0">
+								<img src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/prev-btn.svg" loading="lazy">
+							</div>
+
+							<div class="player__play-btn" id="playBtn" tabindex="0">
+								<img class="player__play-icon" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/d84b620708d6844542150ee976f8e50886be36c2/play.svg" alt="play-icon" width="32" height="32" loading="lazy">
+
+								<img class="player__pause-icon hidden" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/pause.svg" alt="pause-icon" width="32" height="32" loading="lazy">
+							</div>
+
+							<div class="player__replay-btn hidden" id="replayBtn" tabindex="0">
+								<img class="player__replay-icon" src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/replay.svg" alt="replay-icon" width="32" height="32" loading="lazy">
+							</div>
+
+							<div class="player__next-btn" id="nextBtn" tabindex="0">
+								<img src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/next.svg" alt="next-icon" width="44" height="44" loading="lazy">
+							</div>
+						</div>
+
+						<div class="player__random-btn" id="randomBtn" tabindex="0">
+							<img src="https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/random.svg" alt="random-icon" width="24" height="24" loading="lazy">
+						</div>
+					</div>
 				</div>
-				<div class="col-12 text-center">
-					<p>
-						focal length: 22.5mm<br>
-						aperture: ƒ/5.6<br>
-						exposure time: 1/1000<br>
-						ISO: 80
-					</p>
+
+				<!-- Playlist Block -->
+
+				<div class="playlist">
+					<div class="playlist__content">
+						<div class="playlist__top">
+							<h2 class="playlist__title">
+							Church of God of St Petersburg
+							</h2>
+
+							<div class="playlist__control" tabindex="0">
+								<i></i>
+								<i></i>
+							</div>
+						</div>
+
+						<div class="playlist__list"></div>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+      <script id="rendered-js" >
+const defaults = {
+  random: false,
+  volume: 0.5,
+  music: [
+  {
+    title: "Pastor Troy Jones - Build A Sure Foundation",
+    url:
+    "https://ia801803.us.archive.org/13/items/sure-foundation-pastor-troy-jones/Sure%20Foundation-Pastor%20Troy%20Jones.mp3" },
+
+  {
+    title: "Pastor Troy Jones - Free From Sin... A Servant of Holiness",
+    url:
+    "https://ia601809.us.archive.org/31/items/free-from-sin...-a-servant-of-holiness-6-28-15/_Free%20From%20Sin...%20A%20Servant%20of%20Holiness_%206_28_15.mp3" },
+
+  {
+    title: "Pastor Troy Jones - No Cross No Crown",
+    url: "https://ia601407.us.archive.org/35/items/no-cross-no-crown/No%20Cross%20No%20Crown.mp3" },
+
+  {
+    title: "Pastor Troy Jones - The Church That Jesus Built",
+    url: "https://ia800306.us.archive.org/4/items/the-church-that-jesus-built/The%20Church%20that%20Jesus%20Built.mp3" },
+
+  {
+    title: "Brother Milton - Jesus I'll Never Forget",
+    url:
+    "https://ia601206.us.archive.org/2/items/jesus-ill-never-forget-bro-milton/Jesus%20I%27ll%20Never%20Forget%20Bro%20Milton.mp4" },
+
+  {
+    title: "Song 1 - Testing",
+    url:
+    "" },
+
+  {
+    title: "Song 1 - Testing",
+    url: "" },
+
+  {
+    title: "Song 1 - Testing",
+    url: "" },
+
+  {
+    title: "Song 1 - Testing",
+    url:
+    "" },
+
+  {
+    title: "Song 1 - Testing",
+    url:
+    "" },
+
+  {
+    title: "Song 1 - Testing",
+    url: "" },
+
+  {
+    title: "Song 1 - Testing",
+    url: "" }] };
+
+
+
+
+class MusicPlayer {
+  constructor(config) {
+    this.music = config.music || [];
+    this.currentIndex = 0;
+    this.barsCount = 44;
+
+    this.playerBlock = document.querySelector(".player");
+    this.musicList = document.querySelector(".playlist__list");
+    this.audio = document.getElementById("audioPlayer");
+    this.playlistBth = document.getElementById("musicPlaylist");
+    this.settingsBth = document.getElementById("settingsPlayer");
+    this.autoplayBtn = document.getElementById("autoplay");
+    this.playBtn = document.getElementById("playBtn");
+    this.replayBtn = document.getElementById("replayBtn");
+    this.barsContainer = document.getElementById("bars");
+    this.title = document.getElementById("musicTitle");
+    this.artist = document.getElementById("musicArtist");
+    this.durationDisplay = document.getElementById("musicDuration");
+    this.playIcon = this.playBtn.querySelector(".player__play-icon");
+    this.pauseIcon = this.playBtn.querySelector(".player__pause-icon");
+    this.nextBtn = document.querySelector(".player__next-btn");
+    this.prevBtn = document.querySelector(".player__prev-btn");
+    this.closePlaylist = document.querySelector(".playlist__control");
+    this.volumeInput = document.getElementById("volumeInput");
+    this.randomBtn = document.getElementById("randomBtn");
+
+    this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    this.analyser = this.audioContext.createAnalyser();
+
+    const source = this.audioContext.createMediaElementSource(this.audio);
+    source.connect(this.analyser);
+
+    this.analyser.connect(this.audioContext.destination);
+    this.analyser.fftSize = 512;
+    this.bufferLength = this.analyser.frequencyBinCount;
+    this.dataArray = new Uint8Array(this.bufferLength);
+
+    this.audio.volume = config.volume ?? 0.5;
+
+    if (this.volumeInput) {
+      this.volumeInput.value = this.audio.volume * 100;
+      this.volumeInput.style.setProperty("--range", this.volumeInput.value + "%");
+    }
+
+    this.random = config.random;
+    this.autoplay = this.autoplayBtn.checked;
+
+    this.createBars();
+    this.setupControllers();
+    this.playlistControl();
+    this.setupPlaylist();
+    this.playTrack(0);
+    this.isMobile();
+  }
+
+  playTrack(index) {
+    if (this.music[index]) {
+      this.currentIndex = index;
+
+      this.playlistItems?.forEach((el, i) => {
+        el.classList.toggle("current", i === index);
+      });
+
+      const [artist, title] = this.music[index].title.split(" - ");
+
+      this.audio.src = this.music[index].url;
+      this.artist.textContent = artist || "Unknown Artist";
+      this.title.textContent = title || "Unknown Name";
+
+      this.updateControlButtons(false);
+      this.createBars();
+    }
+  }
+
+  // Player Actions
+
+  next(isAuto = false) {
+    if (isAuto && !this.autoplay) return;
+
+    if (this.random) {
+      let nextIndex;
+      do {
+        nextIndex = Math.floor(Math.random() * this.music.length);
+      } while (nextIndex === this.currentIndex && this.music.length > 1);
+
+      this.playTrack(nextIndex);
+    } else {
+      if (this.currentIndex < this.music.length - 1) {
+        this.playTrack(this.currentIndex + 1);
+      } else {
+        return;
+      }
+    }
+
+    this.audio.play();
+    this.audioContext.resume();
+    this.updateControlButtons(true);
+  }
+
+  prev() {
+    if (this.currentIndex > 0) {
+      if (this.autoplay) {
+        this.playTrack(this.currentIndex - 1);
+        this.audio.play();
+        this.audioContext.resume();
+        this.updateControlButtons(true);
+      } else {
+        this.playTrack(this.currentIndex - 1);
+        this.updateControlButtons(false);
+      }
+    }
+  }
+
+  updateControlButtons(isPlaying, ended = false) {
+    this.prevBtn.classList.toggle("disabled", this.currentIndex < 1);
+    this.nextBtn.classList.toggle(
+    "disabled",
+    this.currentIndex === this.music.length - 1 && !this.random);
+
+
+    if (!this.autoplay && ended) {
+      this.replayBtn.classList.remove("hidden");
+      this.playBtn.classList.add("hidden");
+
+      return;
+    } else {
+      this.replayBtn.classList.add("hidden");
+      this.playBtn.classList.remove("hidden");
+    }
+
+    if (isPlaying) {
+      this.playIcon.classList.add("hidden");
+      this.pauseIcon.classList.remove("hidden");
+    } else {
+      this.playIcon.classList.remove("hidden");
+      this.pauseIcon.classList.add("hidden");
+    }
+  }
+
+  // Audio Wave
+
+  createBars() {
+    this.barsContainer.innerHTML = "";
+
+    for (let i = 0; i < this.barsCount; i++) {
+      const bar = document.createElement("div");
+
+      bar.classList.add("player__bar");
+      this.barsContainer.appendChild(bar);
+    }
+  }
+
+
+
+  updateBars() {
+    this.analyser.getByteFrequencyData(this.dataArray);
+
+    const bars = [...document.querySelectorAll(".player__bar")];
+    const step = Math.floor(this.bufferLength / this.barsCount);
+
+    bars.forEach((bar, index) => {
+      let sum = 0;
+      for (let i = 0; i < step; i++) {
+        sum += this.dataArray[index * step + i];
+      }
+
+      const average = sum / step;
+      const fillHeight = average / 2;
+
+      bar.style.height = `${fillHeight}%`;
+
+      const barDuration = this.audio.duration / this.barsCount;
+      const currentIndex = Math.floor(this.audio.currentTime / barDuration);
+
+      if (index <= currentIndex) {
+        bar.classList.add("color");
+      } else {
+        bar.classList.remove("color");
+      }
+    });
+  }
+
+  // Playlist
+
+  setupPlaylist() {
+    this.playlistItems = [];
+
+    for (let i = 0; i < this.music.length; i++) {
+      const [artist, title] = this.music[i].title.split(" - ");
+      const newMusicItem = document.createElement("div");
+
+      newMusicItem.tabIndex = 0;
+      newMusicItem.classList.add("playlist__item");
+
+      if (i === 0) newMusicItem.classList.add("current");
+      newMusicItem.setAttribute("data-song-id", i);
+
+      newMusicItem.innerHTML = `
+                <span class="playlist__song">${artist} - <span class="playlist__song-name">${title}</span></span>
+                <p class="playlist__duration">00:00</p>
+            `;
+
+      this.musicList.appendChild(newMusicItem);
+      this.playlistItems.push(newMusicItem);
+
+      const durationElement = newMusicItem.querySelector(".playlist__duration");
+      const audio = document.createElement("audio");
+
+      audio.src = this.music[i].url;
+
+      audio.addEventListener("loadedmetadata", () => {
+        const duration = audio.duration;
+        const mins = Math.floor(duration / 60).
+        toString().
+        padStart(2, "0");
+        const secs = Math.floor(duration % 60).
+        toString().
+        padStart(2, "0");
+
+        durationElement.textContent = `${mins}:${secs}`;
+      });
+
+      newMusicItem.addEventListener("click", () => {
+        this.playlistItems.forEach(el => el.classList.remove("current"));
+        newMusicItem.classList.add("current");
+        this.playTrack(i);
+
+        if (this.autoplay) {
+          this.audio.play();
+          this.audioContext.resume();
+          this.updateControlButtons(true);
+        } else {
+          this.updateControlButtons(false);
+        }
+      });
+    }
+  }
+
+  playlistControl() {
+    this.playlistBth.addEventListener("click", () => {
+      this.playerBlock.classList.toggle("open-playlist");
+      this.playlistBth.classList.toggle("active");
+    });
+
+    this.closePlaylist.addEventListener("click", () => {
+      this.playerBlock.classList.remove("open-playlist");
+      this.playlistBth.classList.remove("active");
+    });
+  }
+
+  // Player Controllers
+
+  setupControllers() {
+    // Audio Controllers
+
+    this.audio.addEventListener("ended", () => {
+      this.updateControlButtons(false, true);
+      this.next(true);
+    });
+
+    this.audio.addEventListener("timeupdate", () => {
+      if (this.audio.duration && !isNaN(this.audio.duration)) {
+        const remainingTime = this.audio.duration - this.audio.currentTime;
+        const mins = Math.floor(remainingTime / 60).
+        toString().
+        padStart(2, "0");
+        const secs = Math.floor(remainingTime % 60).
+        toString().
+        padStart(2, "0");
+
+        this.durationDisplay.textContent = `${mins}:${secs}`;
+      } else {
+        this.durationDisplay.textContent = "00:00";
+      }
+    });
+
+    this.audio.addEventListener("loadedmetadata", () => {
+      if (this.audio.duration && !isNaN(this.audio.duration)) {
+        const mins = Math.floor(this.audio.duration / 60).
+        toString().
+        padStart(2, "0");
+        const secs = Math.floor(this.audio.duration % 60).
+        toString().
+        padStart(2, "0");
+
+        this.durationDisplay.textContent = `${mins}:${secs}`;
+      } else {
+        this.durationDisplay.textContent = "00:00";
+      }
+    });
+
+    this.audio.addEventListener("play", () => {
+      const update = () => {
+        this.updateBars();
+
+        if (!this.audio.paused) {
+          requestAnimationFrame(update);
+        }
+      };
+
+      update();
+    });
+
+    // Control Buttons
+
+    this.playBtn.addEventListener("click", () => {
+      if (this.audio.paused) {
+        this.audio.play();
+        this.audioContext.resume();
+        this.updateControlButtons(true);
+      } else {
+        this.audio.pause();
+        this.updateControlButtons(false);
+      }
+    });
+
+    this.nextBtn.addEventListener("click", () => {
+      this.next(false);
+    });
+
+    this.prevBtn.addEventListener("click", () => {
+      this.prev();
+    });
+
+    this.replayBtn.addEventListener("click", () => {
+      this.audio.currentTime = 0;
+      this.audio.play();
+      this.audioContext.resume();
+      this.updateControlButtons(true);
+    });
+
+    this.randomBtn.addEventListener("click", () => {
+      this.randomBtn.classList.toggle("active");
+
+      this.random = !this.random;
+    });
+
+    // Audio Wave Controller
+
+    this.barsContainer.addEventListener("click", event => {
+      const rect = this.barsContainer.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+
+      const barWidth = rect.width / this.barsCount;
+      const index = Math.min(
+      this.barsCount - 1,
+      Math.max(0, Math.floor(clickX / barWidth)));
+
+
+      const timePerBar = this.audio.duration / this.barsCount;
+      const newTime = index * timePerBar;
+
+      this.audio.currentTime = newTime;
+
+      if (this.audio.paused) {
+        const bars = [...document.querySelectorAll(".player__bar")];
+
+        bars.forEach((bar, i) => {
+          if (i <= index) {
+            bar.classList.add("color");
+          } else {
+            bar.classList.remove("color");
+          }
+        });
+      } else {
+        this.updateBars();
+      }
+    });
+
+    // Settings Controllers
+
+    this.volumeInput.addEventListener("input", () => {
+      const volumeMute = document.querySelector(".player__volume-mute");
+      const volumeHigh = document.querySelector(".player__volume-high");
+      const volumeDefault = document.querySelector(".player__volume-default");
+
+      this.audio.volume = this.volumeInput.value / 100;
+
+      if (this.volumeInput.value <= 0) {
+        volumeDefault.classList.add("hidden");
+        volumeHigh.classList.add("hidden");
+        volumeMute.classList.remove("hidden");
+      } else if (this.volumeInput.value >= 60) {
+        volumeDefault.classList.add("hidden");
+        volumeMute.classList.add("hidden");
+        volumeHigh.classList.remove("hidden");
+      } else {
+        volumeMute.classList.add("hidden");
+        volumeHigh.classList.add("hidden");
+        volumeDefault.classList.remove("hidden");
+      }
+
+      let range = this.volumeInput.value + "%";
+
+      this.volumeInput.style.setProperty("--range", range);
+    });
+
+    this.settingsBth.addEventListener("click", () => {
+      this.settingsBth.classList.toggle("active");
+    });
+
+    this.autoplayBtn.addEventListener("change", () => {
+      this.autoplay = this.autoplayBtn.checked;
+    });
+  }
+
+  isMobile() {
+    const updateBarsCount = () => {
+      this.barsCount = window.innerWidth < 620 ? 25 : 50;
+
+      this.createBars();
+    };
+
+    updateBarsCount();
+
+    window.addEventListener("resize", () => {
+      updateBarsCount();
+    });
+  }}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  new MusicPlayer(defaults);
+});
+//# sourceURL=pen.js
+    </script>
+          <!-- playlist start-->
+          <!-- <li itemscope="" itemtype="http://schema.org/CreativeWork">
+                    <a href="information.html" id="cerasa"  data-destination="" itemprop="url" class="case-study">
+                      <div class="case-study-mask"></div>
+                      <div class="case-study-reveal-mask"></div>
+                      <div class="case-study-mask-number">
+                        <div class="case-study-mask-back">01</div>
+                        <div class="case-study-mask-front">
+                          <div data-index="01" class="case-study-mask-overlay">01</div>
+                        </div>
+                      </div>
+                      <div class="case-study-text-section">
+                        <h3 itemprop="name" class="h2 case-study-title"></h3>
+                        <h5 itemprop="description" class="case-study-subtitle">testing</h5>
+                        <button class="the-button call-to-button">
+                          <span class="button-text">Beliefs</span>
+                          <div class="button-mask"></div>
+
+                        </button>
+                      </div>
+                    </a>
+                  </li> -->
+
+
+          <!-- <li itemscope="" itemtype="">
+                    <a href="calendar.html" id="lato" style="background-image: url('images/pastor.png');" data-destination="lato" itemprop="url" class="case-study">
+                      <div class="case-study-mask"></div>
+                      <div class="case-study-reveal-mask"></div>
+                      <div class="case-study-mask-number">
+                        <div class="case-study-mask-back"></div>
+                        <div class="case-study-mask-front">
+                          <div data-index="02" class="case-study-mask-overlay"></div>
+                        </div>
+                      </div>
+                      <div class="case-study-text-section">
+                        <h3 itemprop="name" class="h2 case-study-title"></h3>
+                        <h5 itemprop="description" class="case-study-subtitle"></h5>
+                        <button class="the-button call-to-button">
+                          <span class="button-text">Services</span>
+                          <div class="button-mask"></div>
+
+                        </button>
+                      </div>
+                    </a>
+                  </li> -->
+          <!-- <li itemscope="" itemtype="">
+                    <a href="videos.html" id="" style="background-image: url('images/pastor.png');" data-destination="" itemprop="url" class="case-study">
+                      <div class="case-study-mask"></div>
+                      <div class="case-study-reveal-mask"></div>
+                      <div class="case-study-mask-number">
+                        <div class="case-study-mask-front">
+                          <div data-index="03" class="case-study-mask-overlay">03</div>
+                        </div>
+                      </div>
+                      <div class="case-study-text-section">
+                        <h3 itemprop="name" class="h2 case-study-title"></h3>
+                        <h5 itemprop="description" class="case-study-subtitle"></h5>
+                        <button class="the-button call-to-button">
+                          <span class="button-text">Sermons</span>
+                          <div class="button-mask"></div>
+                        </button>
+                      </div>
+                    </a>
+                  </li> -->
+        </ul>
+      </div>
+
+                <!--  -->
+				
 			</div>
 		</div>
 	</div>
@@ -726,6 +1981,7 @@
 	<div class='cursor2' id="cursor2"></div>
 	<div class='cursor3' id="cursor3"></div>
 
+  
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
       <script src="script.js" ></script>
