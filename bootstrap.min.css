@@ -579,7 +579,7 @@ pre code {
 }
 
 .container {
-    width: 100%;
+    width: auto;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
