@@ -215,21 +215,21 @@ body.nature-on .hero-section {
 	transition-delay: 0ms;
 }
 .about-text {
-  position: absolute;
+  /* position: absolute;
 	font-size: 17px;
 	line-height: 20px;
-	font-weight: 700;
-	color: var(--dark-blue);
-	letter-spacing: 2px;
+	font-weight: 700; */
+	color: var(--white-sand);
+	/* letter-spacing: 2px;
 	top: 50%;
 	left: 40px;
 	cursor: pointer;
-	z-index: 2;
-	-webkit-writing-mode: vertical-lr;
+	z-index: 2; */
+	/* -webkit-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
 	transform: translateY(-50%);
 	-webkit-transition: all 200ms linear;
-	transition: all 200ms linear;
+	transition: all 200ms linear; */
 }
 .about-text:before {
 	position: absolute;
@@ -253,7 +253,7 @@ body.nature-on .hero-section {
 	left: -30px;
 }
 .about-section {
-    position: fixed;
+  position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -316,12 +316,12 @@ body.about-on .about-section {
 }
 
 .contact-text {
-    position: absolute;
+    /* position: absolute;
 	font-size: 17px;
 	line-height: 20px;
-	font-weight: 700;
-	color: var(--dark-blue);
-	letter-spacing: 2px;
+	font-weight: 700; */
+	color: var(--white-sand);
+	/* letter-spacing: 2px;
 	top: 50%;
 	right: 40px;
 	cursor: pointer;
@@ -330,7 +330,7 @@ body.about-on .about-section {
 	writing-mode: vertical-lr;
 	transform: translateY(-50%) rotate(180deg);
 	-webkit-transition: all 200ms linear;
-	transition: all 200ms linear;
+	transition: all 200ms linear; */
 }
 .contact-text:before {
 	position: absolute;
@@ -510,6 +510,135 @@ body.nature-on .nature-section {
 	font-weight: 700;
 	color: var(--logo-red);
 } */
+
+/* EXPAND MENU START https://codepen.io/LetItRock/pen/GWPygE */
+
+.expand {
+  border-radius: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  will-change: transform;
+}
+
+
+.expand__inner {
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--dark-blue);
+  position: absolute;
+  will-change: transform;
+}
+
+.expand__inner-inverter {
+  will-change: transform;
+}
+
+.expand__btn {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  outline: none;
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform;
+  transition:
+      transform 0.1s cubic-bezier(0, 0, 0.31, 1),
+      opacity 0.2s cubic-bezier(0, 0, 0.31, 1);
+}
+
+.expand__content {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transform: translateY(20px);
+  transition:
+      transform 0.3s cubic-bezier(0, 0, 0.31, 1),
+      opacity 0.3s cubic-bezier(0, 0, 0.31, 1);
+
+}
+
+.expand__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.expand__content-list {
+  width: 140px;
+  margin: 0;
+  padding: 30px 0 20px 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+li {
+  line-height: 1.9;
+  padding: 0 20px;
+}
+
+li:hover {
+  /* background: #555; */
+  color: var(--logo-red);
+}
+.x-btn {
+  color: var(--white-sand);
+}
+
+.item--expanded {
+  animation-name: expandAnimation;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.item__contents--expanded {
+  animation-name: expandContentsAnimation;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.item--collapsed {
+  animation-name: collapseAnimation;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.item__contents--collapsed {
+  animation-name: collapseContentsAnimation;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.item__contents--expanded .expand__content {
+  transform: translateY(0px);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.item__contents--expanded .expand__btn {
+  transform: rotate(180deg);
+  opacity: 0;
+  pointer-events: none;
+}
+/* EXPAND MENU END */
 
 /* VIDEO START */
  .custom-hr-video-platform {
@@ -1075,6 +1204,7 @@ body::-webkit-scrollbar-thumb {
 .fixedSidebar.fixedSidebarRight [data-tooltip]:hover::before {
   right: 50px;
 }
+/* left */
 .fixedSidebar.fixedSidebarLeft {
   top: 50%;
   left: 0;
@@ -1086,5 +1216,45 @@ body::-webkit-scrollbar-thumb {
   padding: 20px 15px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+.fixedSidebar.fixedSidebarLeft:before, .fixedSidebar.fixedSidebarLeft:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  height: 30px;
+  width: 60px;
+  left: 0px;
+}
+.fixedSidebar.fixedSidebarLeft:before {
+  top: 0;
+  border-radius: 0 0 50px 0;
+  box-shadow: 30px 1px 0 0 var(--dark-blue);
+  transform: rotate(90deg) translateY(50%) translateX(-75%);
+}
+.fixedSidebar.fixedSidebarLeft:after {
+  bottom: 0;
+  border-radius: 0 50px 0px 0;
+  box-shadow: 30px -1px 0 0 var(--dark-blue);
+  transform: rotate(-0.25turn) translateX(-75%) translateY(-50%);
+}
+.fixedSidebar.fixedSidebarLeft .buttonTrigger svg {
+  transform: rotate(0deg);
+  transition: 0.25s;
+}
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active {
+  transform: scale(1) !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active svg {
+  transform: rotate(180deg);
+}
+.fixedSidebar.fixedSidebarLeft [data-tooltip]::before {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+.fixedSidebar.fixedSidebarLeft [data-tooltip]:hover::before {
+  left: 50px;
 }
 /* Side Bars End */
