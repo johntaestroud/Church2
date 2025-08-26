@@ -1025,64 +1025,66 @@ body::-webkit-scrollbar-thumb {
 .fixedSidebar .sidebarItem svg {
   fill: var(--white-sand);
 }
-.fixedSidebar.fixedSidebarBottom {
-  right: 50%;
-  top: auto;
-  bottom: 0;
+.fixedSidebar.fixedSidebarRight {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px 15px;
   border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  transform: translateX(50%) translateY(0);
+  border-bottom-left-radius: 30px;
 }
-.fixedSidebar.fixedSidebarBottom:before, .fixedSidebar.fixedSidebarBottom:after {
+.fixedSidebar.fixedSidebarRight:before, .fixedSidebar.fixedSidebarRight:after {
   content: "";
   pointer-events: none;
   position: absolute;
   height: 30px;
   width: 60px;
+  right: 0px;
 }
-.fixedSidebar.fixedSidebarBottom:before {
-  bottom: 0;
-  left: 0;
+.fixedSidebar.fixedSidebarRight:before {
+  top: -30px;
   border-radius: 0 0 50px 0;
   box-shadow: 30px 1px 0 0 var(--dark-blue);
-  transform: rotate(0deg) translateY(0) translateX(-100%);
 }
-.fixedSidebar.fixedSidebarBottom:after {
-  bottom: 0;
-  right: 0;
+.fixedSidebar.fixedSidebarRight:after {
+  bottom: -30px;
   border-radius: 0 50px 0px 0;
   box-shadow: 30px -1px 0 0 var(--dark-blue);
-  transform: rotate(180deg) translateX(-100%) translateY(0%);
 }
-.fixedSidebar.fixedSidebarBottom .sidebarItem {
-  margin: 0 15px;
-}
-.fixedSidebar.fixedSidebarBottom.active .sidebarItem {
-  margin: 0;
-}
-.fixedSidebar.fixedSidebarBottom .buttonTrigger svg {
-  transform: rotate(45deg);
+.fixedSidebar.fixedSidebarRight .buttonTrigger svg {
+  transform: rotate(180deg);
   transition: 0.25s;
 }
-.fixedSidebar.fixedSidebarBottom .buttonTrigger.active {
+.fixedSidebar.fixedSidebarRight .buttonTrigger.active {
   transform: scale(1) !important;
   width: 24px !important;
   height: 24px !important;
 }
-.fixedSidebar.fixedSidebarBottom .buttonTrigger.active svg {
-  transform: rotate(0deg);
+.fixedSidebar.fixedSidebarRight .buttonTrigger.active svg {
+  transform: rotate(0);
 }
-.fixedSidebar.fixedSidebarBottom [data-tooltip]::before {
-  top: -30px;
-  right: 50%;
-  transform: translateX(50%) translateY(0);
+.fixedSidebar.fixedSidebarRight [data-tooltip]::before {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
 }
-.fixedSidebar.fixedSidebarBottom [data-tooltip]:hover::before {
-  top: -60px;
+.fixedSidebar.fixedSidebarRight [data-tooltip]:hover::before {
+  right: 50px;
+}
+.fixedSidebar.fixedSidebarLeft {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 /* Side Bars End */
