@@ -231,7 +231,7 @@ body.nature-on .hero-section {
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear; */
 }
-.about-text:before {
+/* .about-text:before {
 	position: absolute;
 	content: '';
 	top: 50%;
@@ -247,7 +247,7 @@ body.nature-on .hero-section {
 	opacity: 0.2;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
-}
+} */
 .about-text:hover:before {
 	opacity: 1;
 	left: -30px;
@@ -332,7 +332,7 @@ body.about-on .about-section {
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear; */
 }
-.contact-text:before {
+/* .contact-text:before {
 	position: absolute;
 	content: '';
 	top: 50%;
@@ -348,7 +348,7 @@ body.about-on .about-section {
 	opacity: 0.2;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
-}
+} */
 .contact-text:hover:before {
 	opacity: 1;
 	left: -30px;
@@ -515,17 +515,17 @@ body.nature-on .nature-section {
 
 .expand {
   border-radius: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   will-change: transform;
 }
 
 
 .expand__inner {
   top: 10px;
-  left: 10px;
+  right: 10px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--dark-blue);
@@ -556,8 +556,8 @@ body.nature-on .nature-section {
 
 .expand__content {
   position: absolute;
-  left: -10px;
-  top: -10px;
+  right: -50px;
+  top: 0;
   pointer-events: none;
   opacity: 0;
   will-change: transform;
@@ -570,8 +570,8 @@ body.nature-on .nature-section {
 
 .expand__close {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 25px;
+  top: -25px;
   outline: none;
   border: none;
   background: none;
@@ -581,7 +581,7 @@ body.nature-on .nature-section {
 .expand__content-list {
   width: 140px;
   margin: 0;
-  padding: 30px 0 20px 0;
+  padding: 20px 0 20px 0;
   list-style: none;
   overflow: hidden;
 }
@@ -1154,44 +1154,57 @@ body::-webkit-scrollbar-thumb {
 .fixedSidebar .sidebarItem svg {
   fill: var(--white-sand);
 }
-.fixedSidebar.fixedSidebarRight {
+.fixedSidebar.fixedSidebarLeft {
   top: 50%;
-  right: 0;
+  left: 0;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 15px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
-.fixedSidebar.fixedSidebarRight:before, .fixedSidebar.fixedSidebarRight:after {
+.fixedSidebar.fixedSidebarLeft:before, .fixedSidebar.fixedSidebarLeft:after {
   content: "";
   pointer-events: none;
   position: absolute;
   height: 30px;
   width: 60px;
-  right: 0px;
+  left: 0px;
 }
-.fixedSidebar.fixedSidebarRight:before {
-  top: -30px;
+.fixedSidebar.fixedSidebarLeft:before {
+  top: 0;
   border-radius: 0 0 50px 0;
   box-shadow: 30px 1px 0 0 var(--dark-blue);
+  transform: rotate(90deg) translateY(50%) translateX(-75%);
 }
-.fixedSidebar.fixedSidebarRight:after {
-  bottom: -30px;
+.fixedSidebar.fixedSidebarLeft:after {
+  bottom: 0;
   border-radius: 0 50px 0px 0;
   box-shadow: 30px -1px 0 0 var(--dark-blue);
+  transform: rotate(-0.25turn) translateX(-75%) translateY(-50%);
 }
-.fixedSidebar.fixedSidebarRight .buttonTrigger svg {
-  transform: rotate(180deg);
+.fixedSidebar.fixedSidebarLeft .buttonTrigger svg {
+  transform: rotate(0deg);
   transition: 0.25s;
 }
-.fixedSidebar.fixedSidebarRight .buttonTrigger.active {
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active {
   transform: scale(1) !important;
   width: 24px !important;
   height: 24px !important;
+}
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active svg {
+  transform: rotate(180deg);
+}
+.fixedSidebar.fixedSidebarLeft [data-tooltip]::before {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+.fixedSidebar.fixedSidebarLeft [data-tooltip]:hover::before {
+  left: 50px;
 }
 .fixedSidebar.fixedSidebarRight .buttonTrigger.active svg {
   transform: rotate(0);
