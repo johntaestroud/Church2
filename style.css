@@ -21,6 +21,7 @@ body{
 	transition: all 300ms linear;
 	perspective: 800px;
 }
+
 .text {
    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
     serif;
