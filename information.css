@@ -747,7 +747,7 @@ button:active, button:focus {
   }
 
   .fa, .fas{
-    font-size: 60px !important;
+    font-size: 40px !important;
   }
   
   #nav-close-btn.nav-close {
@@ -784,7 +784,7 @@ button:active, button:focus {
   }
   
   #settings .btn {
-    padding: 30px;
+    padding: 10px;
     margin: 0 30px;
   }
   
