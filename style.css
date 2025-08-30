@@ -14,7 +14,7 @@ body{
 	font-size: 15px;
 	line-height: 1.6;
 	color: #fff;
-	background-color: var(--black);
+	/* background-color: var(--black); */
 	overflow: hidden;
 	height: 100vh;
 	-webkit-transition: all 300ms linear;
@@ -135,13 +135,13 @@ a:hover {
 	transform-origin: center top;
 }
 .hero-section h1{
-    color: var(--dark-blue);
+  color: var(--dark-blue);
 	font-size: 5vw;
 	line-height: 1;
 	font-weight: 900;
 }
 .hero-section .location {
-    font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive;
 	letter-spacing: 1px;
 	color: var(--dark-blue);
 	font-size: 26px;

@@ -32,7 +32,11 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --dot-bg: hsl(213, 92%, 15%);
+    --dot-color: hsl(40, 7%, 92%);
+    --dot-size: 1px;
+    --dot-space: 22px;
 }
 
 *,
@@ -73,11 +77,16 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    /* color: #212529; */
     text-align: left;
-    background-color: hsl(213, 92%, 15%);
+    /* background-color: hsl(213, 92%, 15%); */
+    /* dotted background start */
+    background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+        /* dotted background end */
 }
-
 [tabindex="-1"]:focus {
     outline: 0 !important
 }
