@@ -25,7 +25,7 @@
 .base-template__content,
 .base-template__wrapper {
 	padding: 0;
-	max-width: 1420px;
+	/* max-width: 1420px; */
 	width: 100%;
 }
 
@@ -214,6 +214,49 @@
   }
 }
 /* scroll end */
+
+/* home button */
+
+
+.btn--circle {
+  position: absolute;
+  font-family: sans-serif;
+  text-decoration: none;
+  border-radius: 1000px;
+  border: 1px solid var(--white-sand);
+  height: 60px;
+  width: 60px;
+  transition: all cubic-bezier(0.31, -0.105, 0.43, 1.4) 0.2s;
+  background-color: #2a3646;
+  margin-left: 1380px;
+  top: 35px;
+}
+.btn--circle:hover {
+  width: 100px;
+}
+.btn--circle:hover .btn-stage:first-child {
+  opacity: 0;
+}
+.btn--circle:hover .btn-stage:nth-child(n+2) {
+  opacity: 1;
+  transition: opacity linear calc(0.2s + 0.05s);
+}
+
+.btn-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  transition: opacity linear calc(0.2s - 0.05s);
+}
+.btn-stage:nth-child(n+2) {
+  opacity: 0;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+/* home button end */
 </style>
 
 
@@ -221,23 +264,27 @@
 </head>
 
 <body translate="no">
-
+<a href="#" class="btn--circle">
+<span class="btn-stage">+</span>
+<span class="btn-stage">Home</span></a>  
 <section class="base-template">
+	
 	<div class="wrapper base-template__wrapper">
 
 
 		<div class="base-template__content">
 
 			<!-- Video Slider -->
-
+			
 			<div class="video-slider swiper">
+				
 				<div class="video-slider__wrapper swiper-wrapper">
 
 					<!-- Slide 1 -->
 
 					<div class="video-slider__slide swiper-slide">
 						<div class="video-slider__video-box">
-							<video class="video-slider__video" autoplay muted playsinline loop>
+							<video class="video-slider__video" muted playsinline loop>
 								  <source src="https://ia800509.us.archive.org/28/items/troy-jones-website-snippet/troy-jones-website-snippet.mp4" type="video/mp4" />
 							</video>
 						</div>
@@ -248,8 +295,10 @@
 							</h2>
 							
 							<time class="video-slider__info-text">	
-								<span class="text">Scroll</span>       
+								<span class="text">Try Scrolling</span>    
+								 
 							</time> 
+							
 						</div>
 					</div>
 					<!-- Slide 2 -->
