@@ -217,6 +217,7 @@ body.nature-on .hero-section {
 }
 .about-text {
 	color: var(--white-sand);
+  cursor: pointer;
 }
 /* .about-text:before {
 } */
@@ -327,10 +328,10 @@ body.about-on .about-section {
 	line-height: 20px;
 	font-weight: 700; */
 	color: var(--white-sand);
+  cursor: pointer;
 	/* letter-spacing: 2px;
 	top: 50%;
 	right: 40px;
-	cursor: pointer;
 	z-index: 2;
 	-webkit-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
@@ -461,7 +462,7 @@ body.contact-on .contact-section {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 36px 36px;
-	background-image: url('https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/close.svg');
+	background-image: url('https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/close-white.svg');
 	cursor: pointer;
 	z-index: 11;
 }
