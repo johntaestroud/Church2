@@ -648,8 +648,8 @@ body.nature-on .nature-section {
 
 .expand__close {
   position: absolute;
-  right: 25px;
-  top: -25px;
+  right: 35px;
+  top: -15px;
   outline: none;
   border: none;
   background: none;
@@ -666,15 +666,17 @@ body.nature-on .nature-section {
 
 li {
   line-height: 1.9;
-  padding: 0 20px;
+  padding: 2px 1px;
 }
 
 li:hover {
   /* background: #555; */
   color: var(--logo-red);
 }
+
 .x-btn {
   color: var(--white-sand);
+  font-size: larger;
 }
 
 .item--expanded {
