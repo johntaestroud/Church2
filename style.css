@@ -632,6 +632,7 @@ body.nature-on .nature-section {
 }
 
 .expand__content {
+  outline: none;
   position: absolute;
   right: -50px;
   top: 0;
@@ -1304,6 +1305,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* left */
 .fixedSidebar.fixedSidebarLeft {
+  outline: none;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
