@@ -117,7 +117,7 @@ a:hover {
 ================================================== */
 
 .hero-section {
-    position: relative;
+  position: relative;
 	width: 100%;
 	display: block;
 	overflow: hidden;
@@ -822,8 +822,9 @@ li:hover {
       /* background: var(--white-color); */
       /* border-radius: var(--hr-radius-md);
       box-shadow: var(--hr-shadow-md); */
+      box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem #fff;
       overflow: hidden;
-      height: 20vh;
+      height: 10vh;
       max-height: 100vh;
       display: flex;
      
@@ -957,6 +958,12 @@ li:hover {
       -webkit-box-orient: vertical;
       overflow: hidden;
       line-height: 1.4;
+
+    background: #0a1141cf;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    text-shadow: #fdfdfd59 1px 2px 1px !important;
     }
     .hr-video-meta {
       display: flex;
@@ -1982,3 +1989,4 @@ input:checked + .player__settings-switch {
 	}
 }
 /* Audio Player End */
+
