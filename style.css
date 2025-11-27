@@ -180,7 +180,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 30px 30px;
-	background-image: url('http://www.ivang-design.com/svg-load/portfolio/down.svg');
+	/* background-image: url(''); */
 	opacity: 0.2;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
@@ -1243,6 +1243,7 @@ body::-webkit-scrollbar-thumb {
   fill: var(--white-sand);
 }
 .fixedSidebar.fixedSidebarLeft {
+  outline: none;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -1255,6 +1256,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom-right-radius: 30px;
 }
 .fixedSidebar.fixedSidebarLeft:before, .fixedSidebar.fixedSidebarLeft:after {
+  outline: none;
   content: "";
   pointer-events: none;
   position: absolute;
@@ -1263,12 +1265,14 @@ body::-webkit-scrollbar-thumb {
   left: 0px;
 }
 .fixedSidebar.fixedSidebarLeft:before {
+  outline: none;
   top: 0;
   border-radius: 0 0 50px 0;
   box-shadow: 30px 1px 0 0 var(--dark-blue);
   transform: rotate(90deg) translateY(50%) translateX(-75%);
 }
 .fixedSidebar.fixedSidebarLeft:after {
+  outline: none;
   bottom: 0;
   border-radius: 0 50px 0px 0;
   box-shadow: 30px -1px 0 0 var(--dark-blue);
