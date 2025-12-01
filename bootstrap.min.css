@@ -10022,3 +10022,16 @@ a.text-dark:hover {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+html {
+transform: rotate(-90deg);
+transform-origin: left top;
+width: 100vh;
+height: 300vh;
+overflow-x: hidden;
+position: absolute;
+top: 100%;
+left: 0;
+}
+}
