@@ -2,7 +2,6 @@
     "use strict";
 
     //Page cursors
-
     document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
         t.style.left = n.clientX + "px",
             t.style.top = n.clientY + "px",
@@ -40,7 +39,7 @@
     });
 
 
-    //Contact page
+    //TBD
 
     $(".contact-text").on('click', function () {
         $("body").addClass("contact-on");
@@ -220,19 +219,18 @@ class expand {
 
         } window.CP.exitedLoop(0);
 
-        ease.textContent = `
-@keyframes expandAnimation {
-${expandAnimation.join('')}
-}
-@keyframes expandContentsAnimation {
-${expandContentsAnimation.join('')}
-}
-@keyframes collapseAnimation {
-${collapseAnimation.join('')}
-}
-@keyframes collapseContentsAnimation {
-${collapseContentsAnimation.join('')}
-}`;
+        ease.textContent = `@keyframes expandAnimation {
+                ${expandAnimation.join('')}
+        }
+        @keyframes expandContentsAnimation {
+               ${expandContentsAnimation.join('')}
+        }
+        @keyframes collapseAnimation {
+               ${collapseAnimation.join('')}
+        }
+        @keyframes collapseContentsAnimation {
+               ${collapseContentsAnimation.join('')}
+        }`;
 
         document.head.appendChild(ease);
         return ease;
@@ -292,46 +290,551 @@ function OpenMenu(active) {
 // SIDE BAR END - INCLUDING DONATE, INSTAGRAM, AND YOUTUBE
 
 // MAIN VIDEO CONTENT START
- document.addEventListener('DOMContentLoaded', () => {
-            const platformTabs = document.querySelectorAll('.hr-tab');
-            platformTabs.forEach(tab => {
-              tab.addEventListener('click', () => {
-                platformTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                document.querySelectorAll('.hr-tab-content').forEach(c => c.classList.remove('active'));
-                document.querySelector(`.hr-tab-content[data-tab-content="${tab.getAttribute('data-tab')}"]`).classList.add('active');
-              });
-            });
+document.addEventListener('DOMContentLoaded', () => {
+    const platformTabs = document.querySelectorAll('.hr-tab');
+    platformTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            platformTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            document.querySelectorAll('.hr-tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.hr-tab-content[data-tab-content="${tab.getAttribute('data-tab')}"]`).classList.add('active');
+        });
+    });
 
-            document.addEventListener('click', e => {
-              const item = e.target.closest('.hr-video-item');
-              if (item) {
-                const platform = item.closest('.hr-video-platform');
-                platform.querySelectorAll('.hr-video-item').forEach(i => i.classList.remove('active'));
-                item.classList.add('active');
-                const id = item.dataset.videoId;
+    document.addEventListener('click', e => {
+        const item = e.target.closest('.hr-video-item');
+        if (item) {
+            const platform = item.closest('.hr-video-platform');
+            platform.querySelectorAll('.hr-video-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            const id = item.dataset.videoId;
 
-                platform.querySelector('iframe').src = `https://www.youtube.com/embed/${id}&rel=0`;
-                platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
-                platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"] .hr-video-description').textContent = item.dataset.description;
-                platform.querySelector('.hr-inner-tab-content[data-tab-content="speakers"] .hr-video-speakers').innerHTML = item.dataset.speakers;
-                platform.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
-                const talkTab = platform.querySelector('.hr-content-tab[data-tab="talk"]');
-                talkTab.classList.add('active');
-                platform.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
-                platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"]').classList.add('active');
-                if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+            platform.querySelector('iframe').src = `https://www.youtube.com/embed/${id}&rel=0`;
+            platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
+            platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"] .hr-video-description').textContent = item.dataset.description;
+            platform.querySelector('.hr-inner-tab-content[data-tab-content="speakers"] .hr-video-speakers').innerHTML = item.dataset.speakers;
+            platform.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
+            const talkTab = platform.querySelector('.hr-content-tab[data-tab="talk"]');
+            talkTab.classList.add('active');
+            platform.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
+            platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"]').classList.add('active');
+            if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
-              const innerTab = e.target.closest('.hr-content-tab');
-              if (innerTab) {
-                const info = innerTab.closest('.hr-video-info');
-                info.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
-                innerTab.classList.add('active');
-                info.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
-                info.querySelector(`.hr-inner-tab-content[data-tab-content="${innerTab.getAttribute('data-tab')}"]`).classList.add('active');
-              }
-            });
-          });
+        const innerTab = e.target.closest('.hr-content-tab');
+        if (innerTab) {
+            const info = innerTab.closest('.hr-video-info');
+            info.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
+            innerTab.classList.add('active');
+            info.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
+            info.querySelector(`.hr-inner-tab-content[data-tab-content="${innerTab.getAttribute('data-tab')}"]`).classList.add('active');
+        }
+    });
+});
 
 // MAIN VIDEO CONTENT END
+
+// AUDIO PLAYLIST SECTION START
+const defaults = {
+    random: false,
+    volume: 0.5,
+    music: [
+        {
+            title: "Choir - Falling In Love With Jesus",
+            url:
+                "https://ia802307.us.archive.org/4/items/falling-in-love-with-jesus_202512/Falling%20In%20Love%20With%20Jesus.mp3"
+        },
+
+        {
+            title: "Choir - Give Myself Away",
+            url:
+                "https://ia902308.us.archive.org/9/items/give-myself-away_202512/Give%20Myself%20Away.mp3"
+        },
+
+        {
+            title: "Brother Milton - Jesus I'll Never Forget",
+            url: "https://ia801805.us.archive.org/27/items/jesus-ill-never-forget/Jesus%20Ill%20Never%20Forget.mp3"
+        },
+
+        {
+            title: "Sister Michelle - One Day At A Time",
+            url: "https://ia601702.us.archive.org/14/items/one-day-at-a-time_202512/One%20Day%20At%20A%20Time.mp3"
+        },
+
+        {
+            title: "Sister Ingrid - Come A Long Way",
+            url: "https://ia601706.us.archive.org/11/items/come-a-long-way_202512/Come%20A%20Long%20Way.mp3"
+        },
+
+        {
+            title: "Sister & Brother Milton - All the Way My Savior Leads Me",
+            url:
+                "https://ia802307.us.archive.org/0/items/all-the-way-my-savior-leads-me/All%20the%20Way%20My%20Savior%20Leads%20Me.mp3"
+        },
+
+        {
+            title: "Sister Michelle - He Will Roll You Over The Tide",
+            url: "https://ia601703.us.archive.org/26/items/he-will-roll-you-over-the-tide/He%20Will%20Roll%20You%20Over%20The%20Tide.mp3"
+        }
+
+        // {
+        //   title: "Song 1 - Testing",
+        //   url: ""
+        // },
+
+        // {
+        //   title: "Song 1 - Testing",
+        //   url:
+        //     ""
+        // },
+
+        // {
+        //   title: "Song 1 - Testing",
+        //   url:
+        //     ""
+        // },
+
+        // {
+        //   title: "Song 1 - Testing",
+        //   url: ""
+        // },
+
+        // {
+        //   title: "Song 1 - Testing",
+        //   url: ""
+        // }
+    ]
+};
+
+
+
+
+class MusicPlayer {
+    constructor(config) {
+        this.music = config.music || [];
+        this.currentIndex = 0;
+        this.barsCount = 44;
+
+        this.playerBlock = document.querySelector(".player");
+        this.musicList = document.querySelector(".playlist__list");
+        this.audio = document.getElementById("audioPlayer");
+        this.playlistBth = document.getElementById("musicPlaylist");
+        this.settingsBth = document.getElementById("settingsPlayer");
+        this.autoplayBtn = document.getElementById("autoplay");
+        this.playBtn = document.getElementById("playBtn");
+        this.replayBtn = document.getElementById("replayBtn");
+        this.barsContainer = document.getElementById("bars");
+        this.title = document.getElementById("musicTitle");
+        this.artist = document.getElementById("musicArtist");
+        this.durationDisplay = document.getElementById("musicDuration");
+        this.playIcon = this.playBtn.querySelector(".player__play-icon");
+        this.pauseIcon = this.playBtn.querySelector(".player__pause-icon");
+        this.nextBtn = document.querySelector(".player__next-btn");
+        this.prevBtn = document.querySelector(".player__prev-btn");
+        this.closePlaylist = document.querySelector(".playlist__control");
+        this.volumeInput = document.getElementById("volumeInput");
+        this.randomBtn = document.getElementById("randomBtn");
+
+        this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        this.analyser = this.audioContext.createAnalyser();
+
+        const source = this.audioContext.createMediaElementSource(this.audio);
+        source.connect(this.analyser);
+
+        this.analyser.connect(this.audioContext.destination);
+        this.analyser.fftSize = 512;
+        this.bufferLength = this.analyser.frequencyBinCount;
+        this.dataArray = new Uint8Array(this.bufferLength);
+
+        this.audio.volume = config.volume ?? 0.5;
+
+        if (this.volumeInput) {
+            this.volumeInput.value = this.audio.volume * 100;
+            this.volumeInput.style.setProperty("--range", this.volumeInput.value + "%");
+        }
+
+        this.random = config.random;
+        this.autoplay = this.autoplayBtn.checked;
+
+        this.createBars();
+        this.setupControllers();
+        this.playlistControl();
+        this.setupPlaylist();
+        this.playTrack(0);
+        this.isMobile();
+    }
+
+    playTrack(index) {
+        if (this.music[index]) {
+            this.currentIndex = index;
+
+            this.playlistItems?.forEach((el, i) => {
+                el.classList.toggle("current", i === index);
+            });
+
+            const [artist, title] = this.music[index].title.split(" - ");
+
+            this.audio.src = this.music[index].url;
+            this.artist.textContent = artist || "Unknown Artist";
+            this.title.textContent = title || "Unknown Name";
+
+            this.updateControlButtons(false);
+            this.createBars();
+        }
+    }
+
+    // Player Actions
+
+    next(isAuto = false) {
+        if (isAuto && !this.autoplay) return;
+
+        if (this.random) {
+            let nextIndex;
+            do {
+                nextIndex = Math.floor(Math.random() * this.music.length);
+            } while (nextIndex === this.currentIndex && this.music.length > 1);
+
+            this.playTrack(nextIndex);
+        } else {
+            if (this.currentIndex < this.music.length - 1) {
+                this.playTrack(this.currentIndex + 1);
+            } else {
+                return;
+            }
+        }
+
+        this.audio.play();
+        this.audioContext.resume();
+        this.updateControlButtons(true);
+    }
+
+    prev() {
+        if (this.currentIndex > 0) {
+            if (this.autoplay) {
+                this.playTrack(this.currentIndex - 1);
+                this.audio.play();
+                this.audioContext.resume();
+                this.updateControlButtons(true);
+            } else {
+                this.playTrack(this.currentIndex - 1);
+                this.updateControlButtons(false);
+            }
+        }
+    }
+
+    updateControlButtons(isPlaying, ended = false) {
+        this.prevBtn.classList.toggle("disabled", this.currentIndex < 1);
+        this.nextBtn.classList.toggle(
+            "disabled",
+            this.currentIndex === this.music.length - 1 && !this.random);
+
+
+        if (!this.autoplay && ended) {
+            this.replayBtn.classList.remove("hidden");
+            this.playBtn.classList.add("hidden");
+
+            return;
+        } else {
+            this.replayBtn.classList.add("hidden");
+            this.playBtn.classList.remove("hidden");
+        }
+
+        if (isPlaying) {
+            this.playIcon.classList.add("hidden");
+            this.pauseIcon.classList.remove("hidden");
+        } else {
+            this.playIcon.classList.remove("hidden");
+            this.pauseIcon.classList.add("hidden");
+        }
+    }
+
+    // Audio Wave
+
+    createBars() {
+        this.barsContainer.innerHTML = "";
+
+        for (let i = 0; i < this.barsCount; i++) {
+            const bar = document.createElement("div");
+
+            bar.classList.add("player__bar");
+            this.barsContainer.appendChild(bar);
+        }
+    }
+
+
+
+    updateBars() {
+        this.analyser.getByteFrequencyData(this.dataArray);
+
+        const bars = [...document.querySelectorAll(".player__bar")];
+        const step = Math.floor(this.bufferLength / this.barsCount);
+
+        bars.forEach((bar, index) => {
+            let sum = 0;
+            for (let i = 0; i < step; i++) {
+                sum += this.dataArray[index * step + i];
+            }
+
+            const average = sum / step;
+            const fillHeight = average / 2;
+
+            bar.style.height = `${fillHeight}%`;
+
+            const barDuration = this.audio.duration / this.barsCount;
+            const currentIndex = Math.floor(this.audio.currentTime / barDuration);
+
+            if (index <= currentIndex) {
+                bar.classList.add("color");
+            } else {
+                bar.classList.remove("color");
+            }
+        });
+    }
+
+    // Playlist
+
+    setupPlaylist() {
+        this.playlistItems = [];
+
+        for (let i = 0; i < this.music.length; i++) {
+            const [artist, title] = this.music[i].title.split(" - ");
+            const newMusicItem = document.createElement("div");
+
+            newMusicItem.tabIndex = 0;
+            newMusicItem.classList.add("playlist__item");
+
+            if (i === 0) newMusicItem.classList.add("current");
+            newMusicItem.setAttribute("data-song-id", i);
+
+            newMusicItem.innerHTML = `
+                <span class="playlist__song">${artist} - <span class="playlist__song-name">${title}</span></span>
+                <p class="playlist__duration">00:00</p>
+            `;
+
+            this.musicList.appendChild(newMusicItem);
+            this.playlistItems.push(newMusicItem);
+
+            const durationElement = newMusicItem.querySelector(".playlist__duration");
+            const audio = document.createElement("audio");
+
+            audio.src = this.music[i].url;
+
+            audio.addEventListener("loadedmetadata", () => {
+                const duration = audio.duration;
+                const mins = Math.floor(duration / 60).
+                    toString().
+                    padStart(2, "0");
+                const secs = Math.floor(duration % 60).
+                    toString().
+                    padStart(2, "0");
+
+                durationElement.textContent = `${mins}:${secs}`;
+            });
+
+            newMusicItem.addEventListener("click", () => {
+                this.playlistItems.forEach(el => el.classList.remove("current"));
+                newMusicItem.classList.add("current");
+                this.playTrack(i);
+
+                if (this.autoplay) {
+                    this.audio.play();
+                    this.audioContext.resume();
+                    this.updateControlButtons(true);
+                } else {
+                    this.updateControlButtons(false);
+                }
+            });
+        }
+    }
+
+    playlistControl() {
+        this.playlistBth.addEventListener("click", () => {
+            this.playerBlock.classList.toggle("open-playlist");
+            this.playlistBth.classList.toggle("active");
+        });
+
+        this.closePlaylist.addEventListener("click", () => {
+            this.playerBlock.classList.remove("open-playlist");
+            this.playlistBth.classList.remove("active");
+        });
+    }
+
+    // Player Controllers
+
+    setupControllers() {
+        // Audio Controllers
+
+        this.audio.addEventListener("ended", () => {
+            this.updateControlButtons(false, true);
+            this.next(true);
+        });
+
+        this.audio.addEventListener("timeupdate", () => {
+            if (this.audio.duration && !isNaN(this.audio.duration)) {
+                const remainingTime = this.audio.duration - this.audio.currentTime;
+                const mins = Math.floor(remainingTime / 60).
+                    toString().
+                    padStart(2, "0");
+                const secs = Math.floor(remainingTime % 60).
+                    toString().
+                    padStart(2, "0");
+
+                this.durationDisplay.textContent = `${mins}:${secs}`;
+            } else {
+                this.durationDisplay.textContent = "00:00";
+            }
+        });
+
+        this.audio.addEventListener("loadedmetadata", () => {
+            if (this.audio.duration && !isNaN(this.audio.duration)) {
+                const mins = Math.floor(this.audio.duration / 60).
+                    toString().
+                    padStart(2, "0");
+                const secs = Math.floor(this.audio.duration % 60).
+                    toString().
+                    padStart(2, "0");
+
+                this.durationDisplay.textContent = `${mins}:${secs}`;
+            } else {
+                this.durationDisplay.textContent = "00:00";
+            }
+        });
+
+        this.audio.addEventListener("play", () => {
+            const update = () => {
+                this.updateBars();
+
+                if (!this.audio.paused) {
+                    requestAnimationFrame(update);
+                }
+            };
+
+            update();
+        });
+
+        // Control Buttons
+
+        this.playBtn.addEventListener("click", () => {
+            if (this.audio.paused) {
+                this.audio.play();
+                this.audioContext.resume();
+                this.updateControlButtons(true);
+            } else {
+                this.audio.pause();
+                this.updateControlButtons(false);
+            }
+        });
+
+        this.nextBtn.addEventListener("click", () => {
+            this.next(false);
+        });
+
+        this.prevBtn.addEventListener("click", () => {
+            this.prev();
+        });
+
+        this.replayBtn.addEventListener("click", () => {
+            this.audio.currentTime = 0;
+            this.audio.play();
+            this.audioContext.resume();
+            this.updateControlButtons(true);
+        });
+
+        this.randomBtn.addEventListener("click", () => {
+            this.randomBtn.classList.toggle("active");
+
+            this.random = !this.random;
+        });
+
+        // Audio Wave Controller
+
+        this.barsContainer.addEventListener("click", event => {
+            const rect = this.barsContainer.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+
+            const barWidth = rect.width / this.barsCount;
+            const index = Math.min(
+                this.barsCount - 1,
+                Math.max(0, Math.floor(clickX / barWidth)));
+
+
+            const timePerBar = this.audio.duration / this.barsCount;
+            const newTime = index * timePerBar;
+
+            this.audio.currentTime = newTime;
+
+            if (this.audio.paused) {
+                const bars = [...document.querySelectorAll(".player__bar")];
+
+                bars.forEach((bar, i) => {
+                    if (i <= index) {
+                        bar.classList.add("color");
+                    } else {
+                        bar.classList.remove("color");
+                    }
+                });
+            } else {
+                this.updateBars();
+            }
+        });
+
+        // Settings Controllers
+
+        this.volumeInput.addEventListener("input", () => {
+            const volumeMute = document.querySelector(".player__volume-mute");
+            const volumeHigh = document.querySelector(".player__volume-high");
+            const volumeDefault = document.querySelector(".player__volume-default");
+
+            this.audio.volume = this.volumeInput.value / 100;
+
+            if (this.volumeInput.value <= 0) {
+                volumeDefault.classList.add("hidden");
+                volumeHigh.classList.add("hidden");
+                volumeMute.classList.remove("hidden");
+            } else if (this.volumeInput.value >= 60) {
+                volumeDefault.classList.add("hidden");
+                volumeMute.classList.add("hidden");
+                volumeHigh.classList.remove("hidden");
+            } else {
+                volumeMute.classList.add("hidden");
+                volumeHigh.classList.add("hidden");
+                volumeDefault.classList.remove("hidden");
+            }
+
+            let range = this.volumeInput.value + "%";
+
+            this.volumeInput.style.setProperty("--range", range);
+        });
+
+        this.settingsBth.addEventListener("click", () => {
+            this.settingsBth.classList.toggle("active");
+        });
+
+        this.autoplayBtn.addEventListener("change", () => {
+            this.autoplay = this.autoplayBtn.checked;
+        });
+    }
+
+    isMobile() {
+        const updateBarsCount = () => {
+            this.barsCount = window.innerWidth < 620 ? 25 : 50;
+
+            this.createBars();
+        };
+
+        updateBarsCount();
+
+        window.addEventListener("resize", () => {
+            updateBarsCount();
+        });
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    new MusicPlayer(defaults);
+});
+
+// AUDIO PLAYLIST END
+
+// STOP EXECUTION ON TIMEOUT
