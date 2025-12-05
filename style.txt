@@ -210,7 +210,7 @@ body.wildlife-on .hero-section {
 	-webkit-transition-delay: 0ms;
 	transition-delay: 0ms;
 }
-body.audio-on .hero-section {
+body.nature-on .hero-section {
 	transform: rotateX(-10deg);
 	-webkit-transition-delay: 0ms;
 	transition-delay: 0ms;
@@ -497,9 +497,9 @@ body.contact-on .contact-section {
 	}
 }
 
-.video-section,
+.travel-section,
 .wildlife-section,
-.audio-section {
+.nature-section {
   position: fixed;
 	top: 100%;
 	left: 0;
@@ -514,9 +514,9 @@ body.contact-on .contact-section {
 	transition: all 300ms linear;
 	z-index: 10;
 }
-.video-close,
+.travel-close,
 .wildlife-close,
-.audio-close {
+.nature-close {
   position: absolute;
 	top: 20px;
 	right: 20px;
@@ -533,12 +533,12 @@ body.contact-on .contact-section {
 	cursor: pointer;
 	z-index: 11;
 }
-.video-close:hover,
+.travel-close:hover,
 .wildlife-close:hover,
-.audio-close:hover {
+.nature-close:hover {
     transform: rotate(90deg);
 }
-body.video-on .video-section {
+body.travel-on .travel-section {
 	top: 0;
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
@@ -548,7 +548,7 @@ body.wildlife-on .wildlife-section {
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 }
-body.audio-on .audio-section {
+body.nature-on .nature-section {
 	top: 0;
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
