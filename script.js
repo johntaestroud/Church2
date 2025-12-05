@@ -407,8 +407,6 @@ const defaults = {
 };
 
 
-
-
 class MusicPlayer {
     constructor(config) {
         this.music = config.music || [];
