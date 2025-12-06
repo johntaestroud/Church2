@@ -126,7 +126,7 @@ a:hover {
 	height: 100vh;
     background-color: var(--white-sand);
 	background-image: url('http://www.ivang-design.com/svg-load/portfolio/photo.jpg');
-  background-image: url('image/round.jpg') ;
+  background-image: url('image/circles.jpg') ;
 	background-size: cover;
 	background-position: center;
 	transform: scale(1) rotateX(0);
