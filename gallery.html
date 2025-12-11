@@ -1,389 +1,143 @@
 <!-- NEEDS TO BE HTML ONLY, CSS AND JS SEP -->
-    
-	
-	<link rel="canonical" href="https://codepen.io/bato-web-agency/pen/OPyyKre">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="canonical" href="https://codepen.io/bato-web-agency/pen/OPyyKre">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Church of God </title>
+<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
 
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
 <link rel='stylesheet' href='template.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Oswald:wght@200..700&amp;display=swap'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
-  
+<link rel='stylesheet'
+	href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Oswald:wght@200..700&amp;display=swap'>
+<link rel='stylesheet'
+	href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+
 <style>
-:root {
-  --video-slider-blue-color: #06ffff;
-  --dark-blue: hsl(213, 92%, 15%);
-  --logo-red: hsla(11, 92%, 43%, 0.884);
-  --white-sand: 		hsl(40, 7%, 92%);
-  --black: 	hsl(234, 14%, 14%);
-  --gold-sp-color: hsl(18, 22%, 61%);
-}
 
-.base-template__content,
-.base-template__wrapper {
-	padding: 0;
-	/* max-width: 1420px; */
-	width: 100%;
-}
-
-.base-template__text {
-	margin: 0 0 20px;
-}
-
-.base-template__text img {
-	width: 25px;
-	height: auto;
-	vertical-align: middle;
-	transform: translateY(-2px);
-}
-
-.base-template__title {
-	font-size: 4rem;
-}
-
-.video-slider__special {
-	color: var(--video-slider-blue-color);
-}
-
-/**
- * Video Slider
- */
-
-.video-slider {
-	margin-top: 60px;
-	height: 570px;
-	max-width: 1380px;
-	touch-action: pan-x;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	overflow: hidden;
-}
-
-.video-slider__wrapper {
-	bottom: -90px;
-}
-
-.video-slider__slide {
-	width: 400px;
-	height: 480px;
-	border-radius: 10px;
-	transform: translateY(0);
-	transition: filter 0.3s ease, transform 0.4s ease;
-}
-
-.video-slider__video-box {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	filter: brightness(0.2);
-	transition: transform 0.5s ease, filter 0.5s ease;
-	will-change: transform;
-	overflow: hidden;
-}
-
-.video-slider__video-box video {
-	display: block;
-	width: 100%;
-	height: 100%;
-	-o-object-fit: cover;
-	   object-fit: cover;
-	transform: scale(1.2);
-	transition: transform 0.3s ease;
-}
-
-.video-slider__info-box {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	z-index: 100;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	row-gap: 8px;
-	width: 100%;
-	opacity: 0;
-	text-align: center;
-	font-family: "Oswald", sans-serif;
-	transform: translate(-50%, 0);
-	transition: bottom 0.5s ease, opacity 0.1s ease;
-}
-
-.video-slider__info-title {
-	margin: 0;
-	font-family: "Oswald", sans-serif;
-	font-size: 2rem;
-	font-weight: 400;
-	line-height: 1.3;
-	color: white;
-}
-
-.video-slider__info-text {
-	margin: 0;
-	font-family: "Poppins", sans-serif;
-	font-size: 1rem;
-	line-height: 1.3;
-	color: rgba(255, 255, 255, 0.7);
-}
-
-.video-slider__video-box::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	opacity: 0;
-	z-index: 1;
-	background: linear-gradient(
-		to top,
-		rgba(164, 164, 164, 0.28),
-		rgba(161, 25, 152, 0)
-	);
-	transition: opacity 0.5s ease;
-}
-
-.swiper-slide-active .video-slider__video-box {
-	filter: brightness(1);
-}
-
-.swiper-slide-active .video-slider__video-box {
-	transform: translateY(-90px);
-}
-
-.swiper-slide-active .video-slider__video-box::before {
-	opacity: 1;
-}
-
-.swiper-slide-active .video-slider__video-box video {
-	transform: scale(1);
-}
-
-.swiper-slide-active .video-slider__info-box {
-	opacity: 1;
-	transition: bottom 0.5s ease, opacity 0.5s ease 0.25s;
-}
-
-@media screen and (max-width: 768px) {
-	.base-template__text img {
-		width: 20px;
-	}
-
-	.video-slider__slide {
-		width: 300px;
-		height: 400px;
-	}
-
-	.video-slider__info-title {
-		font-size: 1.5rem;
-	}
-
-	.base-template__title {
-		font-size: 2rem;
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.video-slider__slide {
-		width: 250px;
-		height: 350px;
-	}
-}
-
-/* scroll  */
-
-
-.text {
-  /* display: block;
-  margin-top: 75px;
-  margin-left: -30px; */
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
-}
-
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
-}
-/* scroll end */
-
-/* home button */
-@media (max-width: 1080px) {
-    .social-container-styled {
-        left: 20px;
-        right: auto;
-    }
-}
-
-.social-container-styled {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    left: 40px;
-    right: auto;
-    z-index: 10;
-    color: #8892b0;
-    /* top: 30px;
-    right: 40px;
-    left: auto; */
-}
-
-.social-element-styled {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-.social-element-styled li a {
-    padding: 10px;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: var(--transition);
-}
-
-.social-element-styled li a svg {
-    width: 20px;
-    height: 20px;
-}
-
-svg.feather {
-    fill: none;
-}
-
-svg {
-    width: 100%;
-    height: 100%;
-    fill: currentcolor;
-    vertical-align: middle;
-}
-
-.social-element-styled::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: #8892b0;
-}
-
-.social-element-styled li:last-of-type {
-    margin-bottom: 20px;
-}
-
-/* home button end */
 </style>
 
 
-  
+
 </head>
 
 <body translate="no">
- 
-<section class="base-template">
-	
-    <div class="social-container-styled" orientation="left">
-   <ul class="social-element-styled">
-      <li>     
-         <a href="index.html">
-            <svg fill="#ff0000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 495.398 495.398" xml:space="preserve" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391 v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158 c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747 c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"></path> <path d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401 c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79 c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"></path> </g> </g> </g> </g></svg>
-         </a>
-      </li>
-      
-   </ul>
-</div>
+
+	<section class="base-template">
+
+		<div class="social-container-styled" orientation="left">
+			<ul class="social-element-styled">
+				<li>
+					<a href="index.html">
+						<svg fill="#ff0000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 495.398 495.398"
+							xml:space="preserve" stroke="#ff0000">
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+							<g id="SVGRepo_iconCarrier">
+								<g>
+									<g>
+										<g>
+											<path
+												d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391 v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158 c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747 c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z">
+											</path>
+											<path
+												d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401 c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79 c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z">
+											</path>
+										</g>
+									</g>
+								</g>
+							</g>
+						</svg>
+					</a>
+				</li>
+
+			</ul>
+		</div>
 
 
-	<div class="wrapper base-template__wrapper">
-		<div class="base-template__content">
+		<div class="wrapper base-template__wrapper">
+			<div class="base-template__content">
 
-			<!-- Video Slider -->
-			
-			<div class="video-slider swiper">
-				
-				<div class="video-slider__wrapper swiper-wrapper">
+				<!-- Video Slider -->
 
-					<!-- Slide 1 -->
+				<div class="video-slider swiper">
 
-					<div class="video-slider__slide swiper-slide">
-						<div class="video-slider__video-box">
-							<video class="video-slider__video" autoplay muted playsinline loop>
-								  <source src="https://ia800509.us.archive.org/28/items/troy-jones-website-snippet/troy-jones-website-snippet.mp4" type="video/mp4" />
-							</video>
+					<div class="video-slider__wrapper swiper-wrapper">
+
+						<!-- Slide 1 -->
+
+						<div class="video-slider__slide swiper-slide">
+							<div class="video-slider__video-box">
+								<video class="video-slider__video" autoplay muted playsinline loop>
+									<source
+										src="https://ia800509.us.archive.org/28/items/troy-jones-website-snippet/troy-jones-website-snippet.mp4"
+										type="video/mp4" />
+								</video>
+							</div>
+
+							<div class="video-slider__info-box">
+								<h2 class="video-slider__info-title">
+									Pastor Troy Jones
+								</h2>
+
+								<time class="video-slider__info-text">
+									<span class="text">Try Scrolling</span>
+
+								</time>
+
+							</div>
 						</div>
+						<!-- Slide 2 -->
 
-						<div class="video-slider__info-box">
-							<h2 class="video-slider__info-title">
-								Pastor Troy Jones
-							</h2>
-							
-							<time class="video-slider__info-text">	
-								<span class="text">Try Scrolling</span>    
-								 
-							</time> 
-							
-						</div>
-					</div>
-					<!-- Slide 2 -->
+						<div class="video-slider__slide swiper-slide">
+							<div class="video-slider__video-box">
+								<video class="video-slider__video" autoplay muted playsinline loop>
+									<source
+										src="http://ia601209.us.archive.org/18/items/darren-milton-website-snippet/darren-milton-website-snippet.mp4"
+										type="video/mp4" />
+								</video>
+							</div>
 
-					<div class="video-slider__slide swiper-slide">
-						<div class="video-slider__video-box">
-							<video class="video-slider__video" autoplay muted playsinline loop>
-								  <source src="http://ia601209.us.archive.org/18/items/darren-milton-website-snippet/darren-milton-website-snippet.mp4" type="video/mp4" />
-							</video>
-						</div>
+							<div class="video-slider__info-box">
+								<h2 class="video-slider__info-title">
+									Minister Darren Milton
+								</h2>
 
-						<div class="video-slider__info-box">
-							<h2 class="video-slider__info-title">
-								Minister Darren Milton
-							</h2>
-
-							<!-- <time datetime="2025-09-14" class="video-slider__info-text">
+								<!-- <time datetime="2025-09-14" class="video-slider__info-text">
 								
 							</time> -->
-						</div>
-					</div>
-
-					<!-- Slide 3 -->
-
-					<div class="video-slider__slide swiper-slide">
-						<div class="video-slider__video-box">
-							<video class="video-slider__video" autoplay muted playsinline loop>
-								  <source src="https://ia601009.us.archive.org/4/items/brother-farless-website-snippet/brother-farless-website-snippet.mp4" type="video/mp4" />
-							</video>
+							</div>
 						</div>
 
-						<div class="video-slider__info-box">
-							<h2 class="video-slider__info-title">
-								Brother Farless
-							</h2>
+						<!-- Slide 3 -->
 
-							<!-- <time datetime="2025-10-12" class="video-slider__info-text">
+						<div class="video-slider__slide swiper-slide">
+							<div class="video-slider__video-box">
+								<video class="video-slider__video" autoplay muted playsinline loop>
+									<source
+										src="https://ia601009.us.archive.org/4/items/brother-farless-website-snippet/brother-farless-website-snippet.mp4"
+										type="video/mp4" />
+								</video>
+							</div>
+
+							<div class="video-slider__info-box">
+								<h2 class="video-slider__info-title">
+									Brother Farless
+								</h2>
+
+								<!-- <time datetime="2025-10-12" class="video-slider__info-text">
 								
 							</time> -->
+							</div>
 						</div>
-					</div>
 
-					<!-- Slide 4 -->
+						<!-- Slide 4 -->
 
-					<!-- <div class="video-slider__slide swiper-slide">
+						<!-- <div class="video-slider__slide swiper-slide">
 						<div class="video-slider__video-box">
 							<video class="video-slider__video" autoplay muted playsinline loop>
 								  <source src="" type="video/mp4" />
@@ -401,118 +155,120 @@ svg {
 						</div>
 					</div> -->
 
-				
+
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-  <script src='https://bato-web-agency.github.io/bato-shared/js/preview.js?v=1.1'></script>
-<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
-      <script id="rendered-js" >
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".video-slider");
+	</section>
+	<script src='https://bato-web-agency.github.io/bato-shared/js/preview.js?v=1.1'></script>
+	<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+	<script id="rendered-js">
+		document.addEventListener("DOMContentLoaded", () => {
+			const slider = document.querySelector(".video-slider");
 
-  if (!slider) return;
+			if (!slider) return;
 
-  let isScrolling = false;
+			let isScrolling = false;
 
-  // Slider Functionality
+			// Slider Functionality
 
-  const swiper = new Swiper(slider, {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 40,
-    speed: 1000,
-    allowTouchMove: true,
-    on: {
-      init: function () {
-        updateVideos(this);
-      },
-      slideChange: function () {
-        updateVideos(this);
-      } },
+			const swiper = new Swiper(slider, {
+				slidesPerView: "auto",
+				centeredSlides: true,
+				spaceBetween: 40,
+				speed: 1000,
+				allowTouchMove: true,
+				on: {
+					init: function () {
+						updateVideos(this);
+					},
+					slideChange: function () {
+						updateVideos(this);
+					}
+				},
 
-    breakpoints: { 575: { spaceBetween: 90 } } });
-
-
-  // Video Update
-
-  function updateVideos(swiper) {
-    const slides = swiper.slides;
-
-    if (slides && slides.length) {
-      slides.forEach((slide, index) => {
-        const video = slide.querySelector("video");
-
-        if (!video) return;
-
-        const isReady = video.readyState >= 3;
-
-        if (index === swiper.activeIndex) {
-          const playVideo = () => {
-            if (video.paused) video.play();
-
-            video.onended = () => {
-              video.currentTime = 0;
-              video.play();
-            };
-          };
-
-          if (isReady) {
-            setTimeout(playVideo, 250);
-          } else {
-            video.addEventListener("canplay", function handler() {
-              video.removeEventListener("canplay", handler);
-              setTimeout(playVideo, 250);
-            });
-          }
-        } else {
-          if (!video.paused && isReady) {
-            video.pause();
-          }
-        }
-      });
-    }
-  }
-
-  // Horizontal Scroll Functionality
-
-  slider.addEventListener(
-  "wheel",
-  event => {
-    const isHorizontalScroll = Math.abs(event.deltaX) > Math.abs(event.deltaY);
-
-    if (!isHorizontalScroll) return;
-
-    event.preventDefault();
-
-    if (isScrolling || Math.abs(event.deltaX) < 30) return;
-
-    isScrolling = true;
-
-    if (event.deltaX > 0 && swiper) {
-      if (swiper.activeIndex === swiper.slides.length - 1) {
-        swiper.slideTo(0);
-      } else {
-        swiper.slideNext();
-      }
-    } else {
-      if (swiper.activeIndex === 0) {
-        swiper.slideTo(swiper.slides.length - 1);
-      } else {
-        swiper.slidePrev();
-      }
-    }
-
-    setTimeout(() => isScrolling = false, swiper.params.speed + 100);
-  },
-  { passive: false });
+				breakpoints: { 575: { spaceBetween: 90 } }
+			});
 
 
-  window.addEventListener("resize", () => {
-    if (swiper) swiper.update();
-  });
-});
-//# sourceURL=pen.js
-    </script>
+			// Video Update
+
+			function updateVideos(swiper) {
+				const slides = swiper.slides;
+
+				if (slides && slides.length) {
+					slides.forEach((slide, index) => {
+						const video = slide.querySelector("video");
+
+						if (!video) return;
+
+						const isReady = video.readyState >= 3;
+
+						if (index === swiper.activeIndex) {
+							const playVideo = () => {
+								if (video.paused) video.play();
+
+								video.onended = () => {
+									video.currentTime = 0;
+									video.play();
+								};
+							};
+
+							if (isReady) {
+								setTimeout(playVideo, 250);
+							} else {
+								video.addEventListener("canplay", function handler() {
+									video.removeEventListener("canplay", handler);
+									setTimeout(playVideo, 250);
+								});
+							}
+						} else {
+							if (!video.paused && isReady) {
+								video.pause();
+							}
+						}
+					});
+				}
+			}
+
+			// Horizontal Scroll Functionality
+
+			slider.addEventListener(
+				"wheel",
+				event => {
+					const isHorizontalScroll = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+
+					if (!isHorizontalScroll) return;
+
+					event.preventDefault();
+
+					if (isScrolling || Math.abs(event.deltaX) < 30) return;
+
+					isScrolling = true;
+
+					if (event.deltaX > 0 && swiper) {
+						if (swiper.activeIndex === swiper.slides.length - 1) {
+							swiper.slideTo(0);
+						} else {
+							swiper.slideNext();
+						}
+					} else {
+						if (swiper.activeIndex === 0) {
+							swiper.slideTo(swiper.slides.length - 1);
+						} else {
+							swiper.slidePrev();
+						}
+					}
+
+					setTimeout(() => isScrolling = false, swiper.params.speed + 100);
+				},
+				{ passive: false });
+
+
+			window.addEventListener("resize", () => {
+				if (swiper) swiper.update();
+			});
+		});
+		//# sourceURL=pen.js
+	</script>

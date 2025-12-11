@@ -601,7 +601,7 @@ pre code {
     margin-left: auto
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .container {
         max-width: 540px
     }
@@ -623,7 +623,7 @@ pre code {
     .container {
         max-width: 1140px
     }
-}
+} */
 
 .container-fluid {
     width: 100%;
@@ -942,7 +942,7 @@ pre code {
     margin-left: 91.666667%
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .col-sm {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1364,9 +1364,9 @@ pre code {
     .offset-md-11 {
         margin-left: 91.666667%
     }
-}
+} */
 
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     .col-lg {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1788,7 +1788,7 @@ pre code {
     .offset-xl-11 {
         margin-left: 91.666667%
     }
-}
+} */
 
 .table {
     width: 100%;
@@ -2020,7 +2020,7 @@ pre code {
     background-color: rgba(255, 255, 255, .075)
 }
 
-@media (max-width:575.98px) {
+/* @media (max-width:575.98px) {
     .table-responsive-sm {
         display: block;
         width: 100%;
@@ -2107,7 +2107,7 @@ pre code {
     .form-control {
         transition: none
     }
-}
+} */
 
 .form-control::-ms-expand {
     background-color: transparent;
@@ -2537,7 +2537,7 @@ textarea.form-control {
     width: 100%
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .form-inline label {
         display: -ms-flexbox;
         display: flex;
@@ -2603,7 +2603,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
         margin-bottom: 0
     }
-}
+} */
 
 .btn {
     display: inline-block;
@@ -2623,11 +2623,11 @@ textarea.form-control {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+/* @media screen and (prefers-reduced-motion:reduce) {
     .btn {
         transition: none
     }
-}
+} */
 
 .btn:focus,
 .btn:hover {
@@ -4465,7 +4465,7 @@ input[type=submit].btn-block {
     background: no-repeat center center;
     background-size: 100% 100%
 }
-
+/* 
 @media (max-width:575.98px) {
 
     .navbar-expand-sm>.container,
@@ -4660,7 +4660,7 @@ input[type=submit].btn-block {
     .navbar-expand-xl .navbar-toggler {
         display: none
     }
-}
+} */
 
 .navbar-expand {
     -ms-flex-flow: row nowrap;
@@ -4938,7 +4938,7 @@ input[type=submit].btn-block {
     margin-bottom: 15px
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .card-deck {
         -ms-flex-flow: row wrap;
         flex-flow: row wrap;
@@ -4957,7 +4957,7 @@ input[type=submit].btn-block {
         margin-bottom: 0;
         margin-left: 15px
     }
-}
+} */
 
 .card-group {
     display: -ms-flexbox;
@@ -4969,7 +4969,7 @@ input[type=submit].btn-block {
 .card-group>.card {
     margin-bottom: 15px
 }
-
+/* 
 @media (min-width:576px) {
     .card-group {
         -ms-flex-flow: row wrap;
@@ -5043,12 +5043,12 @@ input[type=submit].btn-block {
     .card-group>.card:not(:first-child):not(:last-child):not(:only-child) .card-img-top {
         border-radius: 0
     }
-}
+} */
 
 .card-columns .card {
     margin-bottom: .75rem
 }
-
+/* 
 @media (min-width:576px) {
     .card-columns {
         -webkit-column-count: 3;
@@ -5065,7 +5065,7 @@ input[type=submit].btn-block {
         display: inline-block;
         width: 100%
     }
-}
+} */
 
 .accordion .card:not(:first-of-type):not(:last-of-type) {
     border-bottom: 0;
@@ -5347,11 +5347,11 @@ input[type=submit].btn-block {
     border-radius: .3rem
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .jumbotron {
         padding: 4rem 2rem
     }
-}
+} */
 
 .jumbotron-fluid {
     padding-right: 0;
@@ -5966,7 +5966,7 @@ button.close {
     overflow: scroll
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .modal-dialog {
         max-width: 500px;
         margin: 1.75rem auto
@@ -5983,13 +5983,13 @@ button.close {
     .modal-sm {
         max-width: 300px
     }
-}
+} */
 
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     .modal-lg {
         max-width: 800px
     }
-}
+} */
 
 .tooltip {
     position: absolute;
@@ -6831,7 +6831,7 @@ button.bg-dark:hover {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important
 }
-
+/* 
 @media (min-width:576px) {
     .d-sm-none {
         display: none !important
@@ -6990,7 +6990,7 @@ button.bg-dark:hover {
         display: -ms-inline-flexbox !important;
         display: inline-flex !important
     }
-}
+} */
 
 @media print {
     .d-print-none {
@@ -7244,7 +7244,7 @@ button.bg-dark:hover {
     -ms-flex-item-align: stretch !important;
     align-self: stretch !important
 }
-
+/* 
 @media (min-width:576px) {
     .flex-sm-row {
         -ms-flex-direction: row !important;
@@ -7931,7 +7931,7 @@ button.bg-dark:hover {
         -ms-flex-item-align: stretch !important;
         align-self: stretch !important
     }
-}
+} */
 
 .float-left {
     float: left !important
@@ -7944,7 +7944,7 @@ button.bg-dark:hover {
 .float-none {
     float: none !important
 }
-
+/* 
 @media (min-width:576px) {
     .float-sm-left {
         float: left !important
@@ -7999,7 +7999,7 @@ button.bg-dark:hover {
     .float-xl-none {
         float: none !important
     }
-}
+} */
 
 .position-static {
     position: static !important
@@ -8443,7 +8443,7 @@ button.bg-dark:hover {
 .mx-auto {
     margin-left: auto !important
 }
-
+/* 
 @media (min-width:576px) {
     .m-sm-0 {
         margin: 0 !important
@@ -9698,7 +9698,7 @@ button.bg-dark:hover {
     .mx-xl-auto {
         margin-left: auto !important
     }
-}
+} */
 
 .text-monospace {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
@@ -9729,7 +9729,7 @@ button.bg-dark:hover {
 .text-center {
     text-align: center !important
 }
-
+/* 
 @media (min-width:576px) {
     .text-sm-left {
         text-align: left !important
@@ -9784,7 +9784,7 @@ button.bg-dark:hover {
     .text-xl-center {
         text-align: center !important
     }
-}
+} */
 
 .text-lowercase {
     text-transform: lowercase !important

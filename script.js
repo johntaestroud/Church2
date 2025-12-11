@@ -833,6 +833,10 @@ document.addEventListener("DOMContentLoaded", () => {
     new MusicPlayer(defaults);
 });
 
+// GALLERY SECTION START
+
+// GALLERY SECTION END
+
 // AUDIO PLAYLIST END
 
 // STOP EXECUTION ON TIMEOUT
