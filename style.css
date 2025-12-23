@@ -2043,6 +2043,11 @@ input:checked+.player__settings-switch {
   color: var(--dark-blue);
 }
 
+.services-number {
+	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
+	color: #7e7676;
+}
+
 /* SERVICES  END */
 
 /* Audio Player End */
