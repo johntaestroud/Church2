@@ -9,6 +9,7 @@
   --primary-light: #fff;
   --white: #fff;
   --off-white: whitesmoke;
+  --white-sand: hsl(40, 7%, 92%);
   --grey-1: #f3f3f3;
   --grey-2: #e4e4e4;
   --grey-3: #d3d3d3;
@@ -50,7 +51,7 @@ body {
   font-size: var(--font-size);
   font-family: var(--font-family);
   color: var(--blue);
-  background-color: var(--off-white);
+  background-color: var(--white-sand);
   line-height: 1.5em;
   scroll-behavior: smooth;
   transition: background 0.3s ease;
@@ -241,7 +242,7 @@ a:focus::before {
 #reading-bar {
   position: fixed;
   top: 0;
-  background-color: var(--white);
+  background-color: var(--white-sand);
   width: 100%;
   height: 3px;
   transition:
@@ -334,7 +335,7 @@ button:active, button:focus {
   justify-content: center;
   align-items: center;
   padding: 5px 7px;
-  background: var(--white);
+  background: var(--white-sand);
   box-shadow: var(--shadow);
   transition:
     box-shadow 0.5s ease,
@@ -405,7 +406,7 @@ button:active, button:focus {
   bottom: 40px;
   padding: 20px;
   box-shadow: var(--shadow-btn);
-  background-color: var(--white);
+  background-color: var(--white-sand);
   border-radius: 50%;
   visibility: hidden;
   z-index: 9999;
@@ -440,7 +441,7 @@ button:active, button:focus {
   width: var(--nav-min-width);
   height: 100%;
   /* overflow: hidden; */
-  background-color: var(--white);
+  background-color: var(--white-sand);
   box-shadow: var(--shadow-nav);
   z-index: 9998;
   transition:
@@ -601,7 +602,7 @@ button:active, button:focus {
 }
 
 .nav-link.selected {
-  border-left: 5px solid var(--primary);
+  /* border-left: 5px solid var(--primary); */
 }
 
 .nav-link.selected:hover {
@@ -622,7 +623,7 @@ button:active, button:focus {
 
 #main-doc {
   position: relative;
-  background-color: var(--white);
+  background-color: var(--white-sand);
   width: 100%;
   min-width: 300px;
   max-width: var(--page-width);
@@ -683,7 +684,7 @@ button:active, button:focus {
   }
   
   html, body {
-    background-color: var(--white);
+    background-color: var(--white-sand);
   }
   
   h2, h3, h4 {

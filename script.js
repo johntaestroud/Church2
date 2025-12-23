@@ -833,6 +833,28 @@ document.addEventListener("DOMContentLoaded", () => {
     new MusicPlayer(defaults);
 });
 
+// SERVICES AND ABOUT US START
+
+const tabs = document.querySelectorAll('[data-id]');
+const contents = document.querySelectorAll('[data-content]');
+let id = 0;
+
+tabs.forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    tabs[id].classList.remove('detail-active');
+    tab.classList.add('detail-active');
+    id = tab.getAttribute('data-id');
+    contents.forEach(function (box) {
+      box.classList.add('detail-hide');
+      if (box.getAttribute('data-content') == id) {
+        box.classList.remove('detail-hide');
+        box.classList.add('detail-show');
+      }
+    });
+  });
+});
+// SERVICES AND ABOUT US END
+
 // GALLERY SECTION START
 
 // GALLERY SECTION END

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stopexecution.js">
 
   <title>Church of God | Salvation Makes You A Member</title>
 
@@ -22,8 +23,9 @@
         <div class="expand__inner-inverter js-expand-inner-inverter">
           <div class="expand__content js-content">
             <ul class="expand__content-list">
-              <li class="about-text">About Us</li>
-              <li class="contact-text">Services</li>
+              <li></li> <a href="information.html"><span class="hover-target">Beliefs</span></a>
+              <!-- <li class="about-text">About Us</li> -->
+              <!-- <li class="contact-text">Services</li> -->
               <li> <a href="gallery.html"> Gallery</a></li>
             </ul>
             <button class="expand__close js-expand-collapse-btn x-btn">╳</button>
@@ -35,7 +37,7 @@
               <path d="M0 0h24v24H0z" fill="none" />
             </svg>
           </button>
-
+          
         </div>
       </div>
     </div>
@@ -191,12 +193,11 @@
             <p>
               <span class="video hover-target">Video</span>
               <!-- <span class="wildlife hover-target">TEST</span> -->
-              <a href="information.html"><span class="hover-target"
-                  style="color: hsl(213, 92%, 15%);">Beliefs</span></a>
+              <span class="about-text hover-target">Services</span> 
               <span class="audio hover-target">Audio</span>
             </p>
           </div>
-
+          
         </div>
       </div>
     </div>
@@ -214,7 +215,7 @@
           <!-- <div class="col-12 text-center">
 						<p><span>About Us</span></p>
 					</div> -->
-<!--
+<!-- 
           <div class="col-lg-8 text-center mt-4">
             <p>The Church of God of Saint Petersburg represents a local body of believers that’s
               part of the universal church of God worldwide. Our doors are open to anyone searching for love from God
@@ -225,157 +226,66 @@
           </div> -->
 
           <!-- services start -->
-            <style id="INLINE_PEN_STYLESHEET_ID">
 
-::selection {
-	background: transparent;
-}
+  <ul class="detail-tabs">
+        <li class="detail-active" data-id="0">About</li>
+        <li data-id="1">Tues</li>
+        <li data-id="2">Wed</li>
+        <li data-id="3">Sun</li>
+    </ul>
 
-h4 {
-	font-size: 26px;
-	line-height: 1px;
-	font-family: 'Amatic SC', cursive !important;
-}
+    <div class="detail-contents">
 
-.color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
-.color2{color:#C0392B/*TALL POPPY*/}
+        <div class="detail-box detail-show" data-content="0">
+            <!-- <img src="" alt=""> -->
+            <div>
+                <!-- <h3>Lorem ipsum dolor</h3> -->
+                <p>The Church of God of Saint Petersburg represents a local body of believers that’s
+              part of the universal church of God worldwide. Our doors are open to anyone searching for love from God
+              and unity with believers in God. We are a humble people living a righteous life through his grace. We aim
+              to do good works in our local community by helping, supporting, and uplifting the spirits of the less
+              fortunate. Furthermore, we are confident that God will bring his children together and build them up in
+              the faith and discover their true life’s purpose.</p>
+            </div>
+        </div>
 
+        <div class="detail-box detail-hide" data-content="1">
+           
+            <div>
+                <!-- <h3>Tuesday Night Prayer Call</h3> -->
+                <p>
+                    <p>Prayer Call: 7:00 PM EST</p>
+                    <p>Number: 667-770-1523</p>
+                    <p>Access Code: 988043</p>
+                    <p style="color: #7e655a; text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;">Phillipians 4:6 "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."</p>
+                </p>
+            </div>
+        </div>
 
-.card {
-	color: #013243; /*SHERPA BLUE*/
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 300px;
-	height: 400px;
-	background: #e0e1dc;
-	transform-style: preserve-3d;
-	transform: translate(-50%,-50%) perspective(2000px);
-	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
-	transition: 1s;
-}
+        <div class="detail-box detail-hide" data-content="2">
+           
+            <div>
+                <p>Zoom Bible Study: 7:00 PM EST</p>
+                <p>Pastor Troy Jones: 727-580-5902</p>
+                <p>Brother Darren Milton: 356 161 5064</p>         
+            </div>
+        </div>
 
-.card:hover {
-	transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
-	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
-}
+        <div class="detail-box detail-hide" data-content="3">
+          
+            <div>
+                <p>Sunday School: 10:30 AM EST</p>
+                <p>1901 62nd Avenue St. Petersburg, FL: Side Bldg</p>
+                <p>Sunday Service: 12:00 PM EST</p>
+                <p>1901 62nd Avenue St. Petersburg, FL: Main Bldg</p>
+            </div>
+        </div>
 
-.card:before {
-	content:'';
-	position: absolute;
-	top: -5px;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: #BAC1BA;
-	transform-origin: bottom;
-	transform: skewX(-45deg);
-}
+    </div>
+  
 
-.card:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: -5px;
-	width: 5px;
-	height: 100%;
-	background: #92A29C;
-	transform-origin: left;
-	transform: skewY(-45deg);
-}
-
-.card .imgBox {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	transform-origin: left;
-	transition: .7s;
-}
-
-.card .txt {
-	position: absolute;
-	background: #e0e1dc;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: .7s;
-}
-
-.card .imgBox img {
-	min-width: 250px;
-	max-height: 400px;
-}
-
-.card:hover .imgBox {
-	transform: rotateY(-135deg);
-}
-
-.card:hover .txt {
-	opacity: 1;
-	transition: .6s;
-  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
-}
-
-.card .details {
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-sizing: border-box;
-	padding: 0 0 0 10px;
-	z-index: -1;
-	margin-top: 30px;
-}
-
-.card .details p {
-	font-size: 15px;
-	line-height: 5px;
-	transform: rotate(-10deg);
-	padding: 0 0 0 20px;
-}
-
-.card .details h4 {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
-}
-  </style>
-
-<script src="stopexecution.js"></script>
-
-</head>
-
-<body>
-  	<div class="card">
-		<div class="imgBox">
-			<div class="txt"></div>
-			<img src="">
-		</div>
-		<div class="details">
-			<!-- <h4 class="color1">Tuesday Prayer Call</h2>
-			<h4 class="color2 margin">Testing</h3> -->
-			<p>The Church of God of Saint Petersburg </p>
-			<p>represents a local body of believers </p>
-      <p>that’s part of the universal church </p>
-			<p>of God worldwide. Our doors are open</p>
-			<p>to anyone searching for love from</p>
-			<p>God and unity with believers in God.</p>
-			<p>We are a humble people living a</p>
-			<p>righteous life through his grace. </p>
-			<p>We aim to do good works in our local </p>
-      <p>community by helping, supporting, </p>
-      <p>and uplifting the spirits of the less </p>
-      <p>fortunate. Furthermore, we are </p>
-      <p>confident that God will bring his </p>
-      <p>children together and build them up </p>
-      <p>in the faith and discover their </p>
-      <p>true life’s purpose.</p>
-			<!-- <p class="text-right">Church of God</p> -->
-		</div>
-	</div>
            <!-- services end -->
-
+            
 
         </div>
       </div>
@@ -389,7 +299,7 @@ h4 {
 
         <div class="row justify-content-center">
           <!--  -->
-
+          
           <!--  -->
 
         </div>
@@ -404,7 +314,7 @@ h4 {
       <div class="container">
         <div class="row justify-content-center">
           <!-- start -->
-
+          
           <!-- end -->
         </div>
       </div>
@@ -533,7 +443,7 @@ h4 {
                   </div>
                   <div class="hr-video-details">
                     <h3 class="hr-video-title">It's Time To Build</h3>
-
+ 
                   </div>
                 </div>
               </div>
@@ -546,7 +456,7 @@ h4 {
                   allowfullscreen></iframe></div>
               <div class="hr-video-info">
                 <h2 class="hr-video-info-title"></h2>
-
+        
               </div>
             </div>
           </div>
@@ -569,7 +479,7 @@ h4 {
                     <div class="hr-play-icon"><i class="fas fa-play"></i></div>
                   </div>
                   <div class="hr-video-details">
-                    <h3 class="hr-video-title">Hunger & Thirst After Righteousness</h3>
+                    <h3 class="hr-video-title">Hunger & Thirst After Righteousness</h3>           
                   </div>
                 </div>
 
@@ -581,7 +491,7 @@ h4 {
                     <div class="hr-play-icon"><i class="fas fa-play"></i></div>
                   </div>
                   <div class="hr-video-details">
-                    <h3 class="hr-video-title">Be An Overcomer</h3>
+                    <h3 class="hr-video-title">Be An Overcomer</h3>           
                   </div>
                 </div>
 
