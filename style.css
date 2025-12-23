@@ -1957,7 +1957,7 @@ input:checked+.player__settings-switch {
 /* SERVICES START */
 
 .demo {
-	padding: 2rem;
+	padding: 0.8rem;
 	width: min(1100px, 100%);
 }
 
