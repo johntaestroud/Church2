@@ -231,7 +231,7 @@ body.video-on .hero-section {
 	transition-delay: 0ms;
 }
 
-body.wildlife-on .hero-section {
+body.services-on .hero-section {
 	transform: rotateX(-10deg);
 	-webkit-transition-delay: 0ms;
 	transition-delay: 0ms;
@@ -521,7 +521,7 @@ body.contact-on .contact-section {
 }
 
 .video-section,
-.wildlife-section,
+.services-section,
 .audio-section {
 	position: fixed;
 	top: 100%;
@@ -539,7 +539,7 @@ body.contact-on .contact-section {
 }
 
 .video-close,
-.wildlife-close,
+.services-close,
 .audio-close {
 	position: absolute;
 	top: 20px;
@@ -559,7 +559,7 @@ body.contact-on .contact-section {
 }
 
 .video-close:hover,
-.wildlife-close:hover,
+.services-close:hover,
 .audio-close:hover {
 	transform: rotate(90deg);
 }
@@ -570,7 +570,7 @@ body.video-on .video-section {
 	transition-delay: 400ms;
 }
 
-body.wildlife-on .wildlife-section {
+body.services-on .services-section {
 	top: 0;
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
@@ -1954,137 +1954,90 @@ input:checked+.player__settings-switch {
 	}
 }
 
-/* SERVICES AND ABOUT US START */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+/* SERVICES START */
 
-.detail-tabs {
-    width: 80%;
-    height: 100px;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    /* box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%); */
-    overflow: hidden;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+.demo {
+	padding: 2rem;
+	width: min(1100px, 100%);
 }
 
-.detail-tabs li {
-    /* background-color: var(--white-sand); */
-    width: 25%;
-    /* height: 100%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #02072b;
-    font-family: 'Poppins', sans-serif;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    cursor: pointer;
+.panel {
+	padding: 1.75rem 2rem 2rem;
+	/* border: 1px solid var(--border-panel); */
+	border-radius: 1.5rem;
+	box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
 }
 
-.detail-tabs li:hover {
-    /* background: linear-gradient(145deg, #1e2024, #23272b); */
-    /* box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%); */
-    color: var(--dark-blue);
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
+.panel__header p {
+	margin: 0;
+	color: var(--dark-blue);
+	font-size: 1.1rem;
 }
 
-.detail-active {
-    /* background: linear-gradient(145deg, #1e2024, #23272b); */
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
-    background-color: #7e655a26;
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
+.panel__header code {
+	font-size: 0.95em;
 }
 
-.detail-contents {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+.status-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: if(
+		media(width < 600px): 1fr; media(width < 900px): repeat(2, minmax(0, 1fr)) ;
+			else: repeat(4, minmax(0, 1fr)) ;
+	);
+	margin-top: 1.75rem;
 }
 
-.detail-box {
-    gap: 20px;
-    /* background: linear-gradient(145deg, #1e2024, #23272b); */
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    animation: moving 1s ease;
-    -webkit-animation: moving 1s ease;
+.services-card {
+	position: relative;
+	padding: 1.1rem 1rem 1rem;
+	border: 1px solid transparent;
+	border-radius: 1rem;
+	overflow: hidden;
+	/* background: #101528;  */
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
+	transition: transform 160ms ease-out, box-shadow 160ms ease-out,
+		border-color 160ms ease-out, background 160ms ease-out;
 }
 
-.detail-box img {
-    width: 50%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+.services-card::after {
+	content: "EST";
+	position: absolute;
+	top: 0.7rem;
+	right: 0.85rem;
+	padding: 0.18rem 0.5rem;
+	border-radius: 999px;
+	border: 1px solid var(--logo-red);
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--logo-red);
 }
 
-.detail-box h3 {
-    color: #02072b;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
+.services-card h2 {
+	color: var(--dark-blue);
+	margin: 0 0 0.35rem;
+	font-size: 0.99rem;
 }
 
-.detail-box p {
-    color: #02072b;
-    opacity: .5;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+.services-card p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.35;
+	color: var(--dark-blue);
 }
 
-.detail-show {
-    display: flex;
+.services-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-.detail-hide {
-    display: none;
+.about-title {
+  font-family: 'Dancing Script', cursive;
+  color: var(--logo-red);
 }
 
-@keyframes moving {
-    from {
-        transform: translateX(-50px);
-        -webkit-transform: translateX(-50px);
-        -moz-transform: translateX(-50px);
-        -ms-transform: translateX(-50px);
-        -o-transform: translateX(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0px);
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-        -o-transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-/* SERVICES AND ABOUT US END */
+/* SERVICES  END */
 
 /* Audio Player End */
 

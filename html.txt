@@ -110,7 +110,7 @@ function OpenMenu(active) {
 					<div class="col-12 text-center mt-4 mt-lg-5">
 						<p>
 							<span class="travel hover-target">Video</span> 
-							<!-- <span class="wildlife hover-target">Beliefs</span>  -->
+							<!-- <span class="services hover-target">Beliefs</span>  -->
 							<a href="information.html"><span class="hover-target" style="color: hsl(213, 92%, 15%);" >Beliefs</span></a>
 							<span class="nature hover-target">Audio</span>
 						</p>
@@ -712,8 +712,8 @@ function OpenMenu(active) {
 		</div>
 	</div>
 	
-	<div class="wildlife-section">	
-		<div class="wildlife-close hover-target"></div>
+	<div class="services-section">	
+		<div class="services-close hover-target"></div>
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center">
