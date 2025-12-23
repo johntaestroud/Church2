@@ -650,9 +650,9 @@ body.audio-on .audio-section {
 }
 
 .expand__content-list {
-	width: 140px;
+	width: 120px;
 	margin: 0;
-	padding: 20px 0 20px 0;
+	padding: 20px 10px 20px 0;
 	list-style: none;
 	overflow: hidden;
 }
