@@ -139,7 +139,7 @@ a:hover {
 	overflow: hidden;
 	height: 100vh;
 	background-color: var(--white-sand);
-	background-image: url('image/circles.jpg');
+	background-image: url('image/lux.jpg');
 	background-size: cover;
 	background-position: center;
 	transform: scale(1) rotateX(0);
