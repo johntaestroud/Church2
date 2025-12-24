@@ -149,6 +149,7 @@ a:hover {
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 	transform-origin: center top;
+	cursor: none;
 }
 
 .hero-section h1 {
@@ -617,7 +618,7 @@ body.audio-on .audio-section {
 	border: none;
 	outline: none;
 	pointer-events: auto;
-	cursor: pointer;
+	/* cursor: pointer; */
 	will-change: transform;
 	transition:
 		transform 0.1s cubic-bezier(0, 0, 0.31, 1),
@@ -2032,10 +2033,10 @@ input:checked+.player__settings-switch {
 	color: #7e7676;
 }
 
-.services-card:hover {
+/* .services-card:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-}
+} */
 
 .about-title {
   font-family: 'Dancing Script', cursive;
@@ -2045,6 +2046,10 @@ input:checked+.player__settings-switch {
 .services-number {
 	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
 	color: #7e7676;
+}
+
+.demo {
+	cursor: none;
 }
 
 /* SERVICES  END */
