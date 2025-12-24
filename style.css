@@ -149,7 +149,6 @@ a:hover {
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 	transform-origin: center top;
-	cursor: none;
 }
 
 .hero-section h1 {
