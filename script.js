@@ -357,6 +357,11 @@ const defaults = {
         },
 
         {
+            title: "Choir - Jesus, We're Depending On You",
+            url: "https://ia601203.us.archive.org/28/items/jesus-were-depending-on-you/Jesus%2C%20We%27re%20Depending%20On%20You.mp3"
+        },
+
+        {
             title: "Sister Michelle - One Day At A Time",
             url: "https://ia601702.us.archive.org/14/items/one-day-at-a-time_202512/One%20Day%20At%20A%20Time.mp3"
         },
@@ -367,6 +372,21 @@ const defaults = {
         },
 
         {
+            title: "Brother Chris - You Get The Glory",
+            url: "https://ia601707.us.archive.org/27/items/you-get-the-glory/You%20Get%20The%20Glory.mp3"
+        },
+
+        {
+            title: "Choir - How Great Is Our God",
+            url: "https://ia600603.us.archive.org/18/items/how-great-is-our-god_20251227/How%20Great%20Is%20Our%20God.mp3"
+        },
+
+        {
+            title: "Sister Candice - Be Still And Know",
+            url: "https://ia600804.us.archive.org/23/items/be-still-and-know_202512/Be%20Still%20And%20Know.mp3"
+        },  
+
+        {
             title: "Sister & Brother Milton - All the Way My Savior Leads Me",
             url:
                 "https://ia802307.us.archive.org/0/items/all-the-way-my-savior-leads-me/All%20the%20Way%20My%20Savior%20Leads%20Me.mp3"
@@ -375,34 +395,17 @@ const defaults = {
         {
             title: "Sister Michelle - He Will Roll You Over The Tide",
             url: "https://ia601703.us.archive.org/26/items/he-will-roll-you-over-the-tide/He%20Will%20Roll%20You%20Over%20The%20Tide.mp3"
+        },
+
+        {
+            title: "Brother Milton - Burdens Are Lifted At Calvary",
+            url: "https://ia800309.us.archive.org/15/items/burdens-are-lifted-at-calvary/Burdens%20Are%20Lifted%20At%20Calvary.mp3"
+        },
+
+        {
+            title: "Choir - Bless Your Name",
+            url: "https://ia601405.us.archive.org/22/items/bless-your-name/Bless%20Your%20Name.mp3"
         }
-
-        // {
-        //   title: "Song 1 - Testing",
-        //   url: ""
-        // },
-
-        // {
-        //   title: "Song 1 - Testing",
-        //   url:
-        //     ""
-        // },
-
-        // {
-        //   title: "Song 1 - Testing",
-        //   url:
-        //     ""
-        // },
-
-        // {
-        //   title: "Song 1 - Testing",
-        //   url: ""
-        // },
-
-        // {
-        //   title: "Song 1 - Testing",
-        //   url: ""
-        // }
     ]
 };
 
