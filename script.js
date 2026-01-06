@@ -353,7 +353,7 @@ const defaults = {
 
         {
             title: "Brother Milton - Jesus I'll Never Forget",
-            url: "https://ia801805.us.archive.org/27/items/jesus-ill-never-forget/Jesus%20Ill%20Never%20Forget.mp3"
+            url: "https://ia601805.us.archive.org/27/items/jesus-ill-never-forget/Jesus%20Ill%20Never%20Forget.mp3"
         },
 
         {
@@ -387,9 +387,25 @@ const defaults = {
         },  
 
         {
+            title: "Choir - Nothing From My Journey Now",
+            url: "https://ia601709.us.archive.org/20/items/nothing-from-my-journey-now_202601/Nothing%20From%20My%20Journey%20Now.mp3"
+        },
+
+        {
+            title: "Choir - Holding On Until My Journey Ends",
+            url: "https://ia601608.us.archive.org/20/items/holding-on-until-my-journey-ends/Holding%20On%20Until%20My%20Journey%20Ends.mp3"
+        },
+
+        {
             title: "Sister & Brother Milton - All the Way My Savior Leads Me",
             url:
                 "https://ia802307.us.archive.org/0/items/all-the-way-my-savior-leads-me/All%20the%20Way%20My%20Savior%20Leads%20Me.mp3"
+        },
+
+        {
+            title: "Sister Takeia - To God Be The Glory",
+            url:
+                "https://ia601701.us.archive.org/27/items/to-god-be-the-glory_202601/To%20God%20Be%20The%20Glory.mp3"
         },
 
         {
@@ -403,9 +419,14 @@ const defaults = {
         },
 
         {
+            title: "Sister Ingrid - I Was Hurting",
+            url: "https://ia601605.us.archive.org/8/items/i-was-hurting/I%20Was%20Hurting.mp3"
+        },
+
+        {
             title: "Choir - Bless Your Name",
             url: "https://ia601405.us.archive.org/22/items/bless-your-name/Bless%20Your%20Name.mp3"
-        }
+        },
     ]
 };
 
