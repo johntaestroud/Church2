@@ -755,6 +755,12 @@ li:hover {
 	display: flex;
 	margin-bottom: 1.5rem;
 	flex-wrap: wrap;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Standard syntax */
 }
 
 .hr-tab {
@@ -823,6 +829,10 @@ li:hover {
 	max-height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+
+.hr-playlist-sidebar-none {
+	height: 1vh;
 }
 
 /* .hr-playlist-header { title at the top of the video
