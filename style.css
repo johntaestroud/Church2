@@ -201,7 +201,7 @@ body {
 
 	/* Your styles for these iPhones */
 	.text {
-		font-size: 20px !important;
+		font-size: 1.5rem !important;
 	}
 }
 
@@ -209,7 +209,7 @@ body {
 
 	/* Styles for screens up to 768px wide (common breakpoint for tablets/mobiles) */
 	.text {
-		font-size: 20px !important;
+		font-size: 1.5rem !important;
 	}
 }
 
