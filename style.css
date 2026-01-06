@@ -833,6 +833,10 @@ li:hover {
 
 .hr-playlist-sidebar-none {
 	height: 1vh;
+	overflow: hidden;
+	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* .hr-playlist-header { title at the top of the video
