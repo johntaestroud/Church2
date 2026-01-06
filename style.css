@@ -792,7 +792,7 @@ body.audio-on .audio-section {
 .expand__content {
 	outline: none;
 	position: absolute;
-	right: -50px;
+	right: -40px;
 	top: 0;
 	pointer-events: none;
 	opacity: 0;
