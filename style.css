@@ -622,7 +622,7 @@ body.audio-on .audio-section {
 	border: none;
 	outline: none;
 	pointer-events: auto;
-	/* cursor: pointer; */
+	cursor: pointer;
 	will-change: transform;
 	transition:
 		transform 0.1s cubic-bezier(0, 0, 0.31, 1),
@@ -1009,7 +1009,7 @@ li:hover {
 
 /* Video Info */
 /* .hr-video-info {
-  
+
     } */
 .hr-video-info-header {
 	margin-bottom: 0.5rem;
@@ -1589,11 +1589,11 @@ li:hover {
 	transition: all 0.3s;
 }
 
-/* 
+/*
 .player__playlist-btn.active,
 .player__settings-btn.active {
 	 filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%)
-		hue-rotate(66deg) brightness(105%) contrast(104%); 
+		hue-rotate(66deg) brightness(105%) contrast(104%);
 } */
 
 .player__settings-btn.active+.player__settings-block {
