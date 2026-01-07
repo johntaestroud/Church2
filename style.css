@@ -161,23 +161,23 @@ body {
 .left,
 .right {
   background-color: #fff;
-  background-image: linear-gradient(to bottom, var(--dark-blue), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, var(--dark-blue), var(--dark-blue));
 }
 
 .center {
   background-color: #fff;
-  background-image: linear-gradient(to bottom, var(--dark-blue), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, var(--dark-blue), var(--dark-blue));
 }
 
 .bottom {
   background-color: #fff;
-  background-image: linear-gradient(to top, var(--dark-blue), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to top, var(--dark-blue), var(--dark-blue));
 }
 
 @keyframes animCube {
   30% {
     transform: translateZ(150px) translatex(0) translateY(0) rotatex(3deg) rotatey(0deg) rotateZ(0deg);
-    box-shadow: 0 0 20px rgba(10, 33, 181, 0.5), 0 12px 20px 1px rgba(5, 11, 90, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 12px 20px 1px rgba(255, 255, 255, 0.5);
   }
   100% {
     transform: translateZ(0px) rotatez(0deg);
