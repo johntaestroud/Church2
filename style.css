@@ -2291,7 +2291,7 @@ input:checked+.player__settings-switch {
 /* SERVICES  END */
 
 @media screen and (orientation: landscape) {
-    body {
+    html, body {
         transform: rotate(-90deg);
         transform-origin: left top;
         width: 100vh;
