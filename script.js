@@ -12,7 +12,7 @@
             $(this).remove();
         });
         }
-    }, 3000);
+    }, 2000);
     
     });
     //PRELOADER END
