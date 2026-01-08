@@ -17,6 +17,21 @@
     });
     //PRELOADER END
 
+    // Function to lock the screen to portrait mode
+function lockOrientationToPortrait() {
+  // Check if the orientation object and lock method are supported
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('portrait')
+      .then(() => console.log('Screen orientation locked to portrait'))
+      .catch((err) => console.error('Orientation lock failed:', err));
+  } else {
+    console.warn('Screen orientation lock not supported on this browser/device.');
+  }
+}
+
+// Call the function when appropriate (e.g., after a user interaction or on page load)
+lockOrientationToPortrait();
+
     //Page cursors hover-target
     // document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
     //     t.style.left = n.clientX + "px",
