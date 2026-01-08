@@ -52,6 +52,7 @@ body {
   font-family: var(--font-family);
   color: var(--blue);
   background-color: var(--off-white);
+  /* background-image: url(image/4853160.png); */
   line-height: 1.5em;
   scroll-behavior: smooth;
   transition: background 0.3s ease;
@@ -734,7 +735,7 @@ button:active, button:focus {
     width: 100%;
     height: var(--nav-max-height);
     padding-bottom: var(--nav-min-width);
-    font-size: 40px;
+    font-size: 35px;
   }
   
   #navbar.nav-close {

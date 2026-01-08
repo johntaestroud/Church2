@@ -245,11 +245,11 @@ body {
 .text {
 	font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
 		serif;
-	background: #3a373596;
+	background: #040b41cf;
 	-webkit-background-clip: text !important;
 	background-clip: text !important;
 	color: transparent !important;
-	text-shadow: #fdfdfd59 1px 2px 1px !important;
+	text-shadow: #ffffffbd 1px 5px 2px !important;
 	font-size: 28px;
 }
 
@@ -337,7 +337,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-	
+
 	.cursor,
 	.cursor2,
 	.cursor3 {
@@ -348,6 +348,55 @@ a:hover {
 /* #Primary style
 ================================================== */
 
+/* 
+BACKGROUND IMAGE
+IMPORTANT NOTICE: This license only applies if you downloaded this content as
+an unsubscribed user. If you are a premium user (ie, you pay a subscription)
+you are bound to the license terms described in the accompanying file
+"License premium.txt".
+
+---------------------
+
+You must attribute the image to its author:
+
+In order to use a content or a part of it, you must attribute it to Freepik,
+so we will be able to continue creating new graphic resources every day.
+
+
+How to attribute it?
+
+For websites:
+
+Please, copy this code on your website to accredit the author:
+<a href="http://www.freepik.com">Designed by Freepik</a>
+
+For printing:
+
+Paste this text on the final work so the authorship is known.
+- For example, in the acknowledgements chapter of a book:
+"Designed by Freepik"
+
+
+You are free to use this image:
+
+- For both personal and commercial projects and to modify it.
+- In a website or presentation template or application or as part of your design.
+
+You are not allowed to:
+
+- Sub-license, resell or rent it.
+- Include it in any online or offline archive or database.
+
+The full terms of the license are described in section 7 of the Freepik
+terms of use, available online in the following link:
+
+  http://www.freepik.com/terms_of_use
+
+The terms described in the above link have precedence over the terms described
+in the present document. In case of disagreement, the Freepik Terms of Use
+will prevail.
+ */
+
 .hero-section {
 	position: relative;
 	width: 100%;
@@ -355,7 +404,7 @@ a:hover {
 	overflow: hidden;
 	height: 100vh;
 	background-color: var(--white-sand);
-	background-image: url('image/lux.jpg');
+	background-image: url('image/4853160.png');
 	background-size: cover;
 	background-position: center;
 	transform: scale(1) rotateX(0);
@@ -385,7 +434,7 @@ a:hover {
 }
 
 .text-hover:hover {
-	background-color: var(--dark-blue);
+	background-color: #ca1d1ae1;
 }
 
 @media screen and (max-width: 580px) {
@@ -753,7 +802,8 @@ body.contact-on .contact-section {
 	display: block;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-color: var(--white-sand);
+	/* background-color: var(--white-sand); */
+	background-image: url('image/4853160.png');
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear;
 	z-index: 10;
@@ -2204,10 +2254,9 @@ input:checked+.player__settings-switch {
 
 .panel__header p {
 	margin: 0;
-	/* color: var(--dark-blue); */
 	font-size: 1.1rem;
 	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
-	color: #7e7676;
+	color: var(--dark-blue);
 }
 
 .panel__header code {
@@ -2243,28 +2292,28 @@ input:checked+.player__settings-switch {
 	right: 0.85rem;
 	padding: 0.18rem 0.5rem;
 	border-radius: 999px;
-	border: 1px solid var(--logo-red);
+	border: 1px solid #ca1d1ae1;
 	font-size: 0.7rem;
 	text-transform: uppercase;
 	letter-spacing: 0.12em;
-	color: var(--logo-red);
+	color: #ca1d1ae1;
 }
 
 .services-card h2 {
-	/* color: var(--dark-blue); */
+	color: var(--dark-blue);
 	margin: 0 0 0.35rem;
 	font-size: 0.99rem;
 	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
-	color: #7e7676;
+	/* color: #00000096; */
 }
 
 .services-card p {
 	margin: 0;
 	font-size: 0.95rem;
 	line-height: 1.35;
-	/* color: var(--dark-blue); */
+	color: var(--dark-blue);
 	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
-	color: #7e7676;
+	/* color: #00000096; */
 }
 
 /* .services-card:hover {
@@ -2274,12 +2323,12 @@ input:checked+.player__settings-switch {
 
 .about-title {
   font-family: 'Dancing Script', cursive;
-  color: var(--dark-blue);
+  color: #ca1d1ae1;
 }
 
 .services-number {
 	text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
-	color: #7e7676;
+	color: #00000096;
 }
 /* SERVICES  END */
 
