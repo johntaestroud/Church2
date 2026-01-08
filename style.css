@@ -2290,30 +2290,7 @@ input:checked+.player__settings-switch {
 }
 /* SERVICES  END */
 
-/* Hide the message by default */
-#rotate-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding-top: 50%; /* Center the message vertically */
-    z-index: 99999;
-}
 
-/* Show the message and hide the content when in landscape orientation on small screens */
-@media screen and (max-width: 767px) and (orientation: landscape) {
-    #app-content {
-        display: none;
-    }
-    #rotate-message {
-        display: block;
-    }
-}
 
 /*GALLERY SECTION START*/
 
