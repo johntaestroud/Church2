@@ -1340,7 +1340,7 @@ li:hover {
 }
 
 @media only screen and (orientation: landscape) {
-  nav, header, section, footer, .fixed-action-btn {
+  header, section, footer {
     display: none !important;
   }
 
@@ -1353,6 +1353,10 @@ li:hover {
     /* color: #fff; */
 	justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
+  }
+
+  #rotation-warning img {
+	justify-content: center;
   }
   /* #rotation-warning i {
     margin-top: 10%;
