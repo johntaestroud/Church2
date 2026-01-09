@@ -1241,57 +1241,65 @@ li:hover {
 
 /* Responsive Design */
 
-/* landscape rotate start*/
-#rotation-warning {
-	display: none !important;
-}
-
 @media only screen and (orientation: landscape) {
 
-	header,
-	section,
-	footer {
-		display: none !important;
-	}
+#rotate-to-landscape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  background: var(--dark-blue);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  z-index: 100;
+}
+#rotate-to-landscape .phone {
+  width: 50px;
+  height: 100px;
+  border: 3px solid white;
+  border-radius: 10px;
+  -webkit-animation: rotate 3s ease-in-out infinite;
+  animation: rotate 3s ease-in-out infinite;
+}
 
-	#rotation-warning {
-		display: block !important;
-		background-color: var(--dark-blue);
-		height: 100vh;
-		width: 100vw;
-		text-align: center;
-		overflow: hidden;
-		/* color: #fff; */
-		justify-content: center;
-		align-items: center;
-	}
+@media screen and (orientation: portrait) and (max-aspect-ratio: 0.8) {
+  #rotate-to-landscape {
+    z-index: 1000;
+    visibility: visible;
+  }
 
-	@font-face {
-		font-family: 'Material Icons';
-		font-style: normal;
-		font-weight: 400;
-		src: url(https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-	}
-
-	.material-icons {
-		font-family: 'Material Icons';
-		font-weight: normal;
-		font-style: normal;
-		font-size: 24px;
-		line-height: 1;
-		letter-spacing: normal;
-		text-transform: none;
-		display: inline-block;
-		white-space: nowrap;
-		word-wrap: normal;
-		direction: ltr;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	#rotation-warning i {
-		margin: auto;
-		font-size: 15vw;
-	}
+  body > *:not(#rotate-to-landscape) {
+    display: none;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-90deg);
+  }
+  99% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+}
 }
 
 /* landscape rotate end */
