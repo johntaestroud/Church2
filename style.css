@@ -1349,8 +1349,7 @@ li:hover {
     background-color: var(--dark-blue);
     height: 100vh;
     width: 100vw;
-    text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* color: #fff; */
 	justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
