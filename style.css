@@ -1351,7 +1351,7 @@ li:hover {
     width: 100vw;
     text-align: center;
     overflow: hidden;
-    color: #fff;
+    /* color: #fff; */
 	justify-content: center;
 	align-items: center;
   }
@@ -1375,12 +1375,11 @@ li:hover {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
   #rotation-warning i {
-    margin-top: 10%;
-    font-size: 25vw;
+    margin-top: 5%;
+    font-size: 30vw;
   }
 }
 /* landscape rotate end */
