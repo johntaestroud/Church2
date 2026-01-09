@@ -1352,6 +1352,8 @@ li:hover {
     text-align: center;
     overflow: hidden;
     color: #fff;
+	justify-content: center;
+	align-items: center;
   }
 
   @font-face {
