@@ -13,9 +13,9 @@
 
 /* PRELOADER START resource: https://codepen.io/jkantner/pen/ZEvQbOK */
 
-.no-scroll-y {
+/* .no-scroll-y {
 	overflow-y: hidden;
-}
+} */
 
 .preloader {
 	position: fixed;
@@ -25,7 +25,6 @@
 	width: 100vw;
 	display: grid;
 	place-items: center;
-	/* transition: background-color 0.3s; */
 	z-index: 999;
 }
 
@@ -1269,10 +1268,10 @@ li:hover {
 }
 
 @media screen and (orientation: portrait) and (max-aspect-ratio: 0.8) {
-  #rotate-to-landscape {
+  /* #rotate-to-landscape {
     z-index: 1000;
     visibility: visible;
-  }
+  } */
 
   body > *:not(#rotate-to-landscape) {
     display: none;
