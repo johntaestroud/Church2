@@ -13,20 +13,19 @@
 
 /* PRELOADER START resource: https://codepen.io/jkantner/pen/ZEvQbOK */
 
-/* .no-scroll-y {
+.no-scroll-y {
 	overflow-y: hidden;
-} */
+}
 
 .preloader {
 	position: fixed;
 	top: 0;
 	left: 0;
 	background: var(--dark-blue);
-	/* color: var(--white-sand); */
 	height: 100vh;
 	width: 100vw;
 	display: flex;
-	place-items: center;
+	/* place-items: center; */
 	z-index: 9999;
 	justify-content: center;
 	align-items: center;
@@ -54,7 +53,6 @@
 	animation-name: worm;
 	animation-timing-function: cubic-bezier(0.42, 0.17, 0.75, 0.83);
 }
-
 
 /* Animations */
 @keyframes bump {

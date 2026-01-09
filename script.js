@@ -2,19 +2,23 @@
     "use strict";
 
     //PRELOADER START
+    
     $(document).ready(function() {
     
-    setTimeout(function() {
-        $('.preloader').addClass('loaded');
-        // $('body').removeClass('no-scroll-y');
+        setTimeout(function () {
+            $('.preloader').addClass('loaded');
+            $('body').removeClass('no-scroll-y');
 
-        if ($('.preloader').hasClass('loaded')) {
-        $('.preloader').delay(1500).queue(function() {
-            $(this).remove();
-        });
-        }
-    }, 3000);
-    
+            if ($('.preloader').hasClass('loaded')) {
+                $('.pl').delay(200).fadeOut('xslow').queue(function () {
+                    $(this).remove();
+                });
+                $('.preloader').delay(1000).fadeOut('xslow').queue(function () {
+                    $(this).remove();
+                });
+            }
+        }, 3000);
+
     });
 
     
