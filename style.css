@@ -19,7 +19,7 @@
 
 .preloader {
 	position: fixed;
-	background-color: var(--dark-blue);
+	background: var(--dark-blue);
 	color: var(--white-sand);
 	height: 100vh;
 	width: 100vw;
@@ -1268,10 +1268,10 @@ li:hover {
 }
 
 @media screen and (orientation: portrait) and (max-aspect-ratio: 0.8) {
-  /* #rotate-to-landscape {
+  #rotate-to-landscape {
     z-index: 1000;
     visibility: visible;
-  } */
+  }
 
   body > *:not(#rotate-to-landscape) {
     display: none;
