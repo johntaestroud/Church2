@@ -1355,11 +1355,11 @@ li:hover {
 	justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
   }
-  #rotation-warning i {
+  /* #rotation-warning i {
     margin-top: 10%;
     font-size: 25vw;
   }
-}
+} */
 /* landscape end */
 
 @media (max-width: 992px) {
