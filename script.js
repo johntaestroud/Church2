@@ -1,20 +1,24 @@
 (function ($) {
     "use strict";
+
     //PRELOADER START
+
     $(document).ready(function() {
     
     setTimeout(function() {
-        $('#container').addClass('loaded');
-        $('body').removeClass('no-scroll-y');
+        $('.preloader').addClass('loaded');
+        // $('body').removeClass('no-scroll-y');
 
-        if ($('#container').hasClass('loaded')) {
-        $('#container').delay(1000).queue(function() {
+        if ($('.preloader').hasClass('loaded')) {
+        $('.preloader').delay(1500).queue(function() {
             $(this).remove();
         });
         }
-    }, 2000);
+    }, 3000);
     
     });
+
+    
     //PRELOADER END
 
     //Page cursors hover-target
