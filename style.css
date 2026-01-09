@@ -1333,20 +1333,34 @@ li:hover {
 }
 
 /* Responsive Design */
-@media (orientation: landscape) {
-	body {
-		min-height: 100vh;
-	}
 
-	img {
-		max-width: 100%;
-		/* Ensures image doesn't overflow its container */
-		height: auto;
-		/* Maintains the aspect ratio */
-		object-fit: cover;
-		/* Useful for background-style images within a fixed-size container */
-	}
+/* landscape rotate*/
+#rotation-warning {
+  display: none !important;
 }
+
+@media only screen and (orientation: landscape) {
+  nav, header, section, footer, .fixed-action-btn {
+    display: none !important;
+  }
+
+  #rotation-warning {
+    display: flex !important;
+    background-color: var(--dark-blue);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+	justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+  }
+  #rotation-warning i {
+    margin-top: 10%;
+    font-size: 25vw;
+  }
+}
+/* landscape end */
 
 @media (max-width: 992px) {
 	.hr-video-platform {
