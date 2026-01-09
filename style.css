@@ -1378,8 +1378,8 @@ li:hover {
   -webkit-font-smoothing: antialiased;
 }
   #rotation-warning i {
-    /* margin-top: 5%; */
-    font-size: 20vw;
+    margin-top: 5%;
+    font-size: 25vw;
   }
 }
 /* landscape rotate end */
