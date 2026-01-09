@@ -22,14 +22,14 @@
     //PRELOADER END
 
     //  lock the screen orientation to portrait (or landscape) during the initial loading phase 
-    async function lockOrientation() {
-        try {
-            await screen.orientation.lock("portrait");
-            console.log("Screen locked to portrait during preloading.");
-        } catch (err) {
-            console.error("Orientation lock failed:", err);
-        }
-    }
+    // async function lockOrientation() {
+    //     try {
+    //         await screen.orientation.lock("portrait");
+    //         console.log("Screen locked to portrait during preloading.");
+    //     } catch (err) {
+    //         console.error("Orientation lock failed:", err);
+    //     }
+    // }
 
     lockOrientation();
 
@@ -37,9 +37,18 @@
         screen.orientation.unlock(); // Unlock when loading is complete
     });
 
+    // Lock the screen to portrait mode
+screen.orientation.lock('portrait').then(() => {
+  console.log('Screen locked to portrait');
+}).catch((error) => {
+  console.error('Failed to lock orientation', error);
+});
+
     // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
     if (window.DeviceOrientationEvent) {
-    window.addEventListener('orientationchange', function() { location.reload(); }, false);
+        window.addEventListener('orientationchange', function () { 
+            location.reload(); 
+        }, false);
 }
 
 
