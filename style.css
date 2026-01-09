@@ -372,7 +372,14 @@ BACKGROUND IMAGE
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 	transform-origin: center top;
+
+	user-select: none;
+    /* Vendor prefixes for older browser compatibility */
+    -webkit-user-select: none; /* Safari, Chrome, Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
 }
+
 
 .hero-section h1 {
 	color: var(--dark-blue);
@@ -1326,6 +1333,21 @@ li:hover {
 }
 
 /* Responsive Design */
+@media (orientation: landscape) {
+	body {
+		min-height: 100vh;
+	}
+
+	img {
+		max-width: 100%;
+		/* Ensures image doesn't overflow its container */
+		height: auto;
+		/* Maintains the aspect ratio */
+		object-fit: cover;
+		/* Useful for background-style images within a fixed-size container */
+	}
+}
+
 @media (max-width: 992px) {
 	.hr-video-platform {
 		grid-template-columns: 1fr;
@@ -1337,6 +1359,7 @@ li:hover {
 }
 
 @media (max-width: 768px) {
+
 	.hr-platform-tabs {
 		overflow-x: auto;
 		padding-bottom: 4px;
