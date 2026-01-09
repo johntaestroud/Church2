@@ -37,6 +37,12 @@
         screen.orientation.unlock(); // Unlock when loading is complete
     });
 
+    // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+    if (window.DeviceOrientationEvent) {
+    window.addEventListener('orientationchange', function() { location.reload(); }, false);
+}
+
+
     //Page cursors hover-target
     // document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
     //     t.style.left = n.clientX + "px",
