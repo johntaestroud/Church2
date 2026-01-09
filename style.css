@@ -18,7 +18,7 @@
 } */
 
 .preloader {
-	position: fixed;
+	position: relative;
 	background: var(--dark-blue);
 	color: var(--white-sand);
 	height: 100vh;
@@ -1271,10 +1271,6 @@ li:hover {
   #rotate-to-landscape {
     z-index: 1000;
     visibility: visible;
-  }
-
-  #rotate-to-landscape p {
-    display: none;
   }
 
   body > *:not(#rotate-to-landscape) {
