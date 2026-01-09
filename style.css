@@ -1273,6 +1273,10 @@ li:hover {
     visibility: visible;
   }
 
+  #rotate-to-landscape p {
+    display: none;
+  }
+
   body > *:not(#rotate-to-landscape) {
     display: none;
   }
