@@ -1335,9 +1335,9 @@ li:hover {
 /* Responsive Design */
 
 /* landscape rotate*/
-/* #rotation-warning {
+#rotation-warning {
   display: none !important;
-} */
+}
 
 @media only screen and (orientation: landscape) {
   nav, header, section, footer, .fixed-action-btn {
@@ -1349,7 +1349,7 @@ li:hover {
     background-color: var(--dark-blue);
     height: 100vh;
     width: 100vw;
-    /* overflow: hidden; */
+    overflow: hidden;
     /* color: #fff; */
 	justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
