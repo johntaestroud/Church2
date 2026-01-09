@@ -18,7 +18,9 @@
 } */
 
 .preloader {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
 	background: var(--dark-blue);
 	color: var(--white-sand);
 	height: 100vh;
@@ -1240,66 +1242,7 @@ li:hover {
 
 /* Responsive Design */
 
-@media only screen and (orientation: landscape) {
-
-#rotate-to-landscape {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  pointer-events: none;
-  background: var(--dark-blue);
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  text-align: center;
-  color: white;
-  z-index: 100;
-}
-#rotate-to-landscape .phone {
-  width: 50px;
-  height: 100px;
-  border: 3px solid white;
-  border-radius: 10px;
-  -webkit-animation: rotate 3s ease-in-out infinite;
-  animation: rotate 3s ease-in-out infinite;
-}
-
-@media screen and (orientation: portrait) and (max-aspect-ratio: 0.8) {
-  #rotate-to-landscape {
-    z-index: 1000;
-    visibility: visible;
-  }
-
-  body > *:not(#rotate-to-landscape) {
-    display: none;
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  25% {
-    transform: rotate(-90deg);
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(-90deg);
-  }
-  99% {
-    opacity: 0;
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(0);
-    opacity: 0;
-  }
-}
-}
+/* landscape rotate start */
 
 /* landscape rotate end */
 
