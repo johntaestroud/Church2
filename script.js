@@ -10,10 +10,10 @@
             $('body').removeClass('no-scroll-y');
 
             if ($('.preloader').hasClass('loaded')) {
-                $('.pl').delay(200).fadeOut('xslow').queue(function () {
+                $('.pl').delay(500).fadeOut('xslow').queue(function () {
                     $(this).remove();
                 });
-                $('.preloader').delay(1500).fadeOut('xslow').queue(function () {
+                $('.preloader').delay(1200).fadeOut('xslow').queue(function () {
                     $(this).remove();
                 });
             }
@@ -21,32 +21,7 @@
 
     });
 
-    
     //PRELOADER END
-
-    //  lock the screen orientation to portrait (or landscape) during the initial loading phase 
-    async function lockOrientation() {
-        try {
-            await screen.orientation.lock("portrait");
-            console.log("Screen locked to portrait during preloading.");
-        } catch (err) {
-            console.error("Orientation lock failed:", err);
-        }
-    }
-
-    lockOrientation();
-
-    window.addEventListener("load", function () {
-        screen.orientation.unlock(); // Unlock when loading is complete
-    });
-
-    // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
-    if (window.DeviceOrientationEvent) {
-        window.addEventListener('orientationchange', function () { 
-            location.reload(); 
-        }, false);
-}
-
 
     //Page cursors hover-target
     // document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
