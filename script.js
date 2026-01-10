@@ -7,7 +7,7 @@
     
         setTimeout(function () {
             $('.preloader').addClass('loaded');
-            $('body').removeClass('no-scroll-y');
+            // $('body').removeClass('no-scroll-y');
 
             if ($('.preloader').hasClass('loaded')) {
                 $('.pl').delay(500).fadeOut('xslow').queue(function () {

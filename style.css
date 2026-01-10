@@ -13,9 +13,9 @@
 
 /* PRELOADER START resource: https://codepen.io/jkantner/pen/ZEvQbOK */
 
-.no-scroll-y {
+/* .no-scroll-y {
 	overflow-y: hidden;
-}
+} */
 
 .preloader {
 	position: fixed;
@@ -1246,7 +1246,7 @@ li:hover {
 
 #rotate-to-landscape {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   position: fixed;
