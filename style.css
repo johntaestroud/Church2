@@ -1256,7 +1256,7 @@ li:hover {
   width: 100vw;
   top: 0;
   left: 0;
-  text-align: center;
+  /* text-align: center; */
   color: white;
 }
 #rotate-to-landscape .phone {
@@ -1264,6 +1264,8 @@ li:hover {
   height: 100px;
   border: 3px solid white;
   border-radius: 10px;
+  align-items: center;
+  justify-content: center;
   -webkit-animation: rotate 3s ease-in-out infinite;
   animation: rotate 3s ease-in-out infinite;
 }
@@ -1274,7 +1276,6 @@ li:hover {
 	}
 
 } */
-
 
 @media screen and (max-height: 440px) and (orientation: landscape) {
 	
