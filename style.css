@@ -142,8 +142,8 @@ body {
 }
 
 .text {
-	font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
-		serif;
+	/* font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
+		serif; */
 	background: #040b41cf;
 	-webkit-background-clip: text !important;
 	background-clip: text !important;
@@ -1268,12 +1268,13 @@ li:hover {
   animation: rotate 3s ease-in-out infinite;
 }
 
-@media screen and (max-height: 460px) and (orientation: landscape) {
+/* @media screen and (max-height: 460px) and (orientation: landscape) {
 	.expand {
 		visibility: hidden;
 	}
 
-}
+} */
+
 
 @media screen and (max-height: 283px) and (orientation: landscape) {
 	
