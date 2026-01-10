@@ -13,11 +13,11 @@
                 $('.pl').delay(200).fadeOut('xslow').queue(function () {
                     $(this).remove();
                 });
-                $('.preloader').delay(1000).fadeOut('xslow').queue(function () {
+                $('.preloader').delay(1500).fadeOut('xslow').queue(function () {
                     $(this).remove();
                 });
             }
-        }, 3000);
+        }, 3200);
 
     });
 
@@ -127,6 +127,7 @@
 
 
 })(jQuery);
+
 
 
 // EXPAND MENU START

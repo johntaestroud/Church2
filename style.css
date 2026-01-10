@@ -1268,10 +1268,10 @@ li:hover {
   animation: rotate 3s ease-in-out infinite;
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-height: 283px) and (orientation: landscape) {
   #rotate-to-landscape {
     z-index: 1000;
-    visibility: visible;
+    /* visibility: visible; */
   }
 
   body > *:not(#rotate-to-landscape) {
