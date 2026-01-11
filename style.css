@@ -1610,6 +1610,9 @@ li:hover {
 	object-position: center center;
 }
 
+.player img:hover {
+	color: var(--gold-sp-color);
+}
 /* Player */
 
 
