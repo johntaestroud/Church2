@@ -1,6 +1,8 @@
 (function ($) {
     "use strict";
 
+    //RESIZE
+
     //PRELOADER START
     
     $(document).ready(function() {

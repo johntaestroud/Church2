@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&display=swap');
 
+* {
+	box-sizing: border-box;
+}
+
+
 :root {
 	--dark-blue: hsl(213, 92%, 15%);
 	--logo-red: hsla(1, 100%, 50%, 0.884);
@@ -729,6 +734,7 @@ body.audio-on .audio-section {
 	top: 20px;
 	right: 20px;
 	will-change: transform;
+	z-index: 100;
 }
 
 .expand__inner {
@@ -746,6 +752,7 @@ body.audio-on .audio-section {
 }
 
 .expand__btn {
+	z-index: 100;
 	width: 48px;
 	height: 48px;
 	position: absolute;
@@ -1258,6 +1265,7 @@ li:hover {
   left: 0;
   /* text-align: center; */
   color: white;
+  margin: auto;
 }
 #rotate-to-landscape .phone {
   width: 50px;
@@ -1275,7 +1283,7 @@ li:hover {
 
 } */
 
-@media screen and (max-height: 440px) and (orientation: landscape) {
+@media screen and (max-height: 330px) and (orientation: landscape) {
 	
   #rotate-to-landscape {
     z-index: 1000;
