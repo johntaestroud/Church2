@@ -2423,11 +2423,7 @@ input:checked+.player__settings-switch {
   bottom: -50px;
 }
 
-@media (max-width: 600px) {
-  .footer-links {
-    display: none;
-  }
-}
+
 
 	/* body {
 	background-color: var(--dark-blue);
