@@ -2389,6 +2389,7 @@ input:checked+.player__settings-switch {
 
 .pagination-toggle-container {
   color: var(--toggle-text-color);
+  margin-bottom: 20px;
   height: 80px;
   position: fixed;
   bottom: 0;
