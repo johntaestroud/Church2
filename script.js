@@ -882,15 +882,15 @@ document.addEventListener("DOMContentLoaded", () => {
     new MusicPlayer(defaults);
 });
 
-// SERVICES AND ABOUT US START
+// FOOTER START
 
 
-// SERVICES AND ABOUT US END
 
-// GALLERY SECTION START
+// FOOTER END
 
-// GALLERY SECTION END
+// WAVE START
 
-// AUDIO PLAYLIST END
+// WAVE END
 
-// STOP EXECUTION ON TIMEOUT
+
+

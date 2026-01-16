@@ -2286,7 +2286,228 @@ input:checked+.player__settings-switch {
 
 /* SERVICES  END */
 
-/*GALLERY SECTION START*/
+/*FOOTER START*/
+.pagination {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  /* background-color: var(--gold-sp-color); */
+  color: var(--dark-blue);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-item {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-left: 1px solid var(--footer-border-color);
+  cursor: pointer;
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 300ms ease;
+}
+
+.footer-item:hover {
+  background: var(--footer-item-hover-background);
+}
+
+.footer-links .footer-item:first-child {
+  border-left: none;
+}
+
+.footer-links .footer-item:last-child {
+  border-right: none;
+}
+
+.nav-link-prev,
+.nav-link-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--nav-arrows-bg-color);
+  color: var(--nav-text-color);
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+  padding: 0 20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.nav-link-prev {
+  left: 0;
+}
+
+.nav-link-next {
+  right: 0;
+}
+
+.nav-link-prev:hover,
+.nav-link-next:hover {
+  background-color: var(--nav-arrow-hover-bg-color);
+}
+
+.pagination-text {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.large-arrow {
+  width: 50px;
+  height: 15px;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.large-arrow-prev,
+.large-arrow-next {
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.nav-link-prev:hover .large-arrow-prev,
+.nav-link-next:hover .large-arrow-next {
+  transform: translateX(-10px) scaleX(1.2);
+  width: 70px;
+}
+
+.nav-link-next:hover .pagination-text {
+  margin-right: 10px; /* Adjust this value as needed */
+}
+
+.pagination-toggle-container {
+  color: var(--toggle-text-color);
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.toggle-pagination {
+  width: 115px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--toggle-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 30px;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.toggle-pagination:hover {
+  background: var(--footer-item-hover-background);
+}
+
+.pagination-toggle-container.active {
+  bottom: -50px;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    display: none;
+  }
+}
+
+	/* body {
+	background-color: var(--dark-blue);
+	color: var(--white-color);
+	margin: 0;
+	padding: 0;
+	font-family: Montserrat, sans-serif;
+	} */
 
 
-/*GALLERY SECTION END*/
+
+/*FOOTER END*/
+
+/* WAVE START */
+.wave {
+ position: relative;
+ display: block;
+ text-decoration: none;
+ overflow: hidden;
+ border-radius: 40px;
+ border: none;
+}
+
+.wave  span {
+ position: relative;
+ color: var(--dark-blue);
+ text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+ font-size: 16px;
+ z-index: 1;
+}
+
+.wave  .liquid {
+ position: absolute;
+ top: -70px;
+ left: 0;
+ width: 100%;
+ height: 180px;
+ /* background: rgba(180, 179, 179, 0.5); */
+ background: var(--dark-blue);
+ box-shadow: inset 0 0 50px #f8f8f8;
+ transition: .5s;
+}
+
+.wave  .liquid::after,
+.wave  .liquid::before {
+ content: '';
+ width: 200%;
+ height: 200%;
+ position: absolute;
+ top: 0;
+ left: 50%;
+ transform: translate(-50%, -75%);
+ background: #fff;
+}
+
+.wave  .liquid::before {
+ border-radius: 45%;
+ background: var(--white-color);
+ animation: animate 5s linear infinite;
+}
+
+.wave  .liquid::after {
+ border-radius: 40%;
+ background: #fff;
+ animation: animate 10s linear infinite;
+}
+
+.wave:hover .liquid {
+ top: 0px;
+}
+
+@keyframes animate {
+ 0% {
+  transform: translate(-50%, -75%) rotate(0deg);
+ }
+
+ 100% {
+  transform: translate(-50%, -75%) rotate(360deg);
+ }
+}
+
+
+/* WAVE END */
