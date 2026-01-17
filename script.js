@@ -53,23 +53,23 @@
     // }
 
 
-    //About page
+    //TERMS SECTION
 
-    $(".about-text").on('click', function () {
-        $("body").addClass("about-on");
+    $(".terms-text").on('click', function () {
+        $("body").addClass("terms-on");
     });
-    $(".about-close").on('click', function () {
-        $("body").removeClass("about-on");
+    $(".terms-close").on('click', function () {
+        $("body").removeClass("terms-on");
     });
 
 
-    //TBD
+    //POLICY SECTION
 
-    $(".contact-text").on('click', function () {
-        $("body").addClass("contact-on");
+    $(".policy-text").on('click', function () {
+        $("body").addClass("policy-on");
     });
-    $(".contact-close").on('click', function () {
-        $("body").removeClass("contact-on");
+    $(".policy-close").on('click', function () {
+        $("body").removeClass("policy-on");
     });
 
 
