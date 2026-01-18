@@ -2281,6 +2281,7 @@ input:checked+.player__settings-switch {
     width: 100%;
     height: 90vh;
     overflow: auto;
+	display: none
 }
 button:focus{
   outline:none !important;
