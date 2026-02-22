@@ -947,17 +947,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // FRAME FORMS START
-function showPopup() {
-  const popup = document.getElementById("popup");
-  popup.src = 'https://api.leadconnectorhq.com/widget/form/6exX2Iyq4NQiA8T8x84j'; //does not work in stack overflow for security reasons.
-  popup.classList.add("iframe-button");
+function openInNewTab() {
+  var iframeSrc = 'https://api.leadconnectorhq.com/widget/form/6exX2Iyq4NQiA8T8x84j';
+  window.open(iframeSrc, '_blank');
 }
+// function showPopup() {
+//   const popup = document.getElementById("popup");
+//   popup.src = 'https://api.leadconnectorhq.com/widget/form/6exX2Iyq4NQiA8T8x84j'; //does not work in stack overflow for security reasons.
+//   popup.classList.add("iframe-button");
+// }
 
-const link = document.querySelector('.iframe-button');
-link.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevents the default link behavior
-  showPopup();
-});
+// const link = document.querySelector('.iframe-button');
+// link.addEventListener('click', function(event) {
+//   event.preventDefault(); // Prevents the default link behavior
+//   showPopup();
+// });
 
 $(document).ready(function(){
   $(".iframe-button").click(function(){
