@@ -680,6 +680,10 @@ button:active, button:focus {
 }
 
 @media only screen and (max-width: 1224px) {
+
+  #fixedban {
+    font-size: 18px;
+  }
   
   :root {
     --nav-max-height: 100vh;
