@@ -821,6 +821,12 @@ button:active, button:focus {
   }
 }
 
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+ #main-doc {
+    font-size: 40px;
+  }
+}
+
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
