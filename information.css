@@ -821,6 +821,13 @@ button:active, button:focus {
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* Change the font size for the body on mobile only */
+  #main-doc {
+    font-size: 42px;
+  }
+}
+
 
 @-webkit-keyframes zoomIn {
   from {
