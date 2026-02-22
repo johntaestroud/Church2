@@ -465,7 +465,7 @@ button:active, button:focus {
 
 #navbar.nav-open {
   width: var(--nav-max-width);
-  z-index: 99999;
+  z-index: 9999;
 }
 
 #navbar.nav-close {
