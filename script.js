@@ -963,10 +963,10 @@ function openInNewTab() {
 //   showPopup();
 // });
 
-$(document).ready(function(){
-  $(".iframe-button").click(function(){
-    $(".iframe").toggle();
-  });
-});
+// $(document).ready(function(){
+//   $(".iframe-button").click(function(){
+//     $(".iframe").toggle();
+//   });
+// });
 
 //FRAME FORMS END
