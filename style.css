@@ -2307,6 +2307,7 @@ button.iframe-button {
 /* READ BUTTON START */
 
 .demo__buttons {
+	z-index: 300;
 	position: absolute;
 	top: 85%;
 	left: 50%;

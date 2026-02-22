@@ -886,7 +886,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function() {
   const $buttons = $(".demo__buttons");
-  const $toggle = $(".demo__open-btn");
+//   const $toggle = $(".demo__open-btn");
   let delay = 200;
   let steps = [];
   let open = false;
