@@ -8,28 +8,8 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="style.css">
 </head>
-
-<body style=" overflow: auto;">
-  <!-- PRELOADER START -->
-  <div class="preloader">
-    <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="hsla(1, 100%, 50%, 0.884)" />
-          <stop offset="100%" stop-color="hsl(213, 92%, 15%)" />
-        </linearGradient>
-      </defs>
-      <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16"
-        stroke-linecap="round" />
-      <path class="pl__worm"
-        d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z"
-        fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
-        stroke-dasharray="44 1111" stroke-dashoffset="10" />
-    </svg>
-  </div>
-  <!-- PRELOADER END -->
+<body>
 
   <!-- BEGIN HEADER MODULE -->
   <table data-module="header" width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
@@ -70,29 +50,6 @@
   </iframe>
   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script>
-        //PRELOADER START
-    
-    $(document).ready(function() {
-    
-        setTimeout(function () {
-            $('.preloader').addClass('loaded');
-            // $('body').removeClass('no-scroll-y');
-
-            if ($('.preloader').hasClass('loaded')) {
-                $('.pl').delay(300).fadeOut('slow').queue(function () {
-                    $(this).remove();
-                });
-                $('.preloader').delay(300).fadeOut('slow').queue(function () {
-                    $(this).remove();
-                });
-            }
-        }, 3200);
-
-    });
-
-    //PRELOADER END
-  </script>
 
 </body>
 
