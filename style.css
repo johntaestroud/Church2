@@ -1264,7 +1264,7 @@ li:hover {
 
 } */
 
-@media screen and (max-height: 335px) and (orientation: landscape) {
+@media screen and (max-height: 435px) and (orientation: landscape) {
 
 	#rotate-to-landscape {
 		z-index: 1000;
