@@ -70,7 +70,29 @@
   </iframe>
   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src="script.js"></script>
+  <script>
+        //PRELOADER START
+    
+    $(document).ready(function() {
+    
+        setTimeout(function () {
+            $('.preloader').addClass('loaded');
+            // $('body').removeClass('no-scroll-y');
+
+            if ($('.preloader').hasClass('loaded')) {
+                $('.pl').delay(100).fadeOut('slow').queue(function () {
+                    $(this).remove();
+                });
+                $('.preloader').delay(100).fadeOut('slow').queue(function () {
+                    $(this).remove();
+                });
+            }
+        }, 3200);
+
+    });
+
+    //PRELOADER END
+  </script>
 
 </body>
 
