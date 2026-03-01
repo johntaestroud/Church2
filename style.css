@@ -414,7 +414,7 @@ body.audio-on .hero-section {
 	/* overflow: hidden; */
 	height: 100vh;
 	background-color: var(--white-sand);
-	color: var(--white-sand);
+	color: var(--dark-blue);
 	font-family: var(--font-monserrat);
 	font-size: 1.2rem;
 	transform: translateX(-100%);

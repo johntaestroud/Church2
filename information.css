@@ -625,6 +625,7 @@ button:active, button:focus {
 
 #main-doc {
   position: relative;
+  background-image: url(image/4853160.png);
   background-color: var(--white-sand);
   width: 100%;
   min-width: 300px;
