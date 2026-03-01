@@ -1,19 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 
 <head>
   <meta charset="UTF-8">
-  <title>Church of God | Salvation Makes You A Member</title>
-  <!-- favicon -->
-  <link rel="shortcut icon" href="favicon/favicon.ico?raw=true" type="image/x-icon">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   
-  <link rel='stylesheet' href='bootstrap.min.css'>
-  <!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'> -->
+ <link rel="shortcut icon" href="favicon/favicon.ico?raw=true" type="image/x-icon">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> 
+
+  <title>Church of God | Events</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   
 <style>
-:root {
+    :root {
 	--dark-blue: hsl(213, 92%, 15%);
 	--logo-red: hsla(1, 100%, 50%, 0.884);
 	--white-sand: hsl(40, 7%, 92%);
@@ -21,179 +22,248 @@
 	--gold-sp-color: hsl(18, 22%, 61%);
 	--light: hsl(33, 26%, 92%);
 }
-
-body {
-  background-image: url(image/4853160.png);
-  background-color: var(--white-sand);
-  color: var(--dark-blue);
-  /* font-family: "Roboto", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif; */
-  margin: 0 auto;
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/varelaround/v21/w8gdH283Tvk__Lua32TysjIfp8uK.ttf) format('truetype');
 }
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
-  color: #222;
-  font-family: "Lato";
+.page-event {
+  background-color: var(--dark-blue);
+  padding-bottom: 40px;
+  font-family: "Varela Round", sans-serif;
 }
-
-.h1, .h2, .h3, .h4 {
-  font-weight: bold;
+.page-event .cover {
+  height: 360px;
+  /* background-image: url('image/church.png'); */
+  background-position: center center;
+  background-size: cover;
 }
-
-.content-type {
-  border-radius: 0;
+.page-event .cover .heading {
+  font-family: 'Telefon Black';
+  font-size: 243px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ccc;
+  transition: font-size 0.3s;
 }
-
-.event {
-  padding-bottom: 1em;
+.page-event .cover .heading::first-letter {
+  color: var(--logo-red);
 }
-
-.flatpickr-calendar, .flatpickr-rContainer, .flatpickr-days, .dayContainer {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  width: 100% !important;
-  max-width: 100% !important;
+.page-event .upcoming-sec {
+  padding: 5vh 0;
+  border-bottom: 1px solid #ccc;
 }
-
-.flatpickr-day {
-  flex-basis: auto !important;
-  width: 14.2857143%;
-  max-width: auto;
+.page-event .upcoming-sec .heading {
+  font-size: 30px;
+  color: #fff;
 }
-
+.page-event .upcoming-event-list {
+  color: #ccc;
+}
+.page-event .upcoming-event-list .event-block {
+  padding: 5vh 0;
+  border-bottom: 1px solid #ccc;
+}
+.page-event .upcoming-event-list .event-block .sec-1,
+.page-event .upcoming-event-list .event-block .sec-2 {
+  padding-bottom: 3vh;
+}
+.page-event .upcoming-event-list .event-block .sec-1 table .month {
+  text-transform: uppercase;
+  color: var(--logo-red);
+  font-size: 30px;
+}
+.page-event .upcoming-event-list .event-block .sec-1 table .month-date-devider {
+  width: 5vh;
+  margin: 1vh 0;
+  background-color: #3cbfaf;
+  height: 5px;
+}
+.page-event .upcoming-event-list .event-block .sec-1 table .date {
+  font-size: 60px;
+  font-weight: bolder;
+  line-height: normal;
+}
+.page-event .upcoming-event-list .event-block .sec-1 table .title {
+  padding-left: 20px;
+  vertical-align: top;
+  font-size: 30px;
+}
+.page-event .upcoming-event-list .event-block .sec-2 img {
+  width: 100%;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .title {
+  font-size: 30px;
+  padding-bottom: 2vh;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .venue table td {
+  vertical-align: top;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .venue table td i {
+  color: var(--logo-red);
+  padding-left: 3px;
+  padding-right: 10px;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .venue table td .dim-color a {
+  color: rgba(204, 204, 204, 0.3);
+}
+.page-event .upcoming-event-list .event-block .sec-3 .time {
+  padding-bottom: 3vh;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .time table td {
+  vertical-align: top;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .time table td i {
+  color: var(--logo-red);
+  padding-right: 10px;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .time table td .dim-color {
+  color: rgba(204, 204, 204, 0.3);
+}
+.page-event .upcoming-event-list .event-block .sec-3 .sort-story {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .group-of-btn {
+  padding-top: 3vh;
+}
+.page-event .upcoming-event-list .event-block .sec-3 .group-of-btn .book-ticket {
+  background-color: #3cbfaf;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.page-event .page-heading {
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 17px;
+  word-break: break-all;
+  padding: 10px;
+}
+.page-event .page-heading::first-letter {
+  color: var(--logo-red);
+}
+@media (min-width: 992px) {
+  .upcoming-event-list .event-block .sec-1 table .title {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .page-event .cover .heading {
+    font-size: 180px;
+    padding-top: 7vh;
+  }
+  .upcoming-event-list .event-block .sec-3 .title {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .page-event .cover .heading {
+    font-size: 140px;
+    padding-top: 11vh;
+  }
+}
+@media (max-width: 575px) {
+  .page-event .cover {
+    height: 214px;
+  }
+  .page-event .cover .heading {
+    font-size: 70px;
+  }
+  .page-event .upcoming-event-list .event-block .sec-1 table .month {
+    font-size: 14px;
+  }
+  .page-event .upcoming-event-list .event-block .sec-1 table .date {
+    font-size: 36px;
+  }
+  .page-event .upcoming-event-list .event-block .sec-1 table .title {
+    padding-left: 20px;
+    font-size: 20px;
+    vertical-align: top;
+  }
+}
 </style>
-
+  
 </head>
 
 <body translate="no">
-  <div class="bg-light event shadow-event m-auto" style="max-width: 400px ">
-  <nav class="navbar navbar-light bg-light shadow-event">
-    <span class="navbar-brand mb-0 h1"><a href="index.html"><img height="45" src="image/church.png"></a></span>
-  </nav>
-  
-  <article class="bg-white m-3 p-4 shadow-event">
-    
-    <span class="badge badge-info content-type">Event</span>
-    <span class="badge">April 26, 2026 </span>
-    <h2 class="h3">
-      Family Day
-    </h2>
-    <p>
-      testing
-    </p>
-  
-    <div class="align-items-center row mb-3">
-
-      <div class="col-3">
-          <img class="img-fluid rounded-circle" src="" alt="">
-      </div>
-
-      <div class="col-9">
-          <p class="align-items-center mt-3">
-            <a class="bold" href="#">testing</a> <br>
-            <small>testing123</small>
-          </p>
-      </div>
-
+  <div class="page-event">
+  <div class="cover">
+    <div class="heading"></div>
   </div>
-    
-  <img class="img-fluid w-100" src="" alt="">
-    
-</article>
-  
-  <!-- <article class="bg-white d-flex m-3 shadow">
-    
-    <div class="col-8 p-4">
-      <span class="badge badge-info content-type">Event</span>
-      <span class="badge"></span>
-      <h2 class="h5 mb-0">
-    
-      </h2>
+  <div class="container">
+    <div class="upcoming-sec">
+      <div class="heading">Upcoming Events</div>
     </div>
-    
-  <img class="img-fluid w-100" src="" alt="">
-    
-</article> -->
-  
-    <article class="bg-light m-3 shadow">
-      
-      <div class="calendar"></div>
-    
-      <div class="d-flex border-bottom">
-    <div class="col-8 p-4">
-      <span class="badge pl-0">Sundays 12pm</span>
-      <h2 class="h5 mb-0">
-        Church Service
-      </h2>
-    </div>
-    
-  <img class="img-fluid w-100" src="" alt="">
-        
+    <div class="upcoming-event-list">
+      <div class="event-block">
+        <div class="row">
+          <div class="col-lg-2 sec-1">
+            <table>
+              <tr>
+                <td>
+                  <div class="month">Apr</div>
+                  <div class="month-date-devider"></div>
+                  <div class="date">26</div>
+                </td>
+                <td class="title">Family Day</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-lg-5 sec-2">
+            <img src="https://placehold.co/600x400" />
+          </div>
+          <div class="col-lg-5 sec-3">
+            <div class="title">Family Day - Church of God</div>
+            <div class="venue">
+              <table>
+                <tr>
+                  <td><i class="fa fa-map-marker"></i></td>
+                  <td>
+                    <div>1901 62nd Avenue S, Saint Petersburg, FL</div>
+                    <div class="dim-color">
+                      <a href="https://www.google.co.in" target="blank">Get Directions</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="time">
+              <table>
+                <tr>
+                  <td><i class="fa fa-clock-o"></i></td>
+                  <td>
+                    <div>Sunday, Apr 26, 2026 at 12:00 PM</div>
+                    <div data-livestamp="2026-04-26T12:00:00Z" class="dim-color"></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="sort-story">"testing</div>
+            <div class="group-of-btn">
+              <a href="https://www.google.com" target="blank" class="btn book-ticket">Homepage</a>
+            </div>
+          </div>
         </div>
-      
-            <div class="d-flex border-bottom">
-    <div class="col-8 p-4">
-      <span class="badge pl-0">Tuesdays 7pm</span>
-      <h2 class="h5 mb-0">
-        Prayer Call
-      </h2>
+      </div>
     </div>
-    
-  <img class="img-fluid w-100" src="" alt="">
-        
-        </div>
-      
-            <div class="d-flex">
-    <div class="col-8 p-4">
-      <span class="badge pl-0">Wednesdays 7pm</span>
-      <h2 class="h5 mb-0">
-        Zoom Service
-      </h2>
-    </div>
-    
-  <img class="img-fluid w-100" src="" alt="">
-        
-        </div>
-    
-</article>
-  
+  </div>
 </div>
-
-     <!-- Sticky Footer Start -->
-  <script type='text/javascript'>
-    $(document).ready(function () { $(&#39;img#closed &#39;).click(function () { $(&#39; #bl_banner &#39;).hide(90);});});
-  </script>
-
-  <div style="z-index: 99999;">
-    <div id='fixedban'
-      style='background-color: hsl(213, 92%, 15%);width:100%;margin:auto;text-align:center;float:none;overflow:hidden;position:fixed;bottom:0;z-index:999;-webkit-transform:translateZ(0); color: hsl(213, 92%, 15%); margin-bottom: 1px;'>
-      <div><a id='close-fixedban'
-          onclick='document.getElementById(&apos;fixedban&apos;).style.display = &apos;none&apos;;'
-          style='cursor:pointer;'><img alt='' src='' title='close button'
-            style='vertical-align:middle;text-decoration: none;' /><span
-            style="font-size: 12px; color: hsl(212, 21%, 88%);"> &#x2718; Close</span></a></div>
-
-      <a href='https://stpetechurchofgod.org/policy.html' title='Terms' target="_blank"><span
-          style='max-width:100%;height:auto;vertical-align:middle; font-size: 12px !important;'>Privacy Policy
-          &nbsp;</span> </a>
-      <!-- <div style='text-align:center;display:block;max-width:728px;height:auto;overflow:hidden;margin:auto'> -->
-      <a href='https://stpetechurchofgod.org/terms.html' title='Terms' target="_blank"><span
-          style='max-width:100%;height:auto;vertical-align:middle; font-size: 12px !important;'>Terms of
-          Service</span></a>
-
-    </div>
-  </div>
-  </div>
-  <!-- Sticky Footer End -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js'></script>
   
-    <script id="rendered-js" >
-flatpickr('.calendar', {
-  inline: true });
-//# sourceURL=pen.js
-  </script>
-
   
 </body>
 
