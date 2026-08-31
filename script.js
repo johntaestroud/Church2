@@ -333,15 +333,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const id = item.dataset.videoId;
 
             platform.querySelector('iframe').src = `https://www.youtube.com/embed/${id}&rel=0`;
-            platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
-            platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"] .hr-video-description').textContent = item.dataset.description;
-            platform.querySelector('.hr-inner-tab-content[data-tab-content="speakers"] .hr-video-speakers').innerHTML = item.dataset.speakers;
-            platform.querySelectorAll('.hr-content-tab').forEach(t => t.classList.remove('active'));
-            const talkTab = platform.querySelector('.hr-content-tab[data-tab="talk"]');
-            talkTab.classList.add('active');
-            platform.querySelectorAll('.hr-inner-tab-content').forEach(c => c.classList.remove('active'));
-            platform.querySelector('.hr-inner-tab-content[data-tab-content="talk"]').classList.add('active');
-            if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
+if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         const innerTab = e.target.closest('.hr-content-tab');
