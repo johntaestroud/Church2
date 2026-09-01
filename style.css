@@ -34,7 +34,7 @@
 	z-index: 9999;
 	justify-content: center;
 	align-items: center;
-	
+
 }
 
 .pl,
@@ -138,11 +138,13 @@ body {
 	font-size: 15px;
 	line-height: 1.6;
 	color: #fff;
-	overflow: hidden;
-	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: auto;
+	min-height: 100vh;
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear;
-	perspective: 800px;
+	/* perspective: 800px; */
 	padding: 0;
 	margin: 0;
 	background-size: cover
@@ -270,9 +272,12 @@ BACKGROUND IMAGE
 	background-color: var(--white-sand);
 	background-image: url('image/4853160.png');
 	background-position: center;
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-size: cover; /* Scales the image to cover the entire container */
-    background-attachment: fixed; /* Optional: keeps the image fixed when scrolling */
+	background-repeat: no-repeat;
+	/* Prevent the image from repeating */
+	background-size: cover;
+	/* Scales the image to cover the entire container */
+	background-attachment: fixed;
+	/* Optional: keeps the image fixed when scrolling */
 	transform: scale(1) rotateX(0);
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 	-webkit-transition: all 300ms linear;
@@ -280,12 +285,13 @@ BACKGROUND IMAGE
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 	transform-origin: center top;
-	object-fit: cover; /* Scales the image to cover the area while maintaining aspect ratio */
-    object-position: center;
-	 top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	object-fit: cover;
+	/* Scales the image to cover the area while maintaining aspect ratio */
+	object-position: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
 	user-select: none;
 	/* Vendor prefixes for older browser compatibility */
@@ -373,24 +379,6 @@ body.terms-on .hero-section {
 
 body.policy-on .hero-section {
 	transform: scale(0.75);
-	-webkit-transition-delay: 0ms;
-	transition-delay: 0ms;
-}
-
-body.video-on .hero-section {
-	transform: rotateX(-10deg);
-	-webkit-transition-delay: 0ms;
-	transition-delay: 0ms;
-}
-
-body.services-on .hero-section {
-	transform: rotateX(-10deg);
-	-webkit-transition-delay: 0ms;
-	transition-delay: 0ms;
-}
-
-body.audio-on .hero-section {
-	transform: rotateX(-10deg);
 	-webkit-transition-delay: 0ms;
 	transition-delay: 0ms;
 }
@@ -643,66 +631,91 @@ body.policy-on .policy-section {
 	transform: rotate(90deg);
 }
 
+/* Video / Services / Audio — fixed overlay panels (same pattern as terms/policy) */
 .video-section,
-.services-section,
 .audio-section {
 	position: fixed;
-	top: 100%;
+	top: 0;
 	left: 0;
-	padding: 100px 0;
 	width: 100%;
 	height: 100vh;
 	display: block;
 	overflow-x: hidden;
 	overflow-y: auto;
-	/* background-color: var(--white-sand); */
 	background-image: url('image/4853160.png');
-	-webkit-transition: all 300ms linear;
-	transition: all 300ms linear;
+	background-size: cover;
+	background-position: center;
+	background-color: var(--white-sand);
+	transform: translateX(-100%);
+	-webkit-transition: transform 300ms linear;
+	transition: transform 300ms linear;
+	z-index: 10;
+	color: var(--dark-blue);
 }
 
+.services-section {
+    position: relative;
+    width: 100%;
+    display: block;
+    background-color: var(--white-sand);
+    padding: 60px 0;
+    color: var(--dark-blue);
+}
+
+/* Slide in when body class is active */
+body.video-on .video-section {
+	transform: translateX(0);
+	-webkit-transition-delay: 400ms;
+	transition-delay: 400ms;
+}
+body.audio-on .audio-section {
+	transform: translateX(0);
+	-webkit-transition-delay: 400ms;
+	transition-delay: 400ms;
+}
+
+/* Scale down hero when overlays are open */
+body.video-on .hero-section,
+body.audio-on .hero-section {
+	transform: scale(0.75);
+	-webkit-transition-delay: 0ms;
+	transition-delay: 0ms;
+}
+
+/* Close button — X icon */
 .video-close,
-.services-close,
 .audio-close {
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	width: 30px;
-	display: block;
-	overflow: hidden;
 	height: 30px;
-	-webkit-transition: all 200ms linear;
-	transition: all 200ms linear;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 36px 36px;
-	background-image: url('https://raw.githubusercontent.com/CentralFloridaChurchofGod/icons/refs/heads/main/close.svg');
+	display: block;
 	cursor: pointer;
-	/* z-index: 11; */
+	z-index: 11;
+	overflow: hidden;
 }
 
-.video-close:hover,
-.services-close:hover,
-.audio-close:hover {
-	transform: rotate(90deg);
+.video-close::before,
+.video-close::after,
+.audio-close::before,
+.audio-close::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	border-radius: 2px;
 }
 
-body.video-on .video-section {
-	top: 0;
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
+.video-close::before,
+.services-close::before,
+.audio-close::before {
+	transform: rotate(45deg);
 }
 
-body.services-on .services-section {
-	top: 0;
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
-}
-
-body.audio-on .audio-section {
-	top: 0;
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
+.video-close::after,
+.services-close::after,
+.audio-close::after {
+	transform: rotate(-45deg);
 }
 
 /* EXPAND MENU START https://codepen.io/LetItRock/pen/GWPygE */
@@ -2209,10 +2222,20 @@ input:checked+.player__settings-switch {
 .status-grid {
 	display: grid;
 	gap: 1rem;
-	grid-template-columns: if(media(width < 600px): 1fr; media(width < 900px): repeat(2, minmax(0, 1fr));
-			else: repeat(4, minmax(0, 1fr));
-		);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	margin-top: 1.75rem;
+}
+
+@media (max-width: 900px) {
+	.status-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.status-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .services-card {
@@ -2424,7 +2447,7 @@ button.iframe-button {
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 	line-height: 1.8;
 	transition: margin 0.3s, box-shadow 0.3s;
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
+	box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9), inset -0.2rem -0.2rem 0.5rem #fff, 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem hsl(0, 0%, 95%);
 }
 
 .cog-terms h1 {
