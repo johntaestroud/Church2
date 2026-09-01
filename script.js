@@ -4,9 +4,9 @@
     //RESIZE
 
     //PRELOADER START
-    
-    $(document).ready(function() {
-    
+
+    $(document).ready(function () {
+
         setTimeout(function () {
             $('.preloader').addClass('loaded');
             // $('body').removeClass('no-scroll-y');
@@ -83,7 +83,7 @@
     });
 
 
-    //TBD
+    //services section
 
     $(".services").on('click', function () {
         $("body").addClass("services-on");
@@ -333,8 +333,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const id = item.dataset.videoId;
 
             platform.querySelector('iframe').src = `https://www.youtube.com/embed/${id}&rel=0`;
-platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
-if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            platform.querySelector('.hr-video-info-title').textContent = item.dataset.title;
+            if (window.innerWidth < 992) platform.querySelector('.hr-video-main').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         const innerTab = e.target.closest('.hr-content-tab');
@@ -400,7 +400,7 @@ const defaults = {
         {
             title: "Sister Candice - Be Still And Know",
             url: "https://ia600804.us.archive.org/23/items/be-still-and-know_202512/Be%20Still%20And%20Know.mp3"
-        },  
+        },
 
         {
             title: "Choir - Nothing From My Journey Now",
@@ -877,62 +877,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
 "use strict";
 
-$(document).ready(function() {
-  const $buttons = $(".demo__buttons");
-//   const $toggle = $(".demo__open-btn");
-  let delay = 200;
-  let steps = [];
-  let open = false;
-  
-  let curStep = 0;
+$(document).ready(function () {
+    const $buttons = $(".demo__buttons");
+    const $toggle = $(".demo__open-btn");
+    let delay = 200;
+    let steps = [];
+    let open = false;
 
-  for (let i = 0; i <= 3; i++) {
-    steps[i] = "demo__step-" + i;
-  }
+    let curStep = 0;
 
-  function setStep(index) {    
-    $buttons.removeClass("step-1 step-0 step-3 step-2").addClass("step-" + curStep);   
-  }
-  
-  let lastTimeout;
-
-  function animate() {
-    if (curStep >= 4) {
-      curStep = 0;
-      return;
+    for (let i = 0; i <= 3; i++) {
+        steps[i] = "demo__step-" + i;
     }
 
-    open = true;
-    setStep(curStep);    
-    curStep++;
-    lastTimeout = setTimeout(animate, delay);
-  }
-
-  $toggle.on("click", function() {
-    if (!open) animate();
-    else {
-      $buttons.removeClass("step-1 step-0 step-3 step-2");
-      clearTimeout(lastTimeout);
-      open = false;
-      curStep = 0;
+    function setStep(index) {
+        $buttons.removeClass("step-1 step-0 step-3 step-2").addClass("step-" + curStep);
     }
-  });
+
+    let lastTimeout;
+
+    function animate() {
+        if (curStep >= 4) {
+            curStep = 0;
+            return;
+        }
+
+        open = true;
+        setStep(curStep);
+        curStep++;
+        lastTimeout = setTimeout(animate, delay);
+    }
+
+    $toggle.on("click", function () {
+        if (!open) animate();
+        else {
+            $buttons.removeClass("step-1 step-0 step-3 step-2");
+            clearTimeout(lastTimeout);
+            open = false;
+            curStep = 0;
+        }
+    });
 });
 
 // FOOTER END
 
 // TERMS START
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const printButton = document.getElementById('cog-print-btn');
     if (printButton) {
-        printButton.addEventListener('click', function() {
+        printButton.addEventListener('click', function () {
             document.body.classList.add('printing-now');
             window.print();
         });
     }
 
-    window.addEventListener('afterprint', function() {
+    window.addEventListener('afterprint', function () {
         document.body.classList.remove('printing-now');
     });
 });
@@ -950,16 +950,18 @@ document.addEventListener('DOMContentLoaded', function() {
 //   popup.classList.add("iframe-button");
 // }
 
-   const link = document.querySelector('.iframe-button');
-   link.addEventListener('click', function(event) {
-   event.preventDefault(); // Prevents the default link behavior
-   showPopup();
-   });
-
-   $(document).ready(function(){
-     $(".iframe-button").click(function(){
-       $(".iframe").toggle();
+const link = document.querySelector('.iframe-button');
+if (link) {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents the default link behavior
+        if (typeof showPopup === 'function') showPopup();
     });
-   });
+}
+
+$(document).ready(function () {
+    $(".iframe-button").click(function () {
+        $(".iframe").toggle();
+    });
+});
 
 //FRAME FORMS END
