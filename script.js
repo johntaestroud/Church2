@@ -73,34 +73,8 @@
     });
 
 
-    //video section
-
-    $(".video").on('click', function () {
-        $("body").addClass("video-on");
-    });
-    $(".video-close").on('click', function () {
-        $("body").removeClass("video-on");
-    });
-
-
-    //services section
-
-    $(".services").on('click', function () {
-        $("body").addClass("services-on");
-    });
-    $(".services-close").on('click', function () {
-        $("body").removeClass("services-on");
-    });
-
-
-    //audio section
-
-    $(".audio").on('click', function () {
-        $("body").addClass("audio-on");
-    });
-    $(".audio-close").on('click', function () {
-        $("body").removeClass("audio-on");
-    });
+    // Sections are now inline (scroll to section, matching Services)
+    // $(".video, .services, .audio overlay handlers removed)
 
 
 })(jQuery);
