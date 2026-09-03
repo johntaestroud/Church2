@@ -604,10 +604,13 @@ class MusicPlayer {
     updateBars() {
         this.analyser.getByteFrequencyData(this.dataArray);
 
-        const bars = [...document.querySelectorAll(".player__bar")];
+        const bars = this.barsContainer.children;
         const step = Math.floor(this.bufferLength / this.barsCount);
+        const barDuration = this.audio.duration / this.barsCount;
+        const currentIndex = Math.floor(this.audio.currentTime / barDuration);
 
-        bars.forEach((bar, index) => {
+        for (let index = 0; index < bars.length; index++) {
+            const bar = bars[index];
             let sum = 0;
             for (let i = 0; i < step; i++) {
                 sum += this.dataArray[index * step + i];
@@ -618,15 +621,12 @@ class MusicPlayer {
 
             bar.style.height = `${fillHeight}%`;
 
-            const barDuration = this.audio.duration / this.barsCount;
-            const currentIndex = Math.floor(this.audio.currentTime / barDuration);
-
             if (index <= currentIndex) {
-                bar.classList.add("color");
+                if (!bar.classList.contains("color")) bar.classList.add("color");
             } else {
-                bar.classList.remove("color");
+                if (bar.classList.contains("color")) bar.classList.remove("color");
             }
-        });
+        }
     }
 
     // Playlist
