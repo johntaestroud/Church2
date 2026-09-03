@@ -631,69 +631,30 @@ body.policy-on .policy-section {
 	transform: rotate(90deg);
 }
 
-/* Video / Services / Audio — fixed overlay panels (same pattern as terms/policy) */
+/* Video / Services / Audio — in-page sections (matching Services) */
 .video-section,
+.services-section,
 .audio-section {
-	position: fixed;
-	top: 0;
-	left: 0;
+	position: relative;
 	width: 100%;
-	height: 100vh;
 	display: block;
-	overflow-x: hidden;
-	overflow-y: auto;
 	background-image: url('image/4853160.png');
 	background-size: cover;
 	background-position: center;
 	background-color: var(--white-sand);
-	transform: translateX(-100%);
-	-webkit-transition: transform 300ms linear;
-	transition: transform 300ms linear;
-	z-index: 10;
+	padding: 60px 0;
 	color: var(--dark-blue);
+	transform: none !important;
+	height: auto;
+	min-height: 100vh;
+	overflow: visible;
 }
 
-.services-section {
-    position: relative;
-    width: 100%;
-    display: block;
-    background-color: var(--white-sand);
-    padding: 60px 0;
-    color: var(--dark-blue);
-}
-
-/* Slide in when body class is active */
-body.video-on .video-section {
-	transform: translateX(0);
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
-}
-body.audio-on .audio-section {
-	transform: translateX(0);
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
-}
-
-/* Scale down hero when overlays are open */
-body.video-on .hero-section,
-body.audio-on .hero-section {
-	transform: scale(0.75);
-	-webkit-transition-delay: 0ms;
-	transition-delay: 0ms;
-}
-
-/* Close button — X icon */
+/* Close buttons hidden since sections are now in-page */
 .video-close,
+.services-close,
 .audio-close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 30px;
-	height: 30px;
-	display: block;
-	cursor: pointer;
-	z-index: 11;
-	overflow: hidden;
+	display: none !important;
 }
 
 .video-close::before,
